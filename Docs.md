@@ -6,7 +6,7 @@
 
 `#3428F5` ou `#5827F5` - Azul
 
-`#2D333B` ou `#1C2128`- Cinza
+`#2D333B` - Cinza
 
 Fontes:
 
