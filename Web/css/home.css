@@ -11,6 +11,42 @@
     padding: 0;
 }
 
+/* HEADER */
+
+header {
+    background-color: #170C38;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* NAVIGATION */
+
+nav {
+    background-color: #170C38;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+}
+
+nav ul li a:hover {
+    color: #f1f1f1;
+    background-color: #2c1575;
+    padding: 20px 20px;
+    border-radius: 3px;
+}
+
+
 /* BODY */
 
 body {
@@ -19,3 +55,4 @@ body {
     background-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
+
