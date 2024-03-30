@@ -1,0 +1,36 @@
+@media screen and (min-width: 600px) and (max-width: 768px) { 
+    
+    body img {
+        width: 33%;
+        height: 25%;
+        top: -2%;
+        transform: translate(-50%, -50%);;    
+    }
+
+    .block {
+        height: 500px;
+        width: 380px;
+    }
+
+    .tit {
+        margin-top: 14%;
+        font-size: 27px;
+    }
+    
+    form input {
+        height: 35px;
+    }
+    
+    form button {
+        height: 35px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    form a {
+    margin-right: 9%;
+    font-size: 85%;
+    }
+
+}
