@@ -1,58 +1,128 @@
-/* IMPORT */
-
-
-/* VARIABLES */
-
-
-/* GLOBAL */
-
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
 /* HEADER */
-
 header {
     background-color: #170C38;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
 }
 
-/* NAVIGATION */
-
-nav {
-    background-color: #170C38;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
 }
 
-nav ul li {
-    display: inline;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-nav ul li a {
-    color: white;
+.logo h1 {
+    color: #fff;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 15px;
+}
+
+.nav-item:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.nav-link {
     text-decoration: none;
-    padding: 20px 20px;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 400;
+    margin: 15px;
 }
 
-nav ul li a:hover {
-    color: #f1f1f1;
-    background-color: #2c1575;
-    padding: 20px 20px;
-    border-radius: 3px;
+.login-button{
+    display: flex;
+    align-items: center;
 }
 
+.login-button button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+.login-button button a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* MEDIA QUERIES - mobile */
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 2rem;
+    }
+    .nav-item {
+        display: none;
+    }
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
+        display: block;
+    }
+}
 
 /* BODY */
-
 body {
     background-color: #3a1f93;
     height: 100vh;
     background-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
-
