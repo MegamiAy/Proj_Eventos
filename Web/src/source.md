@@ -1,0 +1,1 @@
+# Aquivos de imagens
