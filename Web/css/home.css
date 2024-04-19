@@ -227,7 +227,6 @@ main {
             width: 90%;
             height: 300px;
             justify-content: center;
-            
         }
         .slides{
             height: 300px;
@@ -315,7 +314,6 @@ main {
         .content{
             display: block;
             margin-top: 15px;
-            border-radius: 1rem;
             justify-content: center;
         }
         .content-background{
@@ -323,8 +321,8 @@ main {
             display: block;
             align-items: center;
             justify-content: center;
-            border-radius: 1rem;
-            width: 90%;
+            width: 100%;
+            border-radius: 0;
         }
         .content .content-title{
             display: flex;
@@ -332,11 +330,14 @@ main {
             align-self: flex-start;
             padding: 1rem;
             justify-content: center;
+            text-align: center;
+            margin-bottom: 1rem;
         }
         .content .content-title orange{
             color: #CC6820;
         }
         .cat-cards{
+            align-items: center;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -345,24 +346,28 @@ main {
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: center;
             padding: 0.5rem;
-            border-radius: 1rem;
+            width: 4rem;
+            height: 4rem;
+            margin-bottom: 15px;
         }
         .cat-img{
             padding: 1.0rem;
             border-radius: 50%;
-            width: 35px;
-            height: 35px;
+            width: 25px;
+            height: 25px;
             background-color: #CC6820;
+            align-items: center;
         }
         .cat-img img{
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
         }
         .cat-card h2{
-            font-size: 15px;
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 17px;
+            text-align: center;
         }
         .cat-card a{
             text-decoration: none;
