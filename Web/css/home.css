@@ -313,7 +313,7 @@ main {
         /* do for me copilot please */
         .content{
             display: block;
-            margin-top: 15px;
+            margin-top: -80px;
             justify-content: center;
         }
         .content-background{
@@ -331,7 +331,7 @@ main {
             padding: 1rem;
             justify-content: center;
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75;
         }
         .content .content-title orange{
             color: #CC6820;
