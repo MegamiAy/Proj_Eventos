@@ -8,6 +8,11 @@
     clear: both;
 }
 
+/* CRIADOS */
+orange{
+    color:#CC6820
+}
+
 /* HEADER */
     header {
         background-color: #170C38;
@@ -378,6 +383,36 @@ main {
         }
         
     }
+
+    /* Eventos */
+    .event-content{
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .event-card{
+        width: 300px;
+        margin: 100px;
+        background-color: #170C38;
+        border-radius: 0.4rem;
+    }
+    .event-img{
+        width: 300px;
+        height: 150px;
+        border-radius: 0.4rem;;
+    }
+    .event-info{
+        padding: 2rem;
+    }
+    .event-local img{
+        width: 5px;
+        height: 5px;
+    }
+    .event-local orange{
+        color: #CC6820
+    }
+
 
 
 /* FOOTER */
