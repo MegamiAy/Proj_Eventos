@@ -6,13 +6,53 @@
     <link rel="icon" href="../src/img/white_logo.PNG" type="image/x-icon">
     <title>Início | KAYA</title>
     <link rel="stylesheet" type="text/css" href="../src/css/home.css">
-    <script src="../src/js/scriptHome.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-<header id="header"></header>
+<header id="header">
+    <!-- O conteúdo do cabeçalho será carregado aqui -->
+    <nav class="nav-bar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="../src/img/white_logo.PNG" alt="KAYA" title="KAYA" width="80" height="80">
+          </a>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a class="nav-link" href="#">INÍCIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">EVENTOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CRIAR</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">PERFIL</a></li>
+            </ul>
+        </div>
+        <div class="login-button">
+            <button>
+                <a href="login.html">ENTRAR</a>
+            </button>
+        </div>
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()">
+              <img class="icon" src="../src/img/menu_white_36dp.svg" alt="menu-icon">
+            </button>
+        </div>
+    </nav>
+    
+    <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a class="nav-link" href="index.html">INÍCIO</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">EVENTOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CRIAR</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">PERFIL</a></li>  
+        </ul>
+        <div class="login-button">
+            <button>
+                <a href="login.html">ENTRAR</a>
+            </button>
+        </div>
+    </div>
+</header>
 <main>
-    <center>
+<center>
     <div class="slider">
         <div class="slides">
             <!-- Botões rádio -->
@@ -117,9 +157,9 @@
     </div>
     <div class="event-content">
         <div class="event-card">
-            <img src="" class="event-img">
+            <img src="../src/img/events/event1.png" class="event-img">
             <div class="event-info">
-                <h2>Evento 1</h2>
+                <h2>Evento de Música</h2>
                 <div class="event-local">
                     <img src="">
                     <orange>Descrição do evento</orange>
@@ -233,14 +273,15 @@
         </div>
     </div>
 </footer>
+<script src="../src/js/scriptHome.js"></script>
 <script>
-        fetch('template/header.html')
-            .then(response => response.text())
-            .then(html => {
-                // Insira o conteúdo do cabeçalho no elemento com id "header"
-                document.getElementById('header').innerHTML = html;
-            })
-            .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
-    </script>
+    fetch('template/header.html')
+        .then(response => response.text())
+        .then(html => {
+            // Insira o conteúdo do cabeçalho no elemento com id "header"
+            document.getElementById('header').innerHTML = html;
+        })
+        .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
+</script>
 </body>
 </html>
