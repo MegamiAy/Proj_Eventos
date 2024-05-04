@@ -11,4 +11,4 @@ Primeiro trabalho de UX e UI - Faculdade
 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chrome/chrome-original.svg" width="25" /> <a href="https://docs.google.com/document/d/1u0rWRa7KvZ6I29i_XxxvcCiYj4S8nk5wSyEAtoj2b_U/edit?usp=sharing"> Acesse o Docs</a>
 
-Acesse: <a href="Web/view/index.html">Tela</a>
+Acesse: <a href="https://megamiay.github.io/Proj_Eventos/">Tela</a>
