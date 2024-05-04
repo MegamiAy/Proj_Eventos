@@ -20,12 +20,20 @@ orange{
     .nav-bar {
         display: flex;
         justify-content: space-between;
-        padding: 1.5rem 2rem;
+        padding: 8px 25px;
+        height: 60px;
     }
     .logo {
         display: flex;
         align-items: center;
+        width: 15px;
     }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
     .logo h1 {
         color: #fff;
     }
@@ -272,6 +280,7 @@ main {
         justify-content: center;
         border-radius: 1rem;
         max-width: 800px;
+        margin: 25px 0;
     }
     .categories .categories-title{
         flex: 1;
@@ -324,7 +333,6 @@ main {
         /* do for me copilot please */
         .categories{
             display: block;
-            margin-top: -80px;
             justify-content: center;
         }
         .categories-background{
@@ -399,11 +407,14 @@ main {
         max-width: 1200px;
         margin: auto;
     }
+    .event-content a{
+        text-decoration: none;
+    }
     .event-card{
         width: 300px;
         background-color: #170C38;
         border-radius: 0.5rem;
-        margin: 35px;
+        margin: 60px 30px 0 30px;
     }
     .event-img{
         width: 300px;
@@ -414,8 +425,8 @@ main {
         padding: 1rem;
     }
     .event-local img{
-        width: 5px;
-        height: 5px;
+        width: 13px;
+        height: 13px;
     }
     .event-local orange{
         color: #CC6820
