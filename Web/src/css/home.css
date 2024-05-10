@@ -78,6 +78,7 @@ orange{
     }
     .mobile-menu-icon {
         display: none;
+        margin: auto 0;
     }
     .mobile-menu {
         display: none;
