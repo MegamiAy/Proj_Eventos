@@ -7,19 +7,20 @@
         </div>
         <div class="nav-list">
             <ul>
-                <li class="nav-item"><a class="nav-link" href="#">INÍCIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">INÍCIO</a></li>
                 <li class="nav-item"><a class="nav-link" href="Web/view/events.html">EVENTOS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">CRIAR</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">PERFIL</a></li>
+                <li class="nav-item"><a class="nav-link" href="Web/view/login.html">PERFIL</a></li>
             </ul>
         </div>
         <div class="nav-pes">
             <div class="nav-pes-container">
-                <div class="nav-pes-icon">
+                <div class="nav-pes-icon" id="search-button" onclick="search()">
                     <img src="https://img.icons8.com/search" alt="search-icon">
                 </div>
-                <input type="text" placeholder="Pesquisar...">
+                <input type="text" id="search-input" placeholder="Pesquisar...">
             </div>
+            <div id="error-message" style="color: red; display: none;">Erro: Não foi possível realizar a busca.</div>
         </div>
         <div class="mobile-menu-icon">
             <button onclick="menuShow()">
@@ -32,7 +33,7 @@
             <li class="nav-item"><a class="nav-link" href="index.html">INÍCIO</a></li>
             <li class="nav-item"><a class="nav-link" href="Web/view/events.html">EVENTOS</a></li>
             <li class="nav-item"><a class="nav-link" href="#">CRIAR</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">PERFIL</a></li>
+            <li class="nav-item"><a class="nav-link" href="Web/view/login.html">PERFIL</a></li>
         </ul>
         <!-- <div class="nav-pes">
             <div class="nav-pes-container">
@@ -42,18 +43,18 @@
                 <input type="text" placeholder="Pesquisar...">
             </div>
         </div> -->
-        <div class="login-msg">
-            <p>Você já conhece o clube KAYA?</p>
+        <div class="lr-msg">
+            <h2>Você já conhece o clube KAYA?</h2>
         </div>
-        <div class="login-button">
+        <div class="lr-button">
             <button>
                 <a href="login.html">Não, é a primeira vez!</a>
             </button>
         </div>
-        <div class="login-msg-or">
-            <p>ou</p>
+        <div class="lr-msg-or">
+            <h2>ou</h2>
         </div>
-        <div class="login-button">
+        <div class="lr-button">
             <button>
                 <a href="login.html">Sim, já sou do clube!</a>
             </button>

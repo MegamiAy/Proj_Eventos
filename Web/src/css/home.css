@@ -1,3 +1,19 @@
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    z-index: 1000;
+    display: none; /* Oculto por padrão */
+}
+
 /* GERAL */
 *{
     margin: 0;
@@ -32,7 +48,7 @@ orange{
         width: 60px;
         height: 60px;
     }
-    .logo h1 {
+    .logo h2 {
         color: #fff;
     }
     .nav-list {
@@ -74,6 +90,7 @@ orange{
         padding: 5px;
     }
     .nav-pes img {
+        padding: 5px;
         width: 20px;
         height: 20px;
     }
@@ -89,19 +106,19 @@ orange{
     .nav-pes input:focus {
         outline: none;
     }
-    .login-button {
+    .lr-button {
         display: flex;
         align-items: center;
     }
-    .login-button button {
+    .lr-button button {
         border: none;
         padding: 10px 15px;
         border-radius: 0.5rem;
         background-color: #fff;
     }
-    .login-button button a {
+    .lr-button button a {
         text-decoration: none;
-        color: #000;
+        color: #fff;
         font-weight: 500;
         font-size: 1rem;
     }
@@ -139,12 +156,16 @@ orange{
         .mobile-menu ul {
             display: flex;
             flex-direction: column;
-            text-align: center;
+            text-align: left;
         }
         .mobile-menu .nav-item {
             display: block;
             padding: 1rem 2rem;
             border-bottom: #fff 2px solid;
+        }
+        .mobile-menu .nav-item:first-of-type{
+            border-top: #fff 2px solid;
+            margin: /*top right bottom left*/ 20px 0 0 0;
         }
         .mobile-menu .nav-item:hover {
             color: #fff;
@@ -159,27 +180,42 @@ orange{
         .mobile-menu .nav-pes img {
             padding: 5px;
         }
-        .login-msg{
+        .lr-msg{
             display: flex;
             justify-content: center;
+            text-align: center;
             padding: 1.5rem 0 0.5rem 0;
+            font-weight: 500;
         }
-        .login-msg-or{
+        .lr-msg h2{
+            font-size: 1rem;
+            flex-wrap: wrap;
+            max-width: 300px;
+        }
+        .lr-msg-or{
             display: flex;
             justify-content: center;
+            text-align: center;
             padding: 0.5rem;
+            font-weight: 500;
         }
-        .mobile-menu .login-button {
+        .lr-msg-or h2{
+            font-size: 1rem;
+        }
+        .mobile-menu .lr-button{
             display: block;
             padding: 0.5rem 2rem 0.5rem 2rem; /* top right bottom left */
         }
-        .mobile-menu .login-button button {
+        .mobile-menu .lr-button:last-of-type{
+            padding: 0.5rem 2rem 1.5rem 2rem; /* top right bottom left */
+        }
+        .mobile-menu .lr-button button {
             width: 100%;
             background-color: #CC6820;
         }
-        .mobile-menu .login-button button a {
+        .mobile-menu .lr-button button a {
             color: #fff;
-            font-weight: bolder;
+            font-weight: bold;
         }
         .open {
             display: block;
@@ -212,7 +248,6 @@ main {
         width: 800px;
         height: 400px;
         overflow: hidden;
-        order: 0;
     }
     .slides{
         width: 400%;
@@ -303,7 +338,6 @@ main {
             width: 90%;
             height: 300px;
             justify-content: center;
-            order: 0;
         }
         .slides{
             height: 300px;
@@ -333,11 +367,10 @@ main {
 
     /* TITULO */
     .inner-title{
-        order: 1;
         display: flex;
         justify-content: center;
     }
-    .inner-title h1{
+    .inner-title h2{
         font-size: 50px;
         text-align: center;
         padding: 0.5rem;
@@ -345,12 +378,10 @@ main {
     }
     @media screen and (max-width: 730px) {
         .inner-title{
-            order: 2;
             display: flex;
             justify-content: center;
         }
-        .inner-title h1{
-            order: 2;
+        .inner-title h2{
             font-size: 50px;
             text-align: center;
             padding: 0.5rem;
@@ -361,7 +392,6 @@ main {
 
     /* CATEGORIAS */
     .categories{
-        order: 2;
         display: flex;
         margin-top: 2rem;
         border-radius: 1rem;
@@ -398,7 +428,7 @@ main {
     }
     .cat-card h2{
         font-size: 1.3rem;
-        margin-top: 5px
+        margin-top: 5px;
     }
     .cat-img{
         padding: 1.0rem;

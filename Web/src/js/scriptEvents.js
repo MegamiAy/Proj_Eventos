@@ -23,6 +23,7 @@ function nextImage(){
     document.getElementById("radio"+count).checked = true;
 }
 
+
 // function pullHeader(){
 //     fetch('../view/template/header.html')
 //     .then(response => response.text())
