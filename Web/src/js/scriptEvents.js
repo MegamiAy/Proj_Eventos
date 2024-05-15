@@ -9,6 +9,10 @@ function menuShow() {
     }
 }
 
+function search(){
+    alert('Estamos trablhando para disponibilizar a função assim que possível!');
+}
+
 let count = 1;
 document.getElementById("radio1").checked = true;
 setInterval( function() {
