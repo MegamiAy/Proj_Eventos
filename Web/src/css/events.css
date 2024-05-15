@@ -20,47 +20,76 @@ orange{
     .nav-bar {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 8px 25px;
         height: 70px;
     }
     .logo {
         display: flex;
         align-items: center;
-        width: 15px;
     }
-
     .logo img {
         width: 60px;
         height: 60px;
     }
-
     .logo h1 {
         color: #fff;
     }
     .nav-list {
         display: flex;
         align-items: center;
+        flex-grow: 1;
+        margin-left: 25px;
     }
     .nav-list ul {
         display: flex;
-        justify-content: center;
         list-style: none;
+        margin: 0;
+        padding: 0;
     }
     .nav-item {
-        margin: 15px;
+        padding: 5px 15px;
     }
     .nav-item:hover {
         color: #fff;
-        text-decoration: underline;
+        text-decoration: none;
+        background-color: #CC6820;
+        border-radius: 0.5rem;
     }
     .nav-link {
         text-decoration: none;
         font-size: 1.15rem;
         color: #fff;
         font-weight: 400;
-        margin: 15px;
     }
-    .login-button{
+    .nav-pes {
+        display: flex;
+        align-items: center;
+    }
+    .nav-pes-container {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 5px;
+    }
+    .nav-pes img {
+        width: 20px;
+        height: 20px;
+    }
+    .nav-pes input {
+        border: 0;
+        padding: 0.5rem;
+        color: black;
+        font-weight: 500;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        margin-left: 5px;
+    }
+    .nav-pes input:focus {
+        outline: none;
+    }
+    .login-button {
         display: flex;
         align-items: center;
     }
@@ -74,21 +103,26 @@ orange{
         text-decoration: none;
         color: #000;
         font-weight: 500;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .mobile-menu-icon {
         display: none;
+        margin: auto 0;
     }
     .mobile-menu {
         display: none;
     }
 
-/* hEADER - MOBILE */
-    @media screen and (max-width: 730px) {
-        .nav-bar {
+
+    /* hEADER - MOBILE */
+    @media screen and (max-width: 800px) {
+        /* .nav-bar {
             padding: 1.5rem 2rem;
-        }
+        } */
         .nav-item {
+            display: none;
+        }
+        .nav-pes{
             display: none;
         }
         .login-button {
@@ -106,18 +140,46 @@ orange{
             display: flex;
             flex-direction: column;
             text-align: center;
-            padding-bottom: 1rem;
         }
         .mobile-menu .nav-item {
             display: block;
-            padding-top: 1.2rem;
+            padding: 1rem 2rem;
+            border-bottom: #fff 2px solid;
+        }
+        .mobile-menu .nav-item:hover {
+            color: #fff;
+            text-decoration: none;
+            background-color: #CC6820;
+            border-radius: 0;
+        }
+        .mobile-menu .nav-pes {
+            display: block;
+            padding: 1.5rem 2rem 0.75rem 2rem; /* top right bottom left */
+        }
+        .mobile-menu .nav-pes img {
+            padding: 5px;
+        }
+        .login-msg{
+            display: flex;
+            justify-content: center;
+            padding: 1.5rem 0 0.5rem 0;
+        }
+        .login-msg-or{
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
         }
         .mobile-menu .login-button {
             display: block;
-            padding: 1rem 2rem;
+            padding: 0.5rem 2rem 0.5rem 2rem; /* top right bottom left */
         }
         .mobile-menu .login-button button {
             width: 100%;
+            background-color: #CC6820;
+        }
+        .mobile-menu .login-button button a {
+            color: #fff;
+            font-weight: bolder;
         }
         .open {
             display: block;

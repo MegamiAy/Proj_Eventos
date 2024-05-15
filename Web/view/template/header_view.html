@@ -1,11 +1,11 @@
-<header id="header1">
+<header id="header">
     <nav class="nav-bar">
-        <div class="nav-bar-left">
-            <div class="logo">
-                <a href="../../../index.html">
-                  <img src="../src/img/white_logo.PNG" alt="KAYA" title="KAYA">
-                </a>
-            </div>
+        <div class="logo">
+            <a href="../../../index.html">
+                <img src="../src/img/white_logo.PNG" alt="KAYA" title="KAYA">
+            </a>
+        </div>
+        <div class="nav-list">
             <ul>
                 <li class="nav-item"><a class="nav-link" href="../../../index.html">INÍCIO</a></li>
                 <li class="nav-item"><a class="nav-link" href="events.html">EVENTOS</a></li>
@@ -13,35 +13,6 @@
                 <li class="nav-item"><a class="nav-link" href="#">PERFIL</a></li>
             </ul>
         </div>
-        <div class="nav-bar-right">
-            <div class="nav-pes">
-                <div class="nav-pes-container">
-                    <div class="nav-pes-icon">
-                        <img src="https://img.icons8.com/search" alt="search-icon">
-                    </div>
-                    <input type="text" placeholder="Pesquisar...">
-                </div>
-            </div>
-        </div>
-        <!-- <div class="login-button">
-            <button>
-                <a href="login.html">ENTRAR</a>                                            
-            </button>
-        </div> -->
-        <div class="mobile-menu-icon">
-            <button onclick="menuShow()">
-              <img class="icon" src="../src/img/menu_white_36dp.svg" alt="menu-icon">
-            </button>
-        </div>
-    </nav>
-    
-    <div class="mobile-menu">
-        <ul>
-            <li class="nav-item"><a class="nav-link" href="../../../index.html">INÍCIO</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">EVENTOS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">CRIAR</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">PERFIL</a></li>  
-        </ul>
         <div class="nav-pes">
             <div class="nav-pes-container">
                 <div class="nav-pes-icon">
@@ -50,9 +21,41 @@
                 <input type="text" placeholder="Pesquisar...">
             </div>
         </div>
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()">
+                <img class="icon" src="../src/img/menu_white_36dp.svg" alt="menu-icon">
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a class="nav-link" href="../../../index.html">INÍCIO</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">EVENTOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CRIAR</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">PERFIL</a></li>
+        </ul>
+        <!-- <div class="nav-pes">
+            <div class="nav-pes-container">
+                <div class="nav-pes-icon">
+                    <img src="https://img.icons8.com/search" alt="search-icon">
+                </div>
+                <input type="text" placeholder="Pesquisar...">
+            </div>
+        </div> -->
+        <div class="login-msg">
+            <p>Você já conhece o clube KAYA?</p>
+        </div>
         <div class="login-button">
             <button>
-                <a href="login.html">ENTRAR</a>
+                <a href="login.html">Não, é a primeira vez!</a>
+            </button>
+        </div>
+        <div class="login-msg-or">
+            <p>ou</p>
+        </div>
+        <div class="login-button">
+            <button>
+                <a href="login.html">Sim, já sou do clube!</a>
             </button>
         </div>
     </div>
