@@ -22,18 +22,15 @@ body {
 }
 
 body img {
-    width: 40%;
-    height: 32%;
+    width: 35%;
     position: absolute;
-    top: -3%;
     transform: translate(-50%, -50%);;
     z-index: 1;
-
 }
 
 .block {
-    height: 600px;
-    width: 500px;
+    height: 66%;
+    width: 30%;
     background-color: rgba(0, 0, 0, 0.500) ;
     color: white;
 
@@ -41,13 +38,13 @@ body img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 50px;
+    border-radius: 35px;
     text-align: center;
 }
 
 .tit {
-    margin-top: 18%;
-    font-size: 35px;
+    margin-top: 15%;
+    font-size: 25px;
     padding: 30px;
 }
 
@@ -57,9 +54,10 @@ form h4{
     font-weight: normal;
 }
 
-form input {
+input[type=text],
+input[type=password] {
     width:75%;
-    height: 40px;
+    height: 35px;
     margin: 10px 0;
     padding: 0 15px;
     border-radius: 5px;
@@ -67,9 +65,9 @@ form input {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-form button {
+input[type=submit] {
     width: 80%;
-    height: 40px;
+    height: 45px;
     background-color: #CC6820;
     color: white;
     border: none;
@@ -81,11 +79,21 @@ form button {
     font-size: 20px;
 }
 
-form a {
-    color: white;
-    text-decoration: none;
+#fog {
+    float: left;
+    margin-left: 9.5%;
+}
+
+#cad {
     float: right;
     margin-right: 9.5%;
+}
+
+
+form a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
 }
 
 form a:hover{
