@@ -118,7 +118,49 @@
             padding: 5px;
         }
 
+    }
+
+    /* PESQUISA */
+    .mobile-search-button{
+        display: none;
+    }
+    @media screen and (max-width: 800px){
+        .mobile-search-button{
+            display: block;
+            margin: 0 auto;
+            width: 70%;
+            text-align: center;
+            padding: 1.5rem;
         }
+        .mobile-pes-container {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 5px;
+        }
+        .mobile-search-button img {
+            padding: 5px;
+            width: 20px;
+            height: 20px;
+        }
+        .mobile-search-button input {
+            border: 0;
+            padding: 0.5rem;
+            color: black;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            margin-left: 5px;
+        }
+        .mobile-search-button input:focus {
+            outline: none;
+        }
+        .mobile-search-button input::placeholder {
+            color: black;
+            font-weight: 500;
+        }
+    }
 
     /* CATEGORIAS */
     .categories{
@@ -272,7 +314,7 @@
 
     /* Eventos */
     .event-content{
-        padding: 1rem;
+        padding: 0.5rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -283,18 +325,22 @@
         text-decoration: none;
     }
     .event-card{
-        width: 300px;
+        width: 250px;
         background-color: #170C38;
         border-radius: 0.5rem;
         margin: 60px 30px 0 30px;
     }
     .event-img{
-        width: 300px;
-        height: 150px;
+        width: 250px;
+        height: 125px;
         border-radius: 0.5rem;;
     }
     .event-info{
-        padding: 1rem;
+        padding: 0.7rem;
+    }
+    .event-info h2{
+        font-size: 1.2rem;
+        margin-top: 5px;
     }
     .event-local img{
         width: 13px;
