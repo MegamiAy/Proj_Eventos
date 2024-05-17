@@ -212,6 +212,12 @@
         align-self: center;
         margin: auto;
     }
+    .cat-card:hover .cat-img{
+        transform: translateY(-5px);
+        transition: 0.5s;
+        box-shadow: 0px 0px 30px #000000; /* 3px right, 3px down, 3px blur */
+        cursor: pointer;
+    }
     .cat-img img{
         width: 45px;
         height: 45px;
@@ -221,6 +227,12 @@
         color: #fff;
         text-align: center;
         align-content: center;
+    }
+    .cat-card:hover h2{
+        transform: translateY(-5px);
+        transition: 0.5s;
+        text-shadow: 0px 0px 30px #000000; /* 3px right, 3px down, 3px blur */
+        cursor: pointer;
     }
 
     /* CATEGORIAS - MOBILE */
@@ -330,6 +342,12 @@
         border-radius: 0.5rem;
         margin: 60px 30px 0 30px;
     }
+    .event-card:hover{
+        transform: translateY(-5px);
+        transition: 0.5s;
+        box-shadow: 0px 0px 30px #000000; /* 3px right, 3px down, 3px blur */
+        cursor: pointer;
+    }
     .event-img{
         width: 250px;
         height: 125px;
@@ -341,6 +359,18 @@
     .event-info h2{
         font-size: 1.2rem;
         margin-top: 5px;
+    }
+    .event-cat{
+        font-size: 0.8rem;
+        margin: 5px 0; /* 5px top and bottom */
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.5rem;
+        width: fit-content;
+    }
+    .event-cat a{
+        color: white;
+        text-shadow: 0px 0px 5px #000; /* 3px right, 3px down, 3px blur */
+        font-weight: bold;
     }
     .event-local img{
         width: 13px;

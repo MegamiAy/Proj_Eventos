@@ -51,10 +51,11 @@ orange{
         padding: 5px 15px;
     }
     .nav-item:hover {
-        color: #fff;
-        text-decoration: none;
+        transform: translateY(-3px);
+        transition: 0.5s;
         background-color: #CC6820;
         border-radius: 0.5rem;
+        cursor: pointer;
     }
     .nav-link {
         text-decoration: none;
@@ -72,6 +73,11 @@ orange{
         background-color: #fff;
         border-radius: 0.5rem;
         padding: 5px;
+    }
+    .nav-pes-container:hover {
+        transform: translateY(-2px);
+        transition: 0.5s;
+        box-shadow: 0px 0px 30px #000000;
     }
     .nav-pes img {
         padding: 5px;
@@ -120,6 +126,12 @@ orange{
             } */
             .nav-item {
                 display: none;
+            }
+            .nav-item:hover {
+                color: #fff;
+                text-decoration: none;
+                background-color: #CC6820;
+                border-radius: 0.5rem;
             }
             .nav-pes{
                 display: none;
@@ -249,7 +261,34 @@ main {
         
     }
 
-
+    /* Eventos - id */
+    #beer{
+        background-color: #B99200;
+    }
+    #show{
+        background-color: #8B1766;
+    }
+    #lazer{
+        background-color: #13B900;
+    }
+    #food{
+        background-color: #FF4233;
+    }
+    #esporte{
+        background-color: #0093B9;
+    }
+    #music{
+        background-color: #8D00B9;
+    }
+    #children{
+        background-color: #D3269C;
+    }
+    #moda{
+        background-color: #7776BA;
+    }
+    #outros{
+        background-color: #CC6820;
+    }
 
 /* FOOTER */
     .footer {
