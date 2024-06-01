@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Web/src/img/white_logo.PNG" type="image/x-icon">
-    <title>Início | KAYA</title>
-    <link rel="stylesheet" type="text/css"  href="Web/src/css/home.css">
+    <link rel="icon" href="../src/img/white_logo.PNG" type="image/x-icon">
+    <title>BAR | KAYA</title>
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/events.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -13,68 +14,21 @@
     <!-- O conteúdo do cabeçalho será carregado aqui -->
 </header>
 <main>
-    <center>
-    <!-- <div class="slider">
-            <div class="slides">
-
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-
-                <div class="slide first">
-                    <a href="#">
-                        <img src="../src/img/banners/banner1.jpg" alt="slide1" title="slide1">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="">
-                        <img src="../src/img/banners/banner2.jpg" alt="slide2" title="slide2">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="">
-                        <img src="../src/img/banners/banner3.jpg" alt="slide3" title="slide3">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="">
-                        <img src="../src/img/banners/banner4.jpg" alt="slide4" title="slide4">
-                    </a>
-                </div>
-
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                </div>
-            </div>
-
-            <div class="manual-navigation">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-            </div> 
-        </div> -->
-    </center>
-
     <div class="inner-title">
-        <h2>BARES</h2>
+        <h2>Bar</h2>
     </div>
 
     <div class="categories">
         <div class="categories-background">
             <div class="categories-title">
-                <h2>Qual é a sua vibe <orange>hoje?</orange></h2>
+                <h2>Veja <orange>mais!</orange></h2>
             </div>
             <div class="cat-cards">
                 <!-- Categoria 1 -->
                 <div class="cat-card">
-                    <a href="#">
+                    <a href="Web/view/catBar.html">
                         <div class="cat-img">
-                            <img src="Web/src/img/catogories/beer.png" alt="cat1" title="cat1">
+                            <img src="../src/img/catogories/beer.png" alt="cat1" title="cat1">
                         </div>
                         <h2>Bar</h2>
                     </a>
@@ -83,7 +37,7 @@
                 <div class="cat-card">
                     <a href="#">
                         <div class="cat-img">
-                            <img src="Web/src/img/catogories/show.png" alt="cat2" title="cat2">
+                            <img src="../src/img/catogories/show.png" alt="cat2" title="cat2">
                         </div>
                         <h2>Show</h2>
                     </a>
@@ -92,16 +46,16 @@
                 <div class="cat-card">
                     <a href="#">
                         <div class="cat-img">
-                            <img src="Web/src/img/catogories/ferias.png" alt="cat3" title="cat3">
+                            <img src="../src/img/catogories/ferias.png" alt="cat3" title="cat3">
                         </div>
-                        <h2>ferias</h2>
+                        <h2>Férias</h2>
                     </a>
                 </div>
                 <!-- Categoria 4 -->
                 <div class="cat-card">
                     <a href="#">
                         <div class="cat-img">
-                            <img src="Web/src/img/catogories/food.png" alt="cat4" title="cat4">
+                            <img src="../src/img/catogories/food.png" alt="cat4" title="cat4">
                         </div>
                         <h2>Comida</h2>
                     </a>
@@ -110,7 +64,7 @@
                 <div class="cat-card">
                     <a href="#">
                         <div class="cat-img">
-                            <img src="Web/src/img/catogories/more.png" alt="cat5" title="cat5">
+                            <img src="../src/img/catogories/more.png" alt="cat5" title="cat5">
                         </div>
                         <h2>Outros</h2>
                     </a>
@@ -124,118 +78,143 @@
             <a href="#">
                 <img src="Web/src/img/events/event01.png" class="event-img">
                 <div class="event-info">
-                    <h2>Evento de Música</h2>
+                    <h2>ELECTRO NIGHT</h2>
+                    <div class="event-cat" id="music">
+                        <a>Música</a>
+                    </div>
                     <div class="event-local">
                         <img src="Web/src/img/events/local.png">
-                        <orange>Descrição do evento</orange>
+                        <orange>Square Garden - Joinville (SC)</orange>
                     </div>
                 </div>
             </a>
         </div>
         <div class="event-card">
             <a href="#">
-                <img src="Web/src/img/events/event01.png" class="event-img">
+                <img src="Web/src/img/events/event02.jpg" class="event-img">
                 <div class="event-info">
-                    <h2>Evento de Música</h2>
+                    <h2>Festa Junina</h2>
+                    <div class="event-cat" id="outros">
+                        <a>Outros</a>
+                    </div>
                     <div class="event-local">
                         <img src="Web/src/img/events/local.png">
-                        <orange>Descrição do evento</orange>
+                        <orange>Galpão da Roça - Joinville (SC)</orange>
                     </div>
                 </div>
             </a>
         </div>
         <div class="event-card">
             <a href="#">
-                <img src="Web/src/img/events/event01.png" class="event-img">
+                <img src="Web/src/img/events/event03.jpg" class="event-img">
                 <div class="event-info">
-                    <h2>Evento de Música</h2>
+                    <h2>BEER DAY!</h2>
+                    <div class="event-cat" id="beer">
+                        <a>Bar</a>
+                    </div>
                     <div class="event-local">
                         <img src="Web/src/img/events/local.png">
-                        <orange>Descrição do evento</orange>
+                        <orange>Bar do Jorjão - Joinville (SC)</orange>
                     </div>
                 </div>
             </a>
         </div>
         <div class="event-card">
             <a href="#">
-                <img src="Web/src/img/events/event01.png" class="event-img">
+                <img src="Web/src/img/events/event04.jpg" class="event-img">
                 <div class="event-info">
-                    <h2>Evento de Música</h2>
+                    <h2>EMF: DJ Hardwall</h2>
+                    <div class="event-cat" id="show">
+                        <a>Show</a>
+                    </div>
                     <div class="event-local">
                         <img src="Web/src/img/events/local.png">
-                        <orange>Descrição do evento</orange>
+                        <orange>Casa dos Showszaços - Joinville (SC)</orange>
                     </div>
                 </div>
             </a>
         </div>
         <div class="event-card">
             <a href="#">
-                <img src="Web/src/img/events/event01.png" class="event-img">
+                <img src="Web/src/img/events/event05.jpg" class="event-img">
                 <div class="event-info">
-                    <h2>Evento de Música</h2>
+                    <h2>Summer Vibes: A Cara do Verão!</h2>
+                    <div class="event-cat" id="ferias">
+                        <a>ferias</a>
+                    </div>
                     <div class="event-local">
                         <img src="Web/src/img/events/local.png">
-                        <orange>Descrição do evento</orange>
+                        <orange>Enseada - São Francisco do Sul (SC)</orange>
                     </div>
                 </div>
             </a>
         </div>
         <div class="event-card">
             <a href="#">
-                <img src="Web/src/img/events/event01.png" class="event-img">
+                <img src="Web/src/img/events/event06.jpg" class="event-img">
                 <div class="event-info">
-                    <h2>Evento de Música</h2>
+                    <h2>HEALTHY HAPPY LIFE</h2>
+                    <div class="event-cat" id="food">
+                        <a>Comida</a>
+                    </div>
                     <div class="event-local">
                         <img src="Web/src/img/events/local.png">
-                        <orange>Descrição do evento</orange>
+                        <orange>Restaurant Chiqué - Florianópolis (SC)</orange>
                     </div>
                 </div>
             </a>
         </div>
         <div class="event-card">
             <a href="#">
-                <img src="Web/src/img/events/event01.png" class="event-img">
+                <img src="Web/src/img/events/event07.jpg" class="event-img">
                 <div class="event-info">
-                    <h2>Evento de Música</h2>
+                    <h2>Y2K Fashion Show</h2>
+                    <div class="event-cat" id="moda">
+                        <a>Moda</a>
+                    </div>
                     <div class="event-local">
                         <img src="Web/src/img/events/local.png">
-                        <orange>Descrição do evento</orange>
+                        <orange>Fachion Feshê - São Paulo (SP)</orange>
                     </div>
                 </div>
             </a>
         </div>
         <div class="event-card">
             <a href="#">
-                <img src="Web/src/img/events/event01.png" class="event-img">
+                <img src="Web/src/img/events/event08.jpg" class="event-img">
                 <div class="event-info">
-                    <h2>Evento de Música</h2>
+                    <h2>Corrida</h2>
+                    <div class="event-cat" id="esporte">
+                        <a>Esporte</a>
+                    </div>
                     <div class="event-local">
                         <img src="Web/src/img/events/local.png">
-                        <orange>Descrição do evento</orange>
+                        <orange>Parque do Orvalho - Xuxu (AB)</orange>
                     </div>
                 </div>
             </a>
         </div>
         <div class="event-card">
             <a href="#">
-                <img src="Web/src/img/events/event01.png" class="event-img">
+                <img src="Web/src/img/events/event09.jpg" class="event-img">
                 <div class="event-info">
-                    <h2>Evento de Música</h2>
+                    <h2>Dia das Crianças</h2>
+                    <div class="event-cat" id="children">
+                        <a>Crianças</a>
+                    </div>
                     <div class="event-local">
                         <img src="Web/src/img/events/local.png">
-                        <orange>Descrição do evento</orange>
+                        <orange>Só Aleglia! - Ituru (ZY)</orange>
                     </div>
                 </div>
             </a>
-        </div>
-
         </div>
     </div>
 </main>
 <footer>
     <div class="footer">
         <div class="footer-logo">
-            <img src="Web/src/img/white_logo.PNG" alt="KAYA" title="KAYA" width="80" height="80">
+            <img src="../src/img/white_logo.PNG" alt="KAYA" title="KAYA" width="80" height="80">
         </div>
         <div class="footer-list">
             <ul>
@@ -257,9 +236,9 @@
         </div>
     </div>
 </footer>
-<script src="Web/src/js/scriptHome.js"></script>
+<script src="../src/js/scriptEvents.js"></script>
 <script>
-    fetch('Web/view/template/header.html')
+    fetch('template/headerView.html')
         .then(response => response.text())
         .then(html => {
             // Insira o conteúdo do cabeçalho no elemento com id "header"

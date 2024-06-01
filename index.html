@@ -13,66 +13,35 @@
 <header id="header">
     <!-- O conteúdo do cabeçalho será carregado aqui -->
 </header>
-<main>
-    <center>
-    <!-- <div class="slider">
-            <div class="slides">
-
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-
-                <div class="slide first">
-                    <a href="#">
-                        <img src="../src/img/banners/banner1.jpg" alt="slide1" title="slide1">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="">
-                        <img src="../src/img/banners/banner2.jpg" alt="slide2" title="slide2">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="">
-                        <img src="../src/img/banners/banner3.jpg" alt="slide3" title="slide3">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="">
-                        <img src="../src/img/banners/banner4.jpg" alt="slide4" title="slide4">
-                    </a>
-                </div>
-
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                </div>
-            </div>
-
-            <div class="manual-navigation">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-            </div> 
-        </div> -->
-    </center>
-
-    <div class="inner-title">
-        <h2>Início</h2>
+<div class="slider">
+    <div class="slides">
+        <img src="Web/src/img/banners/banner1.jpg" class="slide" alt="Image 1">
+        <img src="Web/src/img/banners/banner2.jpg" class="slide" alt="Image 2">
+        <img src="Web/src/img/banners/banner3.jpg" class="slide" alt="Image 3">
+        <img src="Web/src/img/banners/banner4.jpg" class="slide" alt="Image 4">
     </div>
+    <div class="navigation">
+        <div class="nav-dot" data-slide="0"></div>
+        <div class="nav-dot" data-slide="1"></div>
+        <div class="nav-dot" data-slide="2"></div>
+    </div>
+</div>
 
-    <div class="mobile-search-button">
+<div class="inner-title">
+    <h2>Início</h2>
+</div>
+
+<main>
+
+    
+    <!-- <div class="mobile-search-button">
         <div class="mobile-pes-container">
             <div class="mobile-pes-icon" id="search-button" onclick="search()">
                 <img src="https://img.icons8.com/search" alt="search-icon">
             </div>
             <input type="text" id="search-input" placeholder="Pesquisar...">
         </div>
-    </div>
+    </div> -->
 
     <div class="categories">
         <div class="categories-background">
@@ -293,6 +262,7 @@
     </div>
 </footer>
 <script src="Web/src/js/scriptHome.js"></script>
+<script src="Web/src/js/scriptSlider.js"></script>
 <script>
     fetch('Web/view/template/header.html')
         .then(response => response.text())
