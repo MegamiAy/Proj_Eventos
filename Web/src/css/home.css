@@ -19,28 +19,27 @@
     object-fit: cover;
 }
 
-button {
+.indicators {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
+    border-radius: 50%;
     cursor: pointer;
 }
 
-button:hover {
+.indicator.active {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
 
     /* CATEGORIAS */
     .categories{
@@ -186,9 +185,9 @@ button:hover {
         }
     }
     @media screen and (max-width: 400px) {
-        .categories .categories-title{
+        /* .categories .categories-title{
             
-        }
+        } */
         .cat-img{
             padding: 0.7rem;
             border-radius: 50%;

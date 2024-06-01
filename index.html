@@ -20,8 +20,12 @@
         <img src="Web/src/img/banners/banner3.jpg" class="slide" alt="Image 3">
         <img src="Web/src/img/banners/banner4.jpg" class="slide" alt="Image 4">
     </div>
-    <button class="prev" onclick="prevSlide()">&#10094;</button>
-    <button class="next" onclick="nextSlide()">&#10095;</button>
+    <div class="indicators">
+        <span class="indicator" onclick="showSlide(0)"></span>
+        <span class="indicator" onclick="showSlide(1)"></span>
+        <span class="indicator" onclick="showSlide(2)"></span>
+        <span class="indicator" onclick="showSlide(3)"></span>
+    </div>
 </div>
 
 <div class="inner-title">
@@ -48,7 +52,7 @@
             <div class="cat-cards">
                 <!-- Categoria 1 -->
                 <div class="cat-card">
-                    <a href="Web/view/catBar.html">
+                    <a href="Web/view/bar.html">
                         <div class="cat-img">
                             <img src="Web/src/img/catogories/beer.png" alt="cat1" title="cat1">
                         </div>
@@ -57,7 +61,7 @@
                 </div>
                 <!-- Categoria 2 -->
                 <div class="cat-card">
-                    <a href="#">
+                    <a href="Web/view/show.html">
                         <div class="cat-img">
                             <img src="Web/src/img/catogories/show.png" alt="cat2" title="cat2">
                         </div>
