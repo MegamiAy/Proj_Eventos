@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../src/img/white_logo.PNG" type="image/x-icon">
+    <title>EVENTOS | KAYA</title>
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<header id="header">
+    <!-- O conteúdo do cabeçalho será carregado aqui -->
+</header>
+<main>
+    <div class="inner-title">
+        <h2>Local</h2>
+    </div>
+
+    <!-- Conteúdo da página -->
+
+</main>
+<footer>
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="../src/img/white_logo.PNG" alt="KAYA" title="KAYA" width="80" height="80">
+        </div>
+        <div class="footer-list">
+            <ul>
+                <li class="footer-item"><a class="footer-link" href="#">INÍCIO</a></li>
+                <li class="footer-item"><a class="footer-link" href="#">EVENTOS</a></li>
+                <li class="footer-item"><a class="footer-link" href="#">CRIAR</a></li>
+                <li class="footer-item"><a class="footer-link" href="#">PERFIL</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <ul>
+                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-credits">
+            <p>© 2021 KAYA. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+<script src="../src/js/scriptEvents.js"></script>
+<script>
+    fetch('template/headerView.html')
+        .then(response => response.text())
+        .then(html => {
+            // Insira o conteúdo do cabeçalho no elemento com id "header"
+            document.getElementById('header').innerHTML = html;
+        })
+        .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
+</script>
+</body>
+</html>
