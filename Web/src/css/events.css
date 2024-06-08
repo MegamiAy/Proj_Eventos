@@ -1,55 +1,81 @@
-       /* Eventos */
-    .event-content{
-        padding: 0.5rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 1200px;
-        margin: auto;
-    }
-    .event-content a{
-        text-decoration: none;
-    }
-    .event-card{
-        width: 250px;
-        background-color: #170C38;
-        border-radius: 0.5rem;
-        margin: 60px 30px 0 30px;
-    }
-    .event-card:hover{
-        transform: translateY(-5px);
-        transition: 0.5s;
-        box-shadow: 0px 0px 30px #000000; /* 3px right, 3px down, 3px blur */
-        cursor: pointer;
-    }
-    .event-img{
-        width: 250px;
-        height: 125px;
-        border-radius: 0.5rem;;
-    }
-    .event-info{
-        padding: 0.7rem;
-    }
-    .event-info h2{
-        font-size: 1.2rem;
-        margin-top: 5px;
-    }
-    .event-cat{
-        font-size: 0.8rem;
-        margin: 5px 0; /* 5px top and bottom */
-        padding: 0.2rem 0.5rem;
-        border-radius: 0.5rem;
-        width: fit-content;
-    }
-    .event-cat a{
-        color: white;
-        text-shadow: 0px 0px 5px #000; /* 3px right, 3px down, 3px blur */
-        font-weight: bold;
-    }
-    .event-local img{
-        width: 13px;
-        height: 13px;
-    }
-    .event-local orange{
-        color: #CC6820
-    }
+/* Eventos */
+.event-content{
+    padding: 0.5rem;
+    overflow-x: auto; /* Adiciona rolagem horizontal */
+    white-space: nowrap; /* Mantém os elementos na mesma linha */
+    display: flex;
+    justify-content: flex-start; /* Começa a rolagem no início */
+    max-width: 100%; /* Alteração do máximo para permitir a rolagem horizontal */
+    margin: auto;
+}
+.event-content::-webkit-scrollbar {
+    display: none; /* Remover a barra de rolagem do navegador */
+}
+.event-card {
+    flex: 0 0 auto; /* Permite que os cards tenham tamanho fixo */
+    width: 250px;
+    background-color: #170C38;
+    border-radius: 0.5rem;
+    margin-right: 30px; /* Espaçamento entre os cards */
+}
+.event-card:last-child {
+    margin-right: 0; /* Remove o espaçamento à direita do último card */
+}
+.event-card:hover {
+    transform: translateY(-5px);
+    transition: 0.5s;
+    box-shadow: 0px 0px 30px #000000; /* 3px right, 3px down, 3px blur */
+    cursor: pointer;
+}
+.event-img{
+    width: 250px;
+    height: 125px;
+    border-radius: 0.5rem;
+}
+.event-info{
+    padding: 0.7rem;
+}
+.event-info h2{
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+.event-cat{
+    font-size: 0.8rem;
+    margin: 5px 0; /* 5px top and bottom */
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+}
+.event-cat a{
+    color: white;
+    text-shadow: 0px 0px 5px #000; /* 3px right, 3px down, 3px blur */
+    font-weight: bold;
+}
+.event-local img{
+    width: 13px;
+    height: 13px;
+}
+.event-local orange{
+    color: #CC6820
+}
+
+/* Novos estilos para os botões de navegação */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.nav-button-left {
+    left: 0;
+}
+
+.nav-button-right {
+    right: 0;
+}
