@@ -7,6 +7,9 @@
 .clean{
     clear: both;
 }
+a{
+    text-decoration: none;
+}
 
 /* CRIADOS */
 orange{

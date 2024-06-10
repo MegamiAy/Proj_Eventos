@@ -1,0 +1,102 @@
+.error{
+    color: red;
+    font-size: 0.8rem;
+}
+.profile{
+    display: flex;
+    justify-content: center;
+}
+.p-1{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    order: 0;
+}
+    .p-1 .p-container{
+        /* background-color: #170C38; */
+        border-radius: 0.5rem;
+        text-align: center;
+        margin: 1rem;
+    }
+    .p-1 img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 10px solid #170C38;
+    }
+.p-2{
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    width: fit-content;
+}
+    .p-2 .p-container{
+        background-color: #170C38;
+        padding: 1.5rem;
+        border-radius: 0.5rem;    
+        margin: 1rem; 
+    }
+    .p-container h2{
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 0 0 0.75rem 0;
+    }
+        .p-container form{
+            display: flex;
+            min-width: 100%;
+        }
+            .p-info{
+                display: flex;
+                flex-direction: column;
+                min-width: max-content;
+            }
+            .p-line{
+                display: flex;
+                flex-direction: row;
+                min-width: max-content;
+            }
+            .p-input{
+                display: flex;
+                flex-direction: column;
+                margin: 0.5rem 0 0 0;
+                min-width: max-content;
+            }
+            .p-input:not(:last-child){
+                margin: 0.5rem 1rem 0 0;
+            }
+            form input{
+                height: 35px;
+                margin: 0.5rem 0;
+                padding: 0 0.5rem;
+                border-radius: 0.5rem;
+                background-color: rgba(255, 255, 255, 0.9);
+                color: black;
+                min-width: max-content;
+            }
+        #cpf, #phone, #cep, #birth{
+            width: min-content;
+        }
+        #address{
+            width: 300px;
+        }
+        .p-container form input[type=submit]{
+            width: 100%;
+            height: 35px;
+            background-color: #CC6820;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            margin: 1rem 0 0 0; /*top bottom*/
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .p-container form a{
+            font-size: 0.75rem;
+            color: white;
+            text-decoration: none;
+        }
+
+@media screen and (max-width: 768px){
+}

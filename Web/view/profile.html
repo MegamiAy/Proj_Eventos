@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../src/img/white_logo.PNG" type="image/x-icon">
+    <title>EVENTOS | KAYA</title>
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<header id="header">
+    <!-- O conteúdo do cabeçalho será carregado aqui -->
+</header>
+<main>
+    <div class="inner-title">
+        <h2>PERFIL</h2>
+    </div>
+
+    <div class="profile">
+        <div class="p-1">
+            <div class="p-container">
+                <img src="../src/img/profile.jpg" alt="profile" title="profile">
+                <h2>Nome do Usuário</h2>
+                <h4>@nome_do_usuário</h4>
+            </div>  
+        </div>
+        <div class="p-2">
+            <div class="p-container">
+                <h2>INFORMAÇÕES PESSOAIS ADICIONAIS</h2>
+                <form action="">
+                    <div class="p-info">
+                        <div class="p-line">
+                            <div class="p-input">
+                                <label for="cpf">CPF</label>
+                                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14">
+                                <span class="error" id="cpfError"></span>    
+                            </div>
+                            <div class="p-input">
+                                <label for="phone">Telefone</label>
+                                <input type="text" id="phone" name="phone" placeholder="(00) 00000-0000" maxlength="15">
+                                <span class="error" id="phoneError"></span>
+                            </div>
+                            <div class="p-input">
+                                <label for="birth">Nascimento</label>
+                                <input type="date" id="birth" name="birth">
+                                <span class="error" id="birthError"></span>
+                            </div>
+                        </div>
+                        <div class="p-line">
+                            <div class="p-input">
+                                <label for="address">CEP</label>
+                                <input type="text" id="cep" name="cep" placeholder="000-00000" maxlength="8">
+                                <span class="error" id="addressError"></span>
+                            </div>
+                            <div class="p-input">
+                                <label for="address">Endereço</label>
+                                <input type="text" id="address" name="address" placeholder="Rua, Número, Bairro" maxlength="100">
+                                <span class="error" id="addressError"></span>
+                            </div>
+                        </div>
+                        <div class="p-line">
+                            <input type="submit" value="SALVAR">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</main>
+<footer>
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="../src/img/white_logo.PNG" alt="KAYA" title="KAYA" width="80" height="80">
+        </div>
+        <div class="footer-list">
+            <ul>
+                <li class="footer-item"><a class="footer-link" href="#">INÍCIO</a></li>
+                <li class="footer-item"><a class="footer-link" href="#">EVENTOS</a></li>
+                <li class="footer-item"><a class="footer-link" href="#">CRIAR</a></li>
+                <li class="footer-item"><a class="footer-link" href="#">PERFIL</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <ul>
+                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-credits">
+            <p>© 2024 KAYA. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function formatCPF(cpf) {
+            cpf = cpf.replace(/\D/g, ''); // Remove tudo que não é dígito
+            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o primeiro ponto
+            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o segundo ponto
+            cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Coloca o traço
+            return cpf;
+        }
+
+        function formatPhone(phone) {
+            phone = phone.replace(/\D/g, ''); // Remove tudo que não é dígito
+            phone = phone.replace(/(\d{2})(\d)/, '($1) $2'); // Coloca os parênteses
+            phone = phone.replace(/(\d{5})(\d)/, '$1-$2'); // Coloca o traço
+            return phone;
+        }
+
+        document.getElementById('cpf').addEventListener('input', function() {
+            this.value = formatCPF(this.value);
+        });
+
+        document.getElementById('phone').addEventListener('input', function() {
+            this.value = formatPhone(this.value);
+        });
+
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            let valid = true;
+
+            // CPF Validation
+            const cpf = document.getElementById('cpf').value;
+            const cpfError = document.getElementById('cpfError');
+            if (!/^\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(cpf)) {
+                cpfError.textContent = 'CPF inválido. Formato correto: 000.000.000-00';
+                valid = false;
+            } else {
+                cpfError.textContent = '';
+            }
+
+            // Phone Validation
+            const phone = document.getElementById('phone').value;
+            const phoneError = document.getElementById('phoneError');
+            if (!/^\(\d{2}\) \d{5}-\d{4}$/.test(phone)) {
+                phoneError.textContent = 'Telefone inválido. Formato correto: (00) 00000-0000';
+                valid = false;
+            } else {
+                phoneError.textContent = '';
+            }
+
+            // Birth Date Validation
+            const birth = document.getElementById('birth').value;
+            const birthError = document.getElementById('birthError');
+            if (new Date(birth) > new Date()) {
+                birthError.textContent = 'Data de nascimento não pode ser no futuro.';
+                valid = false;
+            } else {
+                birthError.textContent = '';
+            }
+
+            // Address Validation
+            const address = document.getElementById('address').value;
+            const addressError = document.getElementById('addressError');
+            if (address.length > 100) {
+                addressError.textContent = 'Endereço não pode ter mais que 100 caracteres.';
+                valid = false;
+            } else {
+                addressError.textContent = '';
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+</script>
+
+<script src="../src/js/scriptEvents.js"></script>
+<script>
+    fetch('template/headerView.html')
+        .then(response => response.text())
+        .then(html => {
+            // Insira o conteúdo do cabeçalho no elemento com id "header"
+            document.getElementById('header').innerHTML = html;
+        })
+        .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
+</script>
+<script>
+    // Função para rolar o conteúdo dos eventos
+    function scrollEventContent(scrollOffset) {
+        const eventContent = document.querySelector('.event-content');
+        eventContent.scrollBy({ left: scrollOffset, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>
