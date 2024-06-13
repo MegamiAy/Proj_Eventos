@@ -1,6 +1,7 @@
 .error{
     color: red;
     font-size: 0.8rem;
+    padding: 0.2rem 0 0 0;
 }
 .profile{
     display: flex;
@@ -51,35 +52,23 @@
                 flex-direction: column;
                 min-width: max-content;
             }
-            .p-line{
-                display: flex;
-                flex-direction: row;
-                min-width: max-content;
-            }
             .p-input{
                 display: flex;
                 flex-direction: column;
                 margin: 0.5rem 0 0 0;
-                min-width: max-content;
+                width: 100%;
             }
-            .p-input:not(:last-child){
-                margin: 0.5rem 1rem 0 0;
-            }
-            form input{
+            input{
                 height: 35px;
-                margin: 0.5rem 0;
-                padding: 0 0.5rem;
+                padding: 0 0 0 0.5rem;
                 border-radius: 0.5rem;
                 background-color: rgba(255, 255, 255, 0.9);
                 color: black;
-                min-width: max-content;
+                font-size: 16px;
             }
-        #cpf, #phone, #cep, #birth{
-            width: min-content;
-        }
-        #address{
-            width: 300px;
-        }
+            #birth, #cep{
+                max-width: fit-content;
+            }
         .p-container form input[type=submit]{
             width: 100%;
             height: 35px;

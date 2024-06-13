@@ -29,46 +29,32 @@
         <div class="p-2">
             <div class="p-container">
                 <h2>INFORMAÇÕES PESSOAIS ADICIONAIS</h2>
-                <form action="">
-                    <div class="p-info">
-                        <div class="p-line">
-                            <div class="p-input">
-                                <label for="cpf">CPF</label>
-                                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14">
-                                <span class="error" id="cpfError"></span>    
-                            </div>
-                            <div class="p-input">
-                                <label for="phone">Telefone</label>
-                                <input type="text" id="phone" name="phone" placeholder="(00) 00000-0000" maxlength="15">
-                                <span class="error" id="phoneError"></span>
-                            </div>
-                            <div class="p-input">
-                                <label for="birth">Nascimento</label>
-                                <input type="date" id="birth" name="birth">
-                                <span class="error" id="birthError"></span>
-                            </div>
-                        </div>
-                        <div class="p-line">
-                            <div class="p-input">
-                                <label for="address">CEP</label>
-                                <input type="text" id="cep" name="cep" placeholder="000-00000" maxlength="8">
-                                <span class="error" id="addressError"></span>
-                            </div>
-                            <div class="p-input">
-                                <label for="address">Endereço</label>
-                                <input type="text" id="address" name="address" placeholder="Rua, Número, Bairro" maxlength="100">
-                                <span class="error" id="addressError"></span>
-                            </div>
-                        </div>
-                        <div class="p-line">
-                            <input type="submit" value="SALVAR">
-                        </div>
+                <form id="myForm" class="p-info" action="">
+                    <div class="p-input">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14">
+                        <span class="error" id="cpfError"></span>    
                     </div>
+                    <div class="p-input">
+                        <label for="phone">Telefone</label>
+                        <input type="text" id="phone" name="phone" placeholder="(00) 00000-0000" maxlength="15">
+                        <span class="error" id="phoneError"></span>
+                    </div>
+                    <div class="p-input">
+                        <label for="birth">Nascimento</label>
+                        <input type="date" id="birth" name="birth">
+                        <span class="error" id="birthError"></span>
+                    </div>
+                    <div class="p-input">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9">
+                        <span class="error" id="cepError"></span>
+                    </div>
+                    <input type="submit" value="SALVAR">
                 </form>
             </div>
         </div>
     </div>
-    
 </main>
 <footer>
     <div class="footer">
@@ -97,77 +83,143 @@
 </footer>
 
 <script>
+    // Função para formatar CPF
     function formatCPF(cpf) {
-            cpf = cpf.replace(/\D/g, ''); // Remove tudo que não é dígito
-            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o primeiro ponto
-            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o segundo ponto
-            cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Coloca o traço
-            return cpf;
+        cpf = cpf.replace(/\D/g, ''); // Remove tudo que não é dígito
+        cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o primeiro ponto
+        cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o segundo ponto
+        cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Coloca o traço
+        return cpf;
+    }
+
+    // Função para formatar telefone
+    function formatPhone(phone) {
+        phone = phone.replace(/\D/g, ''); // Remove tudo que não é dígito
+        phone = phone.replace(/(\d{2})(\d)/, '($1) $2'); // Coloca os parênteses
+        phone = phone.replace(/(\d{5})(\d)/, '$1-$2'); // Coloca o traço
+        return phone;
+    }
+
+    // Função para formatar CEP
+    function formatCEP(cep) {
+        cep = cep.replace(/\D/g, ''); // Remove tudo que não é dígito
+        cep = cep.replace(/^(\d{5})(\d{3})/, '$1-$2'); // Coloca o traço apenas antes dos últimos 3 dígitos
+        return cep;
+    }
+
+    // Função para validar CPF
+    function validarCPF(cpf) {
+        cpf = cpf.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+        if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) {
+            return false; // CPF deve ter 11 dígitos e não pode ter todos os dígitos iguais
         }
 
-        function formatPhone(phone) {
-            phone = phone.replace(/\D/g, ''); // Remove tudo que não é dígito
-            phone = phone.replace(/(\d{2})(\d)/, '($1) $2'); // Coloca os parênteses
-            phone = phone.replace(/(\d{5})(\d)/, '$1-$2'); // Coloca o traço
-            return phone;
+        // Validação do primeiro dígito verificador
+        let add = 0;
+        for (let i = 0; i < 9; i++) {
+            add += parseInt(cpf.charAt(i)) * (10 - i);
+        }
+        let rev = 11 - (add % 11);
+        if (rev === 10 || rev === 11) {
+            rev = 0;
+        }
+        if (rev !== parseInt(cpf.charAt(9))) {
+            return false; // Primeiro dígito verificador inválido
         }
 
-        document.getElementById('cpf').addEventListener('input', function() {
-            this.value = formatCPF(this.value);
-        });
+        // Validação do segundo dígito verificador
+        add = 0;
+        for (let i = 0; i < 10; i++) {
+            add += parseInt(cpf.charAt(i)) * (11 - i);
+        }
+        rev = 11 - (add % 11);
+        if (rev === 10 || rev === 11) {
+            rev = 0;
+        }
+        if (rev !== parseInt(cpf.charAt(10))) {
+            return false; // Segundo dígito verificador inválido
+        }
 
-        document.getElementById('phone').addEventListener('input', function() {
-            this.value = formatPhone(this.value);
-        });
+        return true; // CPF válido
+    }
 
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            let valid = true;
+    // Adicionando event listeners para formatar os campos
+    document.getElementById('cpf').addEventListener('input', function() {
+        this.value = formatCPF(this.value);
+    });
 
-            // CPF Validation
-            const cpf = document.getElementById('cpf').value;
-            const cpfError = document.getElementById('cpfError');
-            if (!/^\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(cpf)) {
-                cpfError.textContent = 'CPF inválido. Formato correto: 000.000.000-00';
-                valid = false;
-            } else {
-                cpfError.textContent = '';
-            }
+    document.getElementById('phone').addEventListener('input', function() {
+        this.value = formatPhone(this.value);
+    });
 
-            // Phone Validation
-            const phone = document.getElementById('phone').value;
-            const phoneError = document.getElementById('phoneError');
-            if (!/^\(\d{2}\) \d{5}-\d{4}$/.test(phone)) {
-                phoneError.textContent = 'Telefone inválido. Formato correto: (00) 00000-0000';
-                valid = false;
-            } else {
-                phoneError.textContent = '';
-            }
+    document.getElementById('cep').addEventListener('input', function() {
+        this.value = formatCEP(this.value);
+    });
 
-            // Birth Date Validation
-            const birth = document.getElementById('birth').value;
-            const birthError = document.getElementById('birthError');
-            if (new Date(birth) > new Date()) {
+    // Event listener para validação do formulário
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        let valid = true;
+
+        // CPF Validation
+        const cpf = document.getElementById('cpf').value;
+        const cpfError = document.getElementById('cpfError');
+        if (!validarCPF(cpf)) {
+            cpfError.textContent = 'CPF inválido. Verifique o formato e os dígitos verificadores.';
+            valid = false;
+        } else {
+            cpfError.textContent = '';
+        }
+
+        // Phone Validation
+        const phone = document.getElementById('phone').value;
+        const phoneError = document.getElementById('phoneError');
+        if (!/^\(\d{2}\) \d{5}-\d{4}$/.test(phone)) {
+            phoneError.textContent = 'Telefone inválido. Formato correto: (00) 00000-0000';
+            valid = false;
+        } else {
+            phoneError.textContent = '';
+        }
+
+        // Birth Date Validation
+        const birth = document.getElementById('birth').value;
+        const birthError = document.getElementById('birthError');
+        if (!birth) {
+            birthError.textContent = 'Data de nascimento é obrigatória.';
+            valid = false;
+        } else {
+            const birthDate = new Date(birth);
+            const currentDate = new Date();
+            if (birthDate >= currentDate) {
                 birthError.textContent = 'Data de nascimento não pode ser no futuro.';
                 valid = false;
             } else {
                 birthError.textContent = '';
             }
+        }
 
-            // Address Validation
-            const address = document.getElementById('address').value;
-            const addressError = document.getElementById('addressError');
-            if (address.length > 100) {
-                addressError.textContent = 'Endereço não pode ter mais que 100 caracteres.';
-                valid = false;
-            } else {
-                addressError.textContent = '';
-            }
+        // CEP Validation
+        const cep = document.getElementById('cep').value;
+        const cepError = document.getElementById('cepError');
+        if (!/^\d{5}-\d{3}$/.test(cep)) {
+            cepError.textContent = 'CEP inválido. Formato correto: 00000-000';
+            valid = false;
+        } else {
+            cepError.textContent = '';
+        }
 
-            if (!valid) {
-                event.preventDefault();
-            }
-        });
+        // Exibir mensagem de sucesso se o formulário for válido
+        if (valid) {
+            alert('Informações salvas com sucesso!');
+        }
+
+        // Impedir o envio do formulário se houver campos inválidos
+        if (!valid) {
+            event.preventDefault();
+        }
+    });
 </script>
+
+
 
 <script src="../src/js/scriptEvents.js"></script>
 <script>
