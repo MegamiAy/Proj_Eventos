@@ -4,139 +4,299 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Container de Cards</title>
+    <link rel="stylesheet" href="../src/css/global.css">
     <link rel="stylesheet" href="../src/css/test-events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <section>
-            <h2>Título 1</h2>
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                        <span class="category-icon"><i class="fas fa-tag">categoria</i></span>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="card-title">Título do Card</h3>
-                            <span class="card-time">10:00 AM</span>
-                        </div>
-                        <div class="card-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="card-address">Endereço do Evento</span>
-                        </div>
-                        <a href="#" class="card-link">VER MAIS</a>
-                    </div>
-                </div>
-                <div class="card">Card 2</div>
-                <div class="card">Card 3</div>
-                <div class="card">Card 4</div>
-                <div class="card">Card 5</div>
-                <div class="card">Card 6</div>
-                <div class="card">Card 7</div>
-                <div class="card">Card 8</div>
-                <div class="card">Card 9</div>
-                <div class="card">Card 10</div>
-                <div class="card">Card 11</div>
-                <div class="card">Card 12</div>
-                <div class="card">Card 13</div>
-                <div class="card">Card 14</div>
-                <div class="card">Card 15</div>
-                <div class="card">Card 16</div>
-            </div>
-        </section>
-        <section>
-            <h2>Título 2</h2>
-            <div class="card-container">
-                <div class="card">Card 1</div>
-                <div class="card">Card 2</div>
-                <div class="card">Card 3</div>
-                <div class="card">Card 4</div>
-                <div class="card">Card 5</div>
-            </div>
-        </section>
-        <section>
-            <h2>Título 3</h2>
-            <div class="card-container">
-                <div class="card">Card 1</div>
-                <div class="card">Card 2</div>
-                <div class="card">Card 3</div>
-                <div class="card">Card 4</div>
-                <div class="card">Card 5</div>
-            </div>
-        </section>
-        <section>
-            <h2>Título 4</h2>
-            <div class="card-container">
-                <div class="card">Card 1</div>
-                <div class="card">Card 2</div>
-                <div class="card">Card 3</div>
-                <div class="card">Card 4</div>
-                <div class="card">Card 5</div>
-            </div>
-        </section>
-        <section>
-            <h2>Título 5</h2>
-            <div class="card-container">
-                <div class="card">Card 1</div>
-                <div class="card">Card 2</div>
-                <div class="card">Card 3</div>
-                <div class="card">Card 4</div>
-                <div class="card">Card 5</div>
-            </div>
-        </section>
+<!-- Navegação -->
+<header id="header">
+    <!-- O conteúdo do cabeçalho será carregado aqui -->
+</header>
+<!-- Conteúdo -->
+<main>
+    <!-- Título da Página -->
+    <div class="inner-title">
+        <h2>Eventos</h2>
     </div>
+    <!-- Categorias -->
+    <div class="categories">
+        <div class="categories-background">
+            <div class="categories-title">
+                <h2>Qual é a sua vibe <orange>hoje?</orange></h2>
+            </div>
+            <div class="cat-cards">
+                <!-- Categoria 1 -->
+                <div class="cat-card">
+                    <a href="../view/bar.html">
+                        <div class="cat-img">
+                            <img src="../src/img/catogories/beer.png" alt="cat1" title="cat1">
+                        </div>
+                        <h2>Bar</h2>
+                    </a>
+                </div>
+                <!-- Categoria 2 -->
+                <div class="cat-card">
+                    <a href="#">
+                        <div class="cat-img">
+                            <img src="../src/img/catogories/show.png" alt="cat2" title="cat2">
+                        </div>
+                        <h2>Show</h2>
+                    </a>
+                </div>
+                <!-- Categoria 3 -->
+                <div class="cat-card">
+                    <a href="#">
+                        <div class="cat-img">
+                            <img src="../src/img/catogories/ferias.png" alt="cat3" title="cat3">
+                        </div>
+                        <h2>Férias</h2>
+                    </a>
+                </div>
+                <!-- Categoria 4 -->
+                <div class="cat-card">
+                    <a href="#">
+                        <div class="cat-img">
+                            <img src="../src/img/catogories/food.png" alt="cat4" title="cat4">
+                        </div>
+                        <h2>Comida</h2>
+                    </a>
+                </div>
+                <!-- Categoria 5 -->
+                <div class="cat-card">
+                    <a href="#">
+                        <div class="cat-img">
+                            <img src="../src/img/catogories/more.png" alt="cat5" title="cat5">
+                        </div>
+                        <h2>Outros</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Seções de Categorias -->
+    <div class="eve-cat-container">
+        <section>
+            <h2>BARES - RESTAURANTES - ALIMENTAÇÃO</h2>
+            <div class="eve-cat-card-wrapper">
+                <button class="nav-button prev-button"><i class="fas fa-chevron-left"></i></button>
+                <!-- Linha -->
+                <div class="eve-cat-card-container">
+                    <!-- Card 1 -->
+                    <div class="eve-cat-card">
+                        <div class="eve-cat-card-image">
+                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
+                            <span class="eve-cat-category-icon"><i class="fas fa-tag"></i></span>
+                        </div>
+                        <div class="eve-cat-card-content">
+                            <div class="eve-cat-card-header">
+                                <h3 class="eve-cat-card-title">Título do Card</h3>
+                                <span class="eve-cat-card-time">10:00 AM</span>
+                            </div>
+                            <div class="eve-cat-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="eve-cat-card-address">Endereço do Evento</span>
+                            </div>
+                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
+                        </div>
+                    </div>
+                    <div class="eve-cat-card">
+                        <div class="eve-cat-card-image">
+                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
+                            <span class="eve-cat-category-icon"><i class="fas fa-tag"></i></span>
+                        </div>
+                        <div class="eve-cat-card-content">
+                            <div class="eve-cat-card-header">
+                                <h3 class="eve-cat-card-title">Título do Card</h3>
+                                <span class="eve-cat-card-time">10:00 AM</span>
+                            </div>
+                            <div class="eve-cat-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="eve-cat-card-address">Endereço do Evento</span>
+                            </div>
+                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
+                        </div>
+                    </div>
+                    <div class="eve-cat-card">
+                        <div class="eve-cat-card-image">
+                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
+                            <span class="eve-cat-category-icon"><i class="fas fa-tag"></i></span>
+                        </div>
+                        <div class="eve-cat-card-content">
+                            <div class="eve-cat-card-header">
+                                <h3 class="eve-cat-card-title">Título do Card</h3>
+                                <span class="eve-cat-card-time">10:00 AM</span>
+                            </div>
+                            <div class="eve-cat-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="eve-cat-card-address">Endereço do Evento</span>
+                            </div>
+                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
+                        </div>
+                    </div>
+                    <div class="eve-cat-card">
+                        <div class="eve-cat-card-image">
+                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
+                            <span class="eve-cat-category-icon"><i class="fas fa-tag"></i></span>
+                        </div>
+                        <div class="eve-cat-card-content">
+                            <div class="eve-cat-card-header">
+                                <h3 class="eve-cat-card-title">Título do Card</h3>
+                                <span class="eve-cat-card-time">10:00 AM</span>
+                            </div>
+                            <div class="eve-cat-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="eve-cat-card-address">Endereço do Evento</span>
+                            </div>
+                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
+                        </div>
+                    </div>
+                    <div class="eve-cat-card">
+                        <div class="eve-cat-card-image">
+                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
+                            <span class="eve-cat-category-icon"><i class="fas fa-tag"></i></span>
+                        </div>
+                        <div class="eve-cat-card-content">
+                            <div class="eve-cat-card-header">
+                                <h3 class="eve-cat-card-title">Título do Card</h3>
+                                <span class="eve-cat-card-time">10:00 AM</span>
+                            </div>
+                            <div class="eve-cat-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="eve-cat-card-address">Endereço do Evento</span>
+                            </div>
+                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
+                        </div>
+                    </div>
+                    <div class="eve-cat-card">
+                        <div class="eve-cat-card-image">
+                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
+                            <span class="eve-cat-category-icon"><i class="fas fa-tag"></i></span>
+                        </div>
+                        <div class="eve-cat-card-content">
+                            <div class="eve-cat-card-header">
+                                <h3 class="eve-cat-card-title">Título do Card</h3>
+                                <span class="eve-cat-card-time">10:00 AM</span>
+                            </div>
+                            <div class="eve-cat-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="eve-cat-card-address">Endereço do Evento</span>
+                            </div>
+                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
+                        </div>
+                    </div>
+                    <div class="eve-cat-card">
+                        <div class="eve-cat-card-image">
+                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
+                            <span class="eve-cat-category-icon"><i class="fas fa-tag"></i></span>
+                        </div>
+                        <div class="eve-cat-card-content">
+                            <div class="eve-cat-card-header">
+                                <h3 class="eve-cat-card-title">Título do Card</h3>
+                                <span class="eve-cat-card-time">10:00 AM</span>
+                            </div>
+                            <div class="eve-cat-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="eve-cat-card-address">Endereço do Evento</span>
+                            </div>
+                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
+                        </div>
+                    </div>
+                    <div class="eve-cat-card">
+                        <div class="eve-cat-card-image">
+                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
+                            <span class="eve-cat-category-icon"><i class="fas fa-tag"></i></span>
+                        </div>
+                        <div class="eve-cat-card-content">
+                            <div class="eve-cat-card-header">
+                                <h3 class="eve-cat-card-title">Título do Card</h3>
+                                <span class="eve-cat-card-time">10:00 AM</span>
+                            </div>
+                            <div class="eve-cat-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="eve-cat-card-address">Endereço do Evento</span>
+                            </div>
+                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
+                        </div>
+                    </div>
+                    <div class="eve-cat-card">
+                        <div class="eve-cat-card-image">
+                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
+                            <span class="eve-cat-category-icon"><i class="fas fa-tag"></i></span>
+                        </div>
+                        <div class="eve-cat-card-content">
+                            <div class="eve-cat-card-header">
+                                <h3 class="eve-cat-card-title">Título do Card GTESHEGHE</h3>
+                                <span class="eve-cat-card-time">10:00 AM</span>
+                            </div>
+                            <div class="eve-cat-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="eve-cat-card-address">Endereço do Evento</span>
+                            </div>
+                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
+                        </div>
+                    </div>
+                    <!-- Repita os cards conforme necessário -->
+                </div>
+                <button class="nav-button next-button"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+        <!-- Repita as seções conforme necessário -->
+    </div>
+</main>
+<!-- Rodapé -->
+<footer>
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="../src/img/white_logo.PNG" alt="KAYA" title="KAYA" width="80" height="80">
+        </div>
+        <div class="footer-list">
+            <ul>
+                <li class="footer-item"><a class="footer-link" href="#">INÍCIO</a></li>
+                <li class="footer-item"><a class="footer-link" href="#">EVENTOS</a></li>
+                <li class="footer-item"><a class="footer-link" href="#">CRIAR</a></li>
+                <li class="footer-item"><a class="footer-link" href="#">PERFIL</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <ul>
+                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-credits">
+            <p>© 2024 KAYA. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+<!-- Scripts - colocar no arquivo externo após finalização -->
+<script src="../src/js/scriptEvents.js"></script>
+<script>
+    fetch('template/headerView.html')
+        .then(response => response.text())
+        .then(html => {
+            // Insira o conteúdo do cabeçalho no elemento com id "header"
+            document.getElementById('header').innerHTML = html;
+        })
+        .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
+</script>
+<script>
+    const containers = document.querySelectorAll('.eve-cat-card-container');
 
-    <script>
-        const containers = document.querySelectorAll('.card-container');
+    containers.forEach(container => {
+        const prevButton = container.previousElementSibling;
+        const nextButton = container.nextElementSibling;
 
-        containers.forEach(container => {
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
-            container.addEventListener('mousedown', (e) => {
-                isDown = true;
-                container.classList.add('active');
-                startX = e.pageX - container.offsetLeft;
-                scrollLeft = container.scrollLeft;
-            });
-
-            container.addEventListener('mouseleave', () => {
-                isDown = false;
-                container.classList.remove('active');
-            });
-
-            container.addEventListener('mouseup', () => {
-                isDown = false;
-                container.classList.remove('active');
-            });
-
-            container.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - container.offsetLeft;
-                const walk = (x - startX) * 0.5; // ajuste a velocidade
-                container.scrollLeft = scrollLeft - walk;
-            });
-
-            container.addEventListener('touchstart', (e) => {
-                isDown = true;
-                startX = e.touches[0].pageX - container.offsetLeft;
-                scrollLeft = container.scrollLeft;
-            });
-
-            container.addEventListener('touchend', () => {
-                isDown = false;
-            });
-
-            container.addEventListener('touchmove', (e) => {
-                if (!isDown) return;
-                const x = e.touches[0].pageX - container.offsetLeft;
-                const walk = (x - startX) * 3; // ajuste a velocidade
-                container.scrollLeft = scrollLeft - walk;
-            });
+        prevButton.addEventListener('click', () => {
+            container.scrollLeft -= container.clientWidth / 2;
         });
-    </script>
+
+        nextButton.addEventListener('click', () => {
+            container.scrollLeft += container.clientWidth / 2;
+        });
+    });
+</script>
+
 </body>
 </html>

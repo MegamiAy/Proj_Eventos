@@ -1,42 +1,74 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+/* TITULO */
+.inner-title {
+    margin-top: 0;
+}
+.inner-title h2 {
+    margin: 0 0 1.5rem 0;
 }
 
-.container {
-    width: 90%;
-    margin: auto;
-    padding: 20px 0;
+/* CONTENEDOR DE EVENTOS */
+.eve-cat-container {
+    width: 100%;
 }
 
-section {
-    margin-bottom: 20px;
+.eve-cat-container section {
+    margin: 3.5rem 0;
+    position: relative;
 }
 
-h2 {
+.eve-cat-container h2 {
     margin-bottom: 10px;
 }
 
-.card-container {
+/* Botões de Navegação */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #170C38;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1;
+}
+
+.nav-button:hover {
+    background-color: #2d225e;
+}
+
+.prev-button {
+    left: -20px;
+}
+
+.next-button {
+    right: -20px;
+}
+
+.eve-cat-card-container {
     display: flex;
     overflow: hidden;
-    padding: 10px;
-    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     cursor: grab;
+    scroll-behavior: smooth;
+    padding: 0 40px;
 }
 
-.card-container.active {
+.eve-cat-card-container.active {
     cursor: grabbing;
 }
 
-.card {
+.eve-cat-card {
     flex: 0 0 auto;
     width: 250px;
-    margin-right: 10px;
+    margin-right: 50px;
     background-color: #170C38;
     color: white;
     border-radius: 8px;
@@ -45,25 +77,24 @@ h2 {
     display: flex;
     flex-direction: column;
 }
-
-.card:last-child {
+.eve-cat-card:last-child {
     margin-right: 0;
 }
 
-.card-image {
+.eve-cat-card-image {
     position: relative;
     width: 100%;
     height: 150px;
 }
 
-.card-image img {
+.eve-cat-card-image img {
     width: 100%;
     height: 100%;
     border-radius: 0.5rem;
     object-fit: cover;
 }
 
-.category-icon {
+.eve-cat-category-icon {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -72,11 +103,11 @@ h2 {
     padding: 5px;
 }
 
-.category-icon i {
+.eve-cat-category-icon i {
     font-style: normal;
 }
 
-.card-content {
+.eve-cat-card-content {
     padding: 10px;
     flex-grow: 1;
     display: flex;
@@ -84,36 +115,36 @@ h2 {
     justify-content: space-between;
 }
 
-.card-header {
+.eve-cat-card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.card-title {
+.eve-cat-card-title {
     font-size: 1rem;
     margin: 0;
 }
 
-.card-time {
+.eve-cat-card-time {
     font-size: 0.875rem;
 }
 
-.card-location {
+.eve-cat-card-location {
     display: flex;
     align-items: center;
     margin: 10px 0;
 }
 
-.card-location i {
+.eve-cat-card-location i {
     margin-right: 5px;
 }
 
-.card-address {
+.eve-cat-card-address {
     font-size: 0.875rem;
 }
 
-.card-link {
+.eve-cat-card-link {
     text-align: center;
     padding: 10px;
     background-color: #fff;
@@ -123,7 +154,7 @@ h2 {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.card-link:hover {
+.eve-cat-card-link:hover {
     background-color: #170C38;
     color: #fff;
 }
