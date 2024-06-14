@@ -98,13 +98,12 @@
     position: absolute;
     top: 5px;
     right: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
     padding: 5px;
 }
 
 .eve-cat-category-icon i {
-    font-style: normal;
+    font-style: none;
 }
 
 .eve-cat-card-content {

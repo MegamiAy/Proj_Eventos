@@ -436,30 +436,39 @@ main {
     /* Eventos - id */
     #beer{
         background-color: #B99200;
+        content: "BAR";
     }
     #show{
         background-color: #8B1766;
+        content: "SHOW";
     }
     #ferias{
         background-color: #13B900;
+        content: "FÉRIAS";
     }
     #food{
         background-color: #FF4233;
+        content: "FOOD";
     }
-    #esporte{
+    #sport{
         background-color: #0093B9;
+        content: "SPORT";
     }
     #music{
         background-color: #8D00B9;
+        content: "MUSIC";
     }
     #children{
         background-color: #D3269C;
+        content: "CHILDREN";
     }
     #moda{
         background-color: #7776BA;
+        content: "MODA";
     }
     #outros{
         background-color: #CC6820;
+        content: "OUTROS";
     }
 
 /* FOOTER */
