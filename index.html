@@ -13,6 +13,7 @@
 <header id="header">
     <!-- O conteúdo do cabeçalho será carregado aqui -->
 </header>
+<!-- slide (limitado a 3) -->
 <div class="slider">
     <div class="slides">
         <img src="Web/src/img/banners/banner1.png" class="slide" alt="Image 1">
@@ -254,10 +255,10 @@
 <script src="Web/src/js/scriptHome.js"></script>
 <script src="Web/src/js/scriptSlider.js"></script>
 <script>
+    // puxar o header da pasta de templates
     fetch('Web/view/template/header.html')
         .then(response => response.text())
         .then(html => {
-            // Insira o conteúdo do cabeçalho no elemento com id "header"
             document.getElementById('header').innerHTML = html;
         })
         .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
