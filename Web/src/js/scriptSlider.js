@@ -1,11 +1,15 @@
+// funções globais
 let currentSlide = 0;
 let slideInterval;
 
+
+// mostrar o slide
 function showSlide(index) {
     const slides = document.querySelector('.slides');
     const totalSlides = document.querySelectorAll('.slide').length;
     const indicators = document.querySelectorAll('.indicator');
-    
+
+    // identificar o slide atual
     if (index >= totalSlides) {
         currentSlide = 0;
     } else if (index < 0) {
@@ -14,8 +18,10 @@ function showSlide(index) {
         currentSlide = index;
     }
 
+    // mover para o slide atual
     slides.style.transform = `translateX(${-currentSlide * 100}%)`;
 
+    // atualizar a localização do slide atual, as bolinhas
     indicators.forEach((indicator, i) => {
         if (i === currentSlide) {
             indicator.classList.add('active');
@@ -25,6 +31,7 @@ function showSlide(index) {
     });
 }
 
+// mudança de slide a cada 3 segundos
 function startSlideShow() {
     slideInterval = setInterval(() => {
         showSlide(currentSlide + 1);
@@ -36,13 +43,14 @@ function stopSlideShow() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentSlide);
-    startSlideShow();
+    showSlide(currentSlide); // mostra na teal
+    startSlideShow();    // incia a movimentação
 
+    // faz os indicadores, as bolinhas funcionarem
     const indicators = document.querySelectorAll('.indicator');
     indicators.forEach((indicator, i) => {
         indicator.addEventListener('click', () => {
-            stopSlideShow();
+            stopSlideShow(); 
             showSlide(i);
             startSlideShow();
         });
