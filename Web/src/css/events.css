@@ -1,3 +1,18 @@
+.inner-title{
+    margin-top: 0;
+}
+.inner-title h2{
+    padding: 1rem 0 0 0; /* 1.7rem top and bottom */
+}
+.categories-background{
+    margin: 2rem 0 2rem 0; 
+}
+@media screen and (max-width: 768px){
+    .inner-title{
+        margin: 0;
+        padding: 0;
+    }
+}
 /* Eventos */
 .event-content{
     padding: 0.5rem;

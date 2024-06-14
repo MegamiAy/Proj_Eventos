@@ -40,6 +40,13 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+@media screen and (max-width: 768px) {
+    .slides{
+        height: 150px;
+    }
+    
+}
+
     /* Eventos */
     .event-content{
         padding: 0.5rem;
@@ -94,4 +101,9 @@
     }
     .event-local orange{
         color: #CC6820
+    }
+    @media screen and (max-width: 768px){
+        .event-card:last-child{
+            margin-bottom: 50px; /* Adiciona espaçamento ao último card antes do footer*/
+        }
     }

@@ -239,7 +239,7 @@ main {
 }
     /* TITULO */
     .inner-title{
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         display: flex;
         justify-content: center;
     }
@@ -251,14 +251,14 @@ main {
     }
     @media screen and (max-width: 730px) {
         .inner-title{
-            padding: 0.5rem 0.5rem 0.5rem 0.5rem; /* top right bottom left */
+            padding: 0.5rem 0.5rem 1.5rem 0.5rem; /* top right bottom left */
             display: flex;
             justify-content: center;
         }
         .inner-title h2{
             font-size: 40px;
             text-align: center;
-            padding: 0.5rem;
+            padding: 0.25rem;
             border-bottom: solid orange 5px;
         }
         
@@ -275,8 +275,7 @@ main {
         background-color: #170C38;
         justify-content: center;
         border-radius: 1rem;
-        max-width: 600px;
-        margin: 25px 0; /* 25px top and bottom */
+        max-width: 600px; /* 25px top and bottom */
     }
     .categories .categories-title{
         flex: 1;
@@ -424,7 +423,7 @@ main {
         }
         .cat-card h2{
             margin-top: 0.5rem;
-            font-size: 15px;
+            font-size: 13px;
             text-align: center;
         }
     }
