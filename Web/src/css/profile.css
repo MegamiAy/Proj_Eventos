@@ -1,94 +1,128 @@
 .inner-title{
     margin-top: 0;
 }
-.error{
-    color: red;
-    font-size: 0.8rem;
-    padding: 0.2rem 0 0 0;
-}
+
+/* Perfil */
 .profile{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.p-1{
+.p-container{
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+    border-radius: 0.5rem;
+    max-width: 800px;
+}
+.p-init-left, .p-init-right{
+    flex: 1;
+    padding: 20px;
+    border-radius: 0.5rem;
+}
+.p-init-left{
+    max-height: 257px;
+    max-width: fit-content;
+}
+.p-init-right{
+    background-color: #170C38;
+}
+.p-photo{
+    width: 100%;
+    height: 170px;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.p-photo img{
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px #170C38 solid;
+}
+.p-edit-button {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    width: 40px;
+    height: 40px;
+    background-color: #CC6820;
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+.p-edit-button i {
+    font-size: 20px;
+}
+.p-info{
+    text-align: center;
+    align-items: center;
+}
+.p-name{
+    font-size: 20px;
+    margin: 30px 0 5px 0;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.p-init-right h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.p-additional-info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.p-field {
+    flex: 1 1 calc(50% - 20px);
     display: flex;
     flex-direction: column;
-    height: max-content;
-    order: 0;
 }
-    .p-1 .p-container{
-        /* background-color: #170C38; */
-        border-radius: 0.5rem;
-        text-align: center;
-        margin: 1rem;
-    }
-    .p-1 img{
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        border: 10px solid #170C38;
-    }
-.p-2{
+.p-field label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.p-field input{
+    padding: 10px;
+    border-radius: 0.5rem;
+    color: #000;
+}
+.p-field input::placeholder{
+    color: #000;
+}
+.p-button-container {
     display: flex;
-    flex-direction: column;
-    order: 1;
-    width: fit-content;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
 }
-    .p-2 .p-container{
-        background-color: #170C38;
-        padding: 1.5rem;
-        border-radius: 0.5rem;    
-        margin: 1rem; 
+.p-save-button {
+    width: 100%;
+    background-color: #CC6820;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bolder;
+}
+@media screen and (max-width: 600px){
+    .p-container{
+        flex-direction: column;
     }
-    .p-container h2{
-        color: white;
-        font-size: 1.5rem;
-        text-align: center;
-        padding: 0 0 0.75rem 0;
+    .p-init-left{
+        max-width: fit-content;
+        align-self: center;
     }
-        .p-container form{
-            display: flex;
-            min-width: 100%;
-        }
-            .p-info{
-                display: flex;
-                flex-direction: column;
-                min-width: max-content;
-            }
-            .p-input{
-                display: flex;
-                flex-direction: column;
-                margin: 0.5rem 0 0 0;
-                width: 100%;
-            }
-            input{
-                height: 35px;
-                padding: 0 0 0 0.5rem;
-                border-radius: 0.5rem;
-                background-color: rgba(255, 255, 255, 0.9);
-                color: black;
-                font-size: 16px;
-            }
-            #birth, #cep{
-                max-width: fit-content;
-            }
-        .p-container form input[type=submit]{
-            width: 100%;
-            height: 35px;
-            background-color: #CC6820;
-            color: white;
-            border: none;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            margin: 1rem 0 0 0; /*top bottom*/
-            font-weight: bold;
-            font-size: 1rem;
-        }
-        .p-container form a{
-            font-size: 0.75rem;
-            color: white;
-            text-decoration: none;
-        }
-
-@media screen and (max-width: 768px){
+    .p-field {
+        flex: 1 1 100%;
+    }
 }

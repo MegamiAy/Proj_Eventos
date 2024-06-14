@@ -19,42 +19,56 @@
     </div>
 
     <div class="profile">
-        <div class="p-1">
-            <div class="p-container">
-                <img src="../src/img/profile.jpg" alt="profile" title="profile">
-                <h2>Nome do Usuário</h2>
-                <h4>@nome_do_usuário</h4>
-            </div>  
-        </div>
-        <div class="p-2">
-            <div class="p-container">
+        <div class="p-container">
+            <div class="p-init-left">
+                <div class="p-photo">
+                    <img src="../src/img/profile.jpg" alt="profile" title="profile">
+                    <button class="p-edit-button">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </div>
+                <div class="p-info">
+                    <p class="p-name">Nome do Usuário</p>
+                    <p class="username">@nome_do_usuário</p>
+                </div>
+            </div>
+            <div class="p-init-right">
                 <h2>INFORMAÇÕES PESSOAIS ADICIONAIS</h2>
-                <form id="myForm" class="p-info" action="">
-                    <div class="p-input">
-                        <label for="cpf">CPF</label>
-                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14">
-                        <span class="error" id="cpfError"></span>    
+                <form id="myForm" action="">
+                    <div class="p-additional-info">
+                        <div class="p-field">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14">
+                            <span class="error" id="cpfError"></span>    
+                        </div>
+                        <div class="p-field">
+                            <label for="phone">Telefone</label>
+                            <input type="text" id="phone" name="phone" placeholder="(00) 00000-0000" maxlength="15">
+                            <span class="error" id="phoneError"></span>
+                        </div>
+                        <div class="p-field">
+                            <label for="birth">Nascimento</label>
+                            <input type="date" id="birth" name="birth">
+                            <span class="error" id="birthError"></span>
+                        </div>
+                        <div class="p-field">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9">
+                            <span class="error" id="cepError"></span>
+                        </div>
+                        <div class="p-button-container">
+                            <input type="submit" value="SALVAR" class="p-save-button">
+                        </div>
                     </div>
-                    <div class="p-input">
-                        <label for="phone">Telefone</label>
-                        <input type="text" id="phone" name="phone" placeholder="(00) 00000-0000" maxlength="15">
-                        <span class="error" id="phoneError"></span>
-                    </div>
-                    <div class="p-input">
-                        <label for="birth">Nascimento</label>
-                        <input type="date" id="birth" name="birth">
-                        <span class="error" id="birthError"></span>
-                    </div>
-                    <div class="p-input">
-                        <label for="cep">CEP</label>
-                        <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9">
-                        <span class="error" id="cepError"></span>
-                    </div>
-                    <input type="submit" value="SALVAR">
                 </form>
             </div>
         </div>
     </div>
+
+    <!-- Meus Eventos -->
+
+    <!-- Eventos Salvos -->
+
 </main>
 <footer>
     <div class="footer">

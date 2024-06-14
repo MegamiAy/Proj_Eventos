@@ -10,6 +10,11 @@
 a{
     text-decoration: none;
 }
+.error{
+    color: #ff3845;
+    font-size: 13px;
+    font-weight: bold;
+}
 
 /* CRIADOS */
 orange{

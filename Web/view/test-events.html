@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container de Cards</title>
+    <link rel="stylesheet" href="../src/css/test-events.css">
+</head>
+<body>
+    <div class="container">
+        <section>
+            <h2>Título 1</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
+                        <span class="category-icon"><i class="fas fa-tag">categoria</i></span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3 class="card-title">Título do Card</h3>
+                            <span class="card-time">10:00 AM</span>
+                        </div>
+                        <div class="card-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="card-address">Endereço do Evento</span>
+                        </div>
+                        <a href="#" class="card-link">VER MAIS</a>
+                    </div>
+                </div>
+                <div class="card">Card 2</div>
+                <div class="card">Card 3</div>
+                <div class="card">Card 4</div>
+                <div class="card">Card 5</div>
+                <div class="card">Card 6</div>
+                <div class="card">Card 7</div>
+                <div class="card">Card 8</div>
+                <div class="card">Card 9</div>
+                <div class="card">Card 10</div>
+                <div class="card">Card 11</div>
+                <div class="card">Card 12</div>
+                <div class="card">Card 13</div>
+                <div class="card">Card 14</div>
+                <div class="card">Card 15</div>
+                <div class="card">Card 16</div>
+            </div>
+        </section>
+        <section>
+            <h2>Título 2</h2>
+            <div class="card-container">
+                <div class="card">Card 1</div>
+                <div class="card">Card 2</div>
+                <div class="card">Card 3</div>
+                <div class="card">Card 4</div>
+                <div class="card">Card 5</div>
+            </div>
+        </section>
+        <section>
+            <h2>Título 3</h2>
+            <div class="card-container">
+                <div class="card">Card 1</div>
+                <div class="card">Card 2</div>
+                <div class="card">Card 3</div>
+                <div class="card">Card 4</div>
+                <div class="card">Card 5</div>
+            </div>
+        </section>
+        <section>
+            <h2>Título 4</h2>
+            <div class="card-container">
+                <div class="card">Card 1</div>
+                <div class="card">Card 2</div>
+                <div class="card">Card 3</div>
+                <div class="card">Card 4</div>
+                <div class="card">Card 5</div>
+            </div>
+        </section>
+        <section>
+            <h2>Título 5</h2>
+            <div class="card-container">
+                <div class="card">Card 1</div>
+                <div class="card">Card 2</div>
+                <div class="card">Card 3</div>
+                <div class="card">Card 4</div>
+                <div class="card">Card 5</div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const containers = document.querySelectorAll('.card-container');
+
+        containers.forEach(container => {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            container.addEventListener('mousedown', (e) => {
+                isDown = true;
+                container.classList.add('active');
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+            });
+
+            container.addEventListener('mouseleave', () => {
+                isDown = false;
+                container.classList.remove('active');
+            });
+
+            container.addEventListener('mouseup', () => {
+                isDown = false;
+                container.classList.remove('active');
+            });
+
+            container.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const walk = (x - startX) * 0.5; // ajuste a velocidade
+                container.scrollLeft = scrollLeft - walk;
+            });
+
+            container.addEventListener('touchstart', (e) => {
+                isDown = true;
+                startX = e.touches[0].pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+            });
+
+            container.addEventListener('touchend', () => {
+                isDown = false;
+            });
+
+            container.addEventListener('touchmove', (e) => {
+                if (!isDown) return;
+                const x = e.touches[0].pageX - container.offsetLeft;
+                const walk = (x - startX) * 3; // ajuste a velocidade
+                container.scrollLeft = scrollLeft - walk;
+            });
+        });
+    </script>
+</body>
+</html>
