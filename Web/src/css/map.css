@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+#map{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapBox{
+    position: center;
+    width: 600px;
+    height: 500px;
+    font: #0b0805;
+
+}
+
+#pac-input {
+    color: black; 
+}
+#map {
+    height: 500px;
+    width: 100%;
+}
+#pac-input {
+    margin-top: 10px;
+    padding: 5px;
+    width: 300px;
+}
