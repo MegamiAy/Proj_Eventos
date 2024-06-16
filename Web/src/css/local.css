@@ -176,19 +176,22 @@
     border-radius: 0.5rem;
     width: fit-content;
 }
+
 .map-line{
     display: flex;
     flex-direction: row;
 }
+
 .map-title{
     text-align: center;
 
 }
+
 /*.map-view{
     width: 300px;
     height: 300px;
     background-color: rgb(255, 0, 0); */
-}
+
 
 #map{
     height: 100%;
@@ -196,6 +199,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .map-view{
@@ -203,50 +207,83 @@
     width: 800px;
     height: 400px;
     font: #0b0805;
+    display: flex;
+    flex-direction: row; /* Organiza os elementos em linha */
+    align-items: flex-end; /* Alinha os itens no final da linha */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    margin-right: 0%;
 
 }
+
 
 #pac-input {
     color: black; 
 }
+
 #map {
     height: 100%;
     width: 80%;
+   
 }
+
 #pac-input {
     margin-top: 10px;
     padding: 5px;
     width: 300px;
 }
+
 .map-info{
+    margin-left: 0px;
 
 
 }
+
 .map-money{
     color: #0b0805;
 
 }
+
 .map-age{
 
 }
 
 .map-age-line{
-    color: ;
+   
 
 }
 
 input[type="date"], input[type="time"] {
     color: black;
+    height: 40px;
+    padding: auto;
+    width: 150px;
+    font-size: 15px;
 
 }
 .map-age-col{
 
 }
 .map-info-line{
-    height:;
-    padding: ;
-
+   margin-left: 10px;
+   
 }
 
+.green-button {
+    background-color: rgb(3, 202, 3); 
+    color: white; 
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 10px 100px; /* Adiciona padding ao botão */
+    width: 350px; /* Define uma largura específica para o botão */
+    height: 50px; /* Define uma altura específica para o botão */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */
+    margin-top: 200px; /* Adiciona espaço acima do botão */
+    margin-left: 0px;
+}
 
-
+.categorias{
+    height: 40px;
+    padding: auto;
+    width: 150px;
+}

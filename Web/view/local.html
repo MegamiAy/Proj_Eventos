@@ -16,7 +16,7 @@
 </header>
 <main>
     <div class="inner-title">
-        <h2>Local</h2>
+        <h2>PERTO DE VOCÊ</h2>
     </div>
 
     <!-- Conteúdo da página -->
@@ -191,17 +191,15 @@
             <br>
             <div class="map-line">
                 <!--area do mapa-->
+                <!--COMEÇO-->
                 <div class="map-view">
                     <input id="pac-input" class="controls" type="text" placeholder="Search Box" >
                     <div id="map"></div>
                 </div>
                 <div class="map-info">
-                    <div class="map-info-line">
-                        <input type="address" placeholder="Endereço"> <!-- USAR ENDEREÇO DO PRÓPRIO MAPS, MAIS PRATICO-->
-                    </div>
                     <form action="">
                         <div class="map-info-line">
-                            <selecT name="category" id="category" style="color: black">
+                            <selecT name="category" id="category" style="color: black" class="categorias">
                                 <option value="" selected style="color: black">CATEGORIAS</option>
                                 <option value="" style="color: black">Restaurantes</option>
                                 <option value="" style="color: black">Bares</option>
@@ -217,7 +215,7 @@
                             </div>
                             <div class="map-age">
                                 <div class="map-age-line">
-                                    <input type="checkbox" name="age" id="age">
+                                    <!--<input type="checkbox" name="age" id="age">-->
                                 </div>
                                 <div class="map-age-line">
                                     <div class="map-age-col">
@@ -226,14 +224,14 @@
                                     <div class="map-age-col">
                                         <input type="number" name="max" id="max">
                                     </div>
+                                    <input type="submit" value="FILTRAR" class="green-button">
                                 </div>
                             </div>
                         </div>
-                        <div class="map-info-line">
-                            <input type="submit" value="SALVAR">
-                        </div>
+                        
                     </form>
                 </div>
+                <!-- FIM DA AREA APAGADA-->
             </div>
         </div>
     </div>
