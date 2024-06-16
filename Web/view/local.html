@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../src/css/global.css">
     <link rel="stylesheet" href="../src/css/local.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTuxEIxJkEayj1PQAvvB1qrg5B7GCDaqM&libraries=places"></script>
 </head>
 <body>
 <header id="header">
@@ -182,29 +183,32 @@
             </div>
 
         </div>
-
+        <br>
         <div class="map">
             <div class="map-title">
                 <h2>LOCALIZE EVENTOS NO <br><orange>MAPA</orange></h2>
             </div>
+            <br>
             <div class="map-line">
+                <!--area do mapa-->
                 <div class="map-view">
-                <!-- area do mapa -->
+                    <input id="pac-input" class="controls" type="text" placeholder="Search Box" >
+                    <div id="map"></div>
                 </div>
                 <div class="map-info">
                     <div class="map-info-line">
-                        <input type="address" placeholder="Endereço">
+                        <input type="address" placeholder="Endereço"> <!-- USAR ENDEREÇO DO PRÓPRIO MAPS, MAIS PRATICO-->
                     </div>
                     <form action="">
                         <div class="map-info-line">
                             <selecT name="category" id="category" style="color: black">
-                                <option value="" selected style="color: black">Selecione</option>
-                                <option value="" style="color: black">catgoria</option>
-                                <option value="" style="color: black">catgoria</option>
-                                <option value="" style="color: black">catgoria</option>
+                                <option value="" selected style="color: black">CATEGORIAS</option>
+                                <option value="" style="color: black">Restaurantes</option>
+                                <option value="" style="color: black">Bares</option>
+                                <option value="" style="color: black">Shopping</option>
                             </selecT>
                             <input type="date">
-                            <input type="time" name="jgvugvu" id="fhchxchfc">
+                            <input type="time" name="hora" id="hora">
                         </div>
                         <div class="map-info-line">
                             <div class="map-money">
@@ -270,5 +274,67 @@
         })
         .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
 </script>
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+        });
+
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        map.addListener('bounds_changed', function() {
+            searchBox.setBounds(map.getBounds());
+        });
+
+        var markers = [];
+        
+        searchBox.addListener('places_changed', function() {
+            var places = searchBox.getPlaces();
+
+            if (places.length == 0) {
+                return;
+            }
+
+            markers.forEach(function(marker) {
+                marker.setMap(null);
+            });
+            markers = [];
+
+            var bounds = new google.maps.LatLngBounds();
+            places.forEach(function(place) {
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+                var icon = {
+                    url: place.icon,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(25, 25)
+                };
+
+                markers.push(new google.maps.Marker({
+                    map: map,
+                    icon: icon,
+                    title: place.name,
+                    position: place.geometry.location
+                }));
+
+                if (place.geometry.viewport) {
+                    bounds.union(place.geometry.viewport);
+                } else {
+                    bounds.extend(place.geometry.location);
+                }
+            });
+            map.fitBounds(bounds);
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTuxEIxJkEayj1PQAvvB1qrg5B7GCDaqM&libraries=places&callback=initMap"></script>
 </body>
 </html>

@@ -7,3 +7,7 @@
 
 ### Fontes:
 
+
+### Maps funcionalidade:
+
+maps api key: AIzaSyDTuxEIxJkEayj1PQAvvB1qrg5B7GCDaqM
