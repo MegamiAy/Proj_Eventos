@@ -6,6 +6,10 @@
     margin: 0 0 1.5rem 0;
 }
 
+.local-eve{
+    display: flex;
+    flex-direction: column;
+}
 /* CONTENEDOR DE EVENTOS */
 .eve-cat-container {
     margin: 0 auto;
@@ -142,6 +146,10 @@ input::placeholder{
 input[type="checkbox"]{
     width: 1.5rem;
 }
+input[type="checkbox"]:active{
+    background-color: orange;
+    color: #fff;
+}
 label{
     font-weight: bolder;
 }
@@ -163,7 +171,7 @@ label{
     border-radius: 0.5rem;
 }
 .map-view{
-    width: 350px;
+    width: 500px;
     height: 300px;
     font: #000;
     margin: 0 1rem 0 0;
@@ -222,6 +230,12 @@ input[type="time"]{
     display: flex;
     flex-direction: row;
 }
+.map-label-line{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
 .map-money input[type="text"]{
     margin: 1rem 0.5rem 0 0;
     width: fit-content;
@@ -265,6 +279,10 @@ input[type="time"]{
     margin: 0.5rem 0;
     position: relative;
     top: 45px;
+    text-align: center;
+    justify-content: center;
+}
+@media screen and (max-width: 900px){
 }
 
 
