@@ -8,116 +8,109 @@
 
 /* CONTENEDOR DE EVENTOS */
 .eve-cat-container {
-    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
 }
-
-.eve-cat-container section {
-    margin: 3.5rem 0;
-}
-
 .eve-cat-container h2 {
     margin-bottom: 10px;
 }
-
 .eve-cat-card-container {
     display: flex;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 0 40px;
+    flex-direction: row;
+    justify-content: center;
 }
-
 .eve-cat-card {
-    flex: 0 0 auto;
-    width: 250px;
-    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    min-width: 300px;
     background-color: #170C38;
     color: white;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    margin: 1rem;
 }
-.eve-cat-card:last-child {
+.eve-cat-card:last-child{
     margin-right: 0;
 }
-
-.eve-cat-card-image {
-    position: relative;
-    width: 100%;
-    height: 150px;
+.eve-cat-card:first-child{
+    margin-left: 0;
 }
-
-.eve-cat-card-image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
-    object-fit: cover;
-}
-
-.eve-cat-category-icon {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    border-radius: 0.5rem;
-    padding: 5px;
-}
-
-.eve-cat-category-icon i {
-    font-style: none;
-}
-
-.eve-cat-card-content {
-    padding: 10px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.eve-cat-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.eve-cat-card-title {
-    font-size: 1rem;
-    margin: 0;
-}
-
-.eve-cat-card-time {
-    font-size: 0.875rem;
-}
-
-.eve-cat-card-location {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.eve-cat-card-location i {
-    margin-right: 5px;
-}
-
-.eve-cat-card-address {
-    font-size: 0.875rem;
-}
-
-.eve-cat-card-link {
-    text-align: center;
-    padding: 10px;
-    background-color: #fff;
-    color: #170C38;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.eve-cat-card-link:hover {
-    background-color: #170C38;
-    color: #fff;
-}
+    /* Informações - eventos */
+    .eve-cat-card-image {
+        position: relative;
+        width: 100%;
+        height: 150px;
+    }
+    .eve-cat-card-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        object-fit: cover;
+    }
+    .eve-cat-category-icon {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        border-radius: 0.5rem;
+        padding: 5px;
+    }
+    .eve-cat-category-icon i {
+        font-style: none;
+    }
+    .eve-cat-card-content {
+        padding: 10px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .eve-cat-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .eve-cat-card-title {
+        font-size: 1rem;
+        margin: 0;
+    }
+    .eve-cat-card-time {
+        font-size: 0.875rem;
+    }
+    .eve-cat-card-location {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .eve-cat-card-location i {
+        margin-right: 5px;
+    }
+    .eve-cat-card-address {
+        font-size: 0.875rem;
+    }
+    .eve-cat-card-link {
+        text-align: center;
+        padding: 10px;
+        background-color: #fff;
+        color: #170C38;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .eve-cat-card-link:hover {
+        background-color: #170C38;
+        color: #fff;
+    }
+    @media screen and (max-width: 900px) {
+        .eve-cat-card-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .eve-cat-card{
+            margin: 0 0 1rem 0;
+        }
+        
+    }
 
 /* Mapa */
 .map{
@@ -131,25 +124,35 @@
     padding: 2rem;
     border-radius: 0.5rem;
     width: fit-content;
+    max-width: 800px;
 }
+
+/* Inputs - GLOBAL */
 input{
     color: #000;
     padding: 0.5rem;
     margin: 0 0.5rem 0 0;
-    max-width: fit-content;
+    width: 100%;
     border-radius: 0.5rem;
+    font-size: 15px;
 }
 input::placeholder{
     color: #000;
 }
-
-.map-line{
-    display: flex;
-    flex-direction: row;
+input[type="checkbox"]{
+    width: 1.5rem;
+}
+label{
+    font-weight: bolder;
 }
 
-.map-title{
+.map-title{ /* Título do container */
     text-align: center;
+    margin: 0 0 2rem 0;
+}
+.map-data{ /* Dados do container */
+    display: flex;
+    flex-direction: row;
 }
 
 /* Container API - GOOGLE MAPS */
@@ -163,6 +166,7 @@ input::placeholder{
     width: 350px;
     height: 300px;
     font: #000;
+    margin: 0 1rem 0 0;
 }
 #pac-input {
     margin: 0.5rem;
@@ -180,21 +184,31 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     max-width: fit-content;
-    margin: 0 0 0 1rem;
+    min-height: max-content;
 }
 .map-info-line{
-    padding: 0 0 1rem 1rem;
+    margin: /* faça apenas no lado esquerdo  e embaixo*/ 0 0 2rem 1rem;
     display: flex;
-    width: 100%;
+    width: 98%;
 }
 
 /* Linha 1 */
 .map-info-line select{
-    width: fit-content;
+    width: 33%;
     padding: 0.5rem;
     border-radius: 0.5rem;
     font-size: 15px;
     margin: 0 0.5rem 0 0;
+}
+input[type="date"]{
+    width: 33%;
+    border-radius: 0.5rem;
+    font-size: 15px;
+}
+input[type="time"]{
+    width: 33%;
+    border-radius: 0.5rem;
+    font-size: 15px;
 }
 
 /* Linha 2 */
@@ -204,9 +218,14 @@ input::placeholder{
     align-items: flex-start;
     margin: 0.5rem 0;
 }
+.map-money-line{
+    display: flex;
+    flex-direction: row;
+}
 .map-money input[type="text"]{
     margin: 1rem 0.5rem 0 0;
-    width: 100%
+    width: fit-content;
+    padding: 0.5rem;
 }
 .map-age{
     display: flex;
@@ -217,28 +236,35 @@ input::placeholder{
 .map-age-line{
     display: flex;
     flex-direction: row;
-    margin: 0.5rem 0.5rem 0 0;
-    width: 100%;
+    max-width: 100%;
 }
 .map-age-line input[type="number"]{
+    margin: 1rem 0.5rem 0.5rem 0;
     width: 100%;
 }
 
 /* Linha 3 */
-.map-info-line:last-child {
+.map-filter-button{
     display: flex;
-    align-self: flex-end;
-    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0 0 0 1rem;
 }
-.map-info-line input[type="submit"] {
+.map-filter-button input[type="submit"] {
+    display: flex;
+    justify-content: flex-end;
     background-color: #394; 
     color: #fff; 
+    border: 0;
     font-size: 25px;
     border-radius: 0.5rem;
     text-transform: uppercase; /* Transforma o texto em maiúsculas */
     cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */
     width: 100%;
     padding: 0.5rem;
+    margin: 0.5rem 0;
+    position: relative;
+    top: 45px;
 }
 
 
