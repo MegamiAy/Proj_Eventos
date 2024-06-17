@@ -183,7 +183,6 @@
             </div>
 
         </div>
-        <br>
         <div class="map">
             <div class="map-title">
                 <h2>LOCALIZE EVENTOS NO <br><orange>MAPA</orange></h2>
@@ -193,47 +192,54 @@
                 <!--area do mapa-->
                 <!--COMEÇO-->
                 <div class="map-view">
-                    <input id="pac-input" class="controls" type="text" placeholder="Search Box" >
+                    <input id="pac-input" class="controls" type="text" placeholder="Pesquise o local">
                     <div id="map"></div>
                 </div>
                 <div class="map-info">
                     <form action="">
+                        <!-- Categoria, data e hora -->
                         <div class="map-info-line">
-                            <selecT name="category" id="category" style="color: black" class="categorias">
-                                <option value="" selected style="color: black">CATEGORIAS</option>
+                            <select name="category" id="category" style="color: black" class="categorias">
+                                <option value="" selected style="color: black">Categorias</option>
                                 <option value="" style="color: black">Restaurantes</option>
                                 <option value="" style="color: black">Bares</option>
                                 <option value="" style="color: black">Shopping</option>
-                            </selecT>
-                            <input type="date">
+                            </select>
+                            <input type="date" id="date" name="date">
                             <input type="time" name="hora" id="hora">
                         </div>
+                        <!-- Preço e Idade -->
                         <div class="map-info-line">
+                            <!-- Preço-->
                             <div class="map-money">
-                                <input type="checkbox" name="money" id="money">
-                                <input type="text" name="money" id="money">
+                                <div class="map-money-line">
+                                    <input type="checkbox" name="money" id="money">
+                                    <label for="money">Entrada Franca</label>
+                                </div> 
+                                <input type="text" name="money" id="money" placeholder="Valor">
                             </div>
+                            <!-- Idade -->
                             <div class="map-age">
                                 <div class="map-age-line">
-                                    <!--<input type="checkbox" name="age" id="age">-->
+                                    <input type="checkbox" name="age" id="age">
+                                    <label for="age">Idade</label>
                                 </div>
                                 <div class="map-age-line">
-                                    <div class="map-age-col">
-                                        <input type="number" name="min" id="min">
-                                    </div>
-                                    <div class="map-age-col">
-                                        <input type="number" name="max" id="max">
-                                    </div>
-                                    <input type="submit" value="FILTRAR" class="green-button">
+                                    <input type="number" name="min" id="min" placeholder="min">
+                                    <input type="number" name="max" id="max" placeholder="max">
                                 </div>
                             </div>
                         </div>
-                        
+                        <!-- Filtrar -->
+                        <div class="map-info-line">
+                            <input type="submit" value="Filtrar" class="map-submit">
+                        </div>
                     </form>
                 </div>
                 <!-- FIM DA AREA APAGADA-->
             </div>
         </div>
+        
     </div>
 
 </main>
@@ -271,6 +277,17 @@
             document.getElementById('header').innerHTML = html;
         })
         .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        let hoje = new Date();
+        let dia = String(hoje.getDate()).padStart(2, '0');
+        let mes = String(hoje.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+        let ano = hoje.getFullYear();
+        
+        let dataAtual = `${ano}-${mes}-${dia}`;
+        document.getElementById('date').value = dataAtual;
+    });
 </script>
 <script>
     function initMap() {

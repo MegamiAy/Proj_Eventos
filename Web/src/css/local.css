@@ -19,56 +19,17 @@
 
 .eve-cat-container section {
     margin: 3.5rem 0;
-    position: relative;
 }
 
 .eve-cat-container h2 {
     margin-bottom: 10px;
 }
 
-/* Botões de Navegação */
-.nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #170C38;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    z-index: 1;
-}
-
-.nav-button:hover {
-    background-color: #2d225e;
-}
-
-.prev-button {
-    left: -20px;
-}
-
-.next-button {
-    right: -20px;
-}
-
 .eve-cat-card-container {
     display: flex;
-    overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: grab;
-    scroll-behavior: smooth;
     padding: 0 40px;
-}
-
-.eve-cat-card-container.active {
-    cursor: grabbing;
 }
 
 .eve-cat-card {
@@ -172,9 +133,20 @@
     flex-direction: column;
     background-color: #170C38;
     margin: 0 auto;
-    padding: 1rem;
+    margin-top: 2rem;
+    padding: 2rem;
     border-radius: 0.5rem;
     width: fit-content;
+}
+input{
+    color: #000;
+    padding: 0.5rem;
+    margin: 0 0.5rem 0 0;
+    max-width: fit-content;
+    border-radius: 0.5rem;
+}
+input::placeholder{
+    color: #000;
 }
 
 .map-line{
@@ -184,103 +156,103 @@
 
 .map-title{
     text-align: center;
-
 }
 
-/*.map-view{
-    width: 300px;
-    height: 300px;
-    background-color: rgb(255, 0, 0); */
-
-
-#map{
+/* Container API - GOOGLE MAPS */
+#map{ /* ID da API - Google Maps*/
+    width: 100%;
     height: 100%;
-    margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    border-radius: 0.5rem;
 }
-
 .map-view{
-    position: center;
-    width: 800px;
-    height: 400px;
-    font: #0b0805;
-    display: flex;
-    flex-direction: row; /* Organiza os elementos em linha */
-    align-items: flex-end; /* Alinha os itens no final da linha */
-    justify-content: space-between; /* Espaça os itens igualmente */
-    margin-right: 0%;
-
+    width: 350px;
+    height: 300px;
+    font: #000;
 }
-
-
 #pac-input {
-    color: black; 
+    margin: 0.5rem;
+    padding: 10px;
+    border-radius: 0.5rem;
+    color: #000;
+    width: min-content;
+}
+.gmnoprint, .gm-style-mtc, .gm-fullscreen-control, .gm-style-cc, .gm-style-cc-on, .gm-style-cc-off, .gm-style-mtc, .gm-style-mtc-label, .gm-style-mtc-drag, .gm-style-mtc-drag-dragged, .gm-style-mtc-dragging, .gm-style-mtc-h, .gm-style-mtc-v, .gm-style-mtc-dragging, .gm-style-mtc-drag-dragged{
+    display: none !important; /* Remove botões do display */
 }
 
-#map {
-    height: 100%;
-    width: 80%;
-   
-}
-
-#pac-input {
-    margin-top: 10px;
-    padding: 5px;
-    width: 300px;
-}
-
+/* Container de Informações */
 .map-info{
-    margin-left: 0px;
-
-
-}
-
-.map-money{
-    color: #0b0805;
-
-}
-
-.map-age{
-
-}
-
-.map-age-line{
-   
-
-}
-
-input[type="date"], input[type="time"] {
-    color: black;
-    height: 40px;
-    padding: auto;
-    width: 150px;
-    font-size: 15px;
-
-}
-.map-age-col{
-
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    margin: 0 0 0 1rem;
 }
 .map-info-line{
-   margin-left: 10px;
-   
+    padding: 0 0 1rem 1rem;
+    display: flex;
+    width: 100%;
 }
 
-.green-button {
-    background-color: rgb(3, 202, 3); 
-    color: white; 
+/* Linha 1 */
+.map-info-line select{
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 15px;
+    margin: 0 0.5rem 0 0;
+}
+
+/* Linha 2 */
+.map-money{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0.5rem 0;
+}
+.map-money input[type="text"]{
+    margin: 1rem 0.5rem 0 0;
+    width: 100%
+}
+.map-age{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0.5rem 0;
+}
+.map-age-line{
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 0.5rem 0 0;
+    width: 100%;
+}
+.map-age-line input[type="number"]{
+    width: 100%;
+}
+
+/* Linha 3 */
+.map-info-line:last-child {
+    display: flex;
+    align-self: flex-end;
+    width: 100%;
+}
+.map-info-line input[type="submit"] {
+    background-color: #394; 
+    color: #fff; 
     font-size: 25px;
-    border-radius: 10px;
-    padding: 10px 100px; /* Adiciona padding ao botão */
-    width: 350px; /* Define uma largura específica para o botão */
-    height: 50px; /* Define uma altura específica para o botão */
+    border-radius: 0.5rem;
     text-transform: uppercase; /* Transforma o texto em maiúsculas */
     cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */
-    margin-top: 200px; /* Adiciona espaço acima do botão */
-    margin-left: 0px;
+    width: 100%;
+    padding: 0.5rem;
 }
+
+
+
+
+
+
+
 
 .categorias{
     height: 40px;
