@@ -268,6 +268,9 @@ input[type="time"]{
     border: 0;
 }
 @media screen and (max-width: 900px){
+    .map{
+        margin: 0 auto 2rem;
+    }
     .map-data{ /* Dados do container */
         display: flex;
         flex-direction: column;
@@ -309,6 +312,54 @@ input[type="time"]{
     }
     .map-info input[type="submit"]{
         margin: 0;
+    }
+}
+@media screen and (max-width: 600px){
+    .map{
+        padding: 2rem  0 0 0;
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+    .map-title{
+        margin: 0 0 1rem 0;
+    }
+    .map-view{
+        max-width: 300px;
+        max-height: 100px;
+        font: #000;
+        margin: 0 0 1rem 0;
+    }
+    .map-info{
+        display: flex;
+        align-items: center;
+    }
+    label{
+        font-size: 12px;
+    }
+    select, option{
+        max-width: 100px;
+        height: 20px;
+    }
+    input:not([type="submit"], [type="checkbox"]){
+        width: 100px;
+        height: 20px;
+        font-size: 12px;
+    }
+    .map-money input[type="text"]{
+        max-width: 120px;
+    }
+    input[type="number"]{
+        max-width: 50px;
+    }
+    input[type="date"]{
+        font-size: 12px;
+        max-width: 90px;
+    }
+    input[type="time"]{
+        font-size: 12px;
+        max-width: 50px;
+        text-align: center;
     }
 }
 
