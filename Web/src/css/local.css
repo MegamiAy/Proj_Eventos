@@ -268,6 +268,48 @@ input[type="time"]{
     border: 0;
 }
 @media screen and (max-width: 900px){
+    .map-data{ /* Dados do container */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .map-view{
+        width: 100%;
+        min-height: 300px;
+        height: 300px;
+        font: #000;
+        margin: 0 0 2rem 0;
+    }
+    .map-info{
+        min-width: 390px;
+    }
+    .map-info-line{
+        margin: /* faça apenas no lado esquerdo  e embaixo*/ 0 0 2rem 0;
+        display: flex;
+        width: 100%;
+        padding: 0;
+    }
+    select, input[type="date"]{
+        flex: 1;
+    }
+    input[type="time"]{
+        flex: 1;
+        margin: 0;
+    }
+    .map-money, .map-age{
+        margin: 0;
+        padding: 0;
+    }
+    .map-age input[type="number"]{
+        flex: 1;
+        margin: 1rem 0 0.5rem 0;
+    }
+    .map-age input[type="number"]:first-of-type{
+        margin: 1rem 0.5rem 0.5rem 0;
+    }
+    .map-info input[type="submit"]{
+        margin: 0;
+    }
 }
 
 
