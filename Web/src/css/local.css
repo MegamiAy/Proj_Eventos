@@ -6,115 +6,126 @@
     margin: 0 0 1.5rem 0;
 }
 
-.local-eve{
+
+/* Eventos */
+.event-content{
+    padding: 0.5rem;
     display: flex;
-    flex-direction: column;
-}
-/* CONTENEDOR DE EVENTOS */
-.eve-cat-container {
-    margin: 0 auto;
-    max-width: 800px;
-}
-.eve-cat-container h2 {
-    margin-bottom: 10px;
-}
-.eve-cat-card-container {
-    display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    max-width: 1200px;
+    margin: auto;
 }
-.eve-cat-card {
+.event-card{
+    width: 250px;
+    background-color: #170C38;
+    border-radius: 0.5rem;
+    margin: 0.5rem 1rem 1rem 1rem;
+}
+.event-card:hover{
+    transform: translateY(-5px);
+    transition: 0.5s;
+    box-shadow: 0px 0px 30px #000000; /* 3px right, 3px down, 3px blur */
+    cursor: pointer;
+}
+.event-content a{
+    text-decoration: none;
+}
+.event-img{
+    position: relative;
+    width: 100%;
+}
+.event-img img{
+    width: 250px;
+    height: 125px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+.event-category{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 0.5rem;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.event-category i{
+    font-style: none;
+}
+.event-info{
+    padding: 0.7rem;
+}
+.event-info-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.event-title{
+    font-size: 16px;
+    margin: 0;
+}
+/* .event-time{
+    font-size: 12px;
+    background-color: #CC6820;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    font-weight: bolder;
+    text-shadow: #000 0px 0px 15px;
+} */
+.event-location{
+    display: flex;
+    align-items: center;
+    margin: 0.3rem 0 0 0;
+}
+.event-location i{
+    margin-right: 5px;
+    color: #CC6820;
+}
+.event-address{
+    font-size: 14px;
+    margin: 0;
+    font-weight: bold;
+}
+.event-info-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+.event-f1, .event-f2{
     display: flex;
     flex-direction: column;
-    max-width: 300px;
-    min-width: 300px;
-    background-color: #170C38;
-    color: white;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin: 1rem;
+    font-size: 14px;
+    margin: 0;
+    font-weight: bold;
 }
-.eve-cat-card:last-child{
-    margin-right: 0;
+.event-f2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.eve-cat-card:first-child{
-    margin-left: 0;
+.event-content i{
+    text-align: center;
+    min-height: 16px;
+    min-width: 16px;
+    max-width: 20px;
+    max-height: 20px;
+    background-color: #CC6820;
+    padding: 0.25rem;
+    color: #fff;
+    border-radius: 0.25rem;
 }
-    /* Informações - eventos */
-    .eve-cat-card-image {
-        position: relative;
-        width: 100%;
-        height: 150px;
+.event-f-l:not(:last-child){
+    margin-bottom: 0.25rem;
+}
+
+@media screen and (max-width: 768px){
+    .event-card:last-child{
+        margin-bottom: 50px; /* Adiciona espaçamento ao último card antes do footer*/
     }
-    .eve-cat-card-image img {
-        width: 100%;
-        height: 100%;
-        border-radius: 0.5rem;
-        object-fit: cover;
-    }
-    .eve-cat-category-icon {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        border-radius: 0.5rem;
-        padding: 5px;
-    }
-    .eve-cat-category-icon i {
-        font-style: none;
-    }
-    .eve-cat-card-content {
-        padding: 10px;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .eve-cat-card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .eve-cat-card-title {
-        font-size: 1rem;
-        margin: 0;
-    }
-    .eve-cat-card-time {
-        font-size: 0.875rem;
-    }
-    .eve-cat-card-location {
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
-    }
-    .eve-cat-card-location i {
-        margin-right: 5px;
-    }
-    .eve-cat-card-address {
-        font-size: 0.875rem;
-    }
-    .eve-cat-card-link {
-        text-align: center;
-        padding: 10px;
-        background-color: #fff;
-        color: #170C38;
-        border-radius: 0.5rem;
-        text-decoration: none;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    .eve-cat-card-link:hover {
-        background-color: #170C38;
-        color: #fff;
-    }
-    @media screen and (max-width: 900px) {
-        .eve-cat-card-container {
-            flex-direction: column;
-            align-items: center;
-        }
-        .eve-cat-card{
-            margin: 0 0 1rem 0;
-        }
-        
-    }
+}
+
 
 /* Mapa */
 .map{

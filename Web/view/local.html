@@ -16,124 +16,147 @@
 </header>
 <main>
     <div class="inner-title">
-        <h2>PERTO DE VOCÊ</h2>
+        <h2>Perto de Você!</h2>
     </div>
 
     <!-- Conteúdo da página -->
-    <div class="local-eve">
-        <div class="eve-cat-card-container">
-                <div class="eve-cat-card">
-                    <div class="eve-cat-card-image">
-                        <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                        <span class="eve-cat-category-icon"></span>
-                    </div>
-                    <div class="eve-cat-card-content">
-                        <div class="eve-cat-card-header">
-                            <h3 class="eve-cat-card-title">Título do Card</h3>
-                            <span class="eve-cat-card-time">10:00 AM</span>
-                        </div>
-                        <div class="eve-cat-card-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span id="" class="eve-cat-card-address">Endereço do Evento</span>
-                        </div>
-                        <a href="#" class="eve-cat-card-link">VER MAIS</a>
-                    </div>
+    <div class="event-content">
+        <!-- Card -->
+        <div class="event-card">
+            <a href="#">
+                <div class="event-img">
+                    <img src="../src/img/events/event01.png" alt="Imagem">
+                    <span class="event-category" id="music">Música</span>
                 </div>
-                <div class="eve-cat-card">
-                    <div class="eve-cat-card-image">
-                        <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                        <span class="eve-cat-category-icon"></span>
+                <div class="event-info">
+                    <div class="event-info-header">
+                        <h3 class="event-title">ELECTRO NIGHT</h3>
+                        <!-- <span class="event-time">22:00h</span> -->
                     </div>
-                    <div class="eve-cat-card-content">
-                        <div class="eve-cat-card-header">
-                            <h3 class="eve-cat-card-title">Título do Card</h3>
-                            <span class="eve-cat-card-time">10:00 AM</span>
-                        </div>
-                        <div class="eve-cat-card-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span id="" class="eve-cat-card-address">Endereço do Evento</span>
-                        </div>
-                        <a href="#" class="eve-cat-card-link">VER MAIS</a>
+                    <div class="event-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="" class="event-address">Square Garden - Joinville (SC)</span>
                     </div>
-                </div>
-                <div class="eve-cat-card">
-                    <div class="eve-cat-card-image">
-                        <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                        <span class="eve-cat-category-icon"></span>
-                    </div>
-                    <div class="eve-cat-card-content">
-                        <div class="eve-cat-card-header">
-                            <h3 class="eve-cat-card-title">Título do Card</h3>
-                            <span class="eve-cat-card-time">10:00 AM</span>
-                        </div>
-                        <div class="eve-cat-card-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span id="" class="eve-cat-card-address">Endereço do Evento</span>
-                        </div>
-                        <a href="#" class="eve-cat-card-link">VER MAIS</a>
-                    </div>
-                </div>
-                <!-- Repita os cards conforme necessário -->
-        </div>
-        <div class="map">
-            <div class="map-title">
-                <h2>LOCALIZE EVENTOS NO <br><orange>MAPA</orange></h2>
-            </div>
-            <br>
-            <div class="map-data">
-                <!--area do mapa-->
-                <!--COMEÇO-->
-                <div class="map-view">
-                    <input id="pac-input" class="controls" type="text" placeholder="Pesquise o local" value="Joinville">
-                    <div id="map"></div>
-                </div>
-                <div class="map-info">
-                    <form action="">
-                        <!-- Categoria, data e hora -->
-                        <div class="map-info-line">
-                            <select name="category" id="category" style="color: black" class="categorias">
-                                <option value="" selected style="color: black">Categorias</option>
-                                <option value="" style="color: black">Restaurantes</option>
-                                <option value="" style="color: black">Bares</option>
-                                <option value="" style="color: black">Shopping</option>
-                            </select>
-                            <input type="date" id="date" name="date">
-                            <input type="time" name="hora" id="hora">
-                        </div>
-                        <!-- Preço e Idade -->
-                        <div class="map-info-line">
-                            <!-- Preço-->
-                            <div class="map-money">
-                                <div class="map-label-line">
-                                    <input type="checkbox" name="money" id="money">
-                                    <label for="money">Entrada Franca</label>
-                                </div> 
-                                <input type="text" name="money" id="money" placeholder="Valor">
+                    <div class="event-info-footer">
+                        <div class="event-f1">
+                            <div class="event-f-l">
+                                <i class="fas fa-calendar"></i>
+                                <span class="event-date">22/10/2024</span>
                             </div>
-                            <!-- Idade -->
-                            <div class="map-age">
-                                <div class="map-label-line">
-                                    <input type="checkbox" name="age" id="age">
-                                    <label for="age">Faixa Etária</label>
-                                </div>
-                                <div class="map-age-line">
-                                    <input type="number" name="min" id="min" placeholder="min">
-                                    <input type="number" name="max" id="max" placeholder="max">
-                                </div>
+                            <div class="event-f-l">
+                                <i class="fas fa-clock"></i>
+                                <span class="event-time">22:00h</span>
                             </div>
                         </div>
-                        <!-- Filtrar -->
-                        <div class="map-info-line">
-                            <input type="submit" value="Filtrar" class="map-submit">
+                        <div class="event-f2">
+                            <i class="fas fa-ticket-alt"></i>
+                            <span class="event-price">R$ 20,00</span>
                         </div>
-                    </form>
+                    </div>
                 </div>
-                <!-- FIM DA AREA APAGADA-->
-            </div>
+            </a>
         </div>
-        
+        <!-- Card -->
+        <div class="event-card">
+            <a href="#">
+                <div class="event-img">
+                    <img src="../src/img/events/event02.jpg" alt="Imagem">
+                    <span class="event-category" id="outros">Outros</span>
+                </div>
+                <div class="event-info">
+                    <div class="event-info-header">
+                        <h3 class="event-title">BEER DAY!</h3>
+                        <span class="event-time">14:00h</span>
+                    </div>
+                    <div class="event-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="" class="event-address">Galpão da Roça - Joinville (SC)</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Card -->
+        <div class="event-card">
+            <a href="#">
+                <div class="event-img">
+                    <img src="../src/img/events/event03.jpg" alt="Imagem">
+                    <span class="event-category" id="beer">Bar</span>
+                </div>
+                <div class="event-info">
+                    <div class="event-info-header">
+                        <h3 class="event-title">BEER DAY!</h3>
+                        <span class="event-time">14:00h</span>
+                    </div>
+                    <div class="event-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="" class="event-address">Bar do Jorjão - Joinville (SC)</span>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
 
+
+
+
+
+
+    <div class="map">
+        <div class="map-title">
+            <h2>LOCALIZE EVENTOS NO <br><orange>MAPA</orange></h2>
+        </div>
+        <br>
+        <div class="map-data">
+            <!--area do mapa-->
+            <!--COMEÇO-->
+            <div class="map-view">
+                <input id="pac-input" class="controls" type="text" placeholder="Pesquise o local" value="Joinville">
+                <div id="map"></div>
+            </div>
+            <div class="map-info">
+                <form action="">
+                    <!-- Categoria, data e hora -->
+                    <div class="map-info-line">
+                        <select name="category" id="category" style="color: black" class="categorias">
+                            <option value="" selected style="color: black">Categorias</option>
+                            <option value="" style="color: black">Restaurantes</option>
+                            <option value="" style="color: black">Bares</option>
+                            <option value="" style="color: black">Shopping</option>
+                        </select>
+                        <input type="date" id="date" name="date">
+                        <input type="time" name="hora" id="hora">
+                    </div>
+                    <!-- Preço e Idade -->
+                    <div class="map-info-line">
+                        <!-- Preço-->
+                        <div class="map-money">
+                            <div class="map-label-line">
+                                <input type="checkbox" name="money" id="money">
+                                <label for="money">Entrada Franca</label>
+                            </div> 
+                            <input type="text" name="money" id="money" placeholder="Valor">
+                        </div>
+                        <!-- Idade -->
+                        <div class="map-age">
+                            <div class="map-label-line">
+                                <input type="checkbox" name="age" id="age">
+                                <label for="age">Faixa Etária</label>
+                            </div>
+                            <div class="map-age-line">
+                                <input type="number" name="min" id="min" placeholder="min">
+                                <input type="number" name="max" id="max" placeholder="max">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Filtrar -->
+                    <div class="map-info-line">
+                        <input type="submit" value="Filtrar" class="map-submit">
+                    </div>
+                </form>
+            </div>
+            <!-- FIM DA AREA APAGADA-->
+        </div>
+    </div>
 </main>
 <footer>
     <div class="footer">
