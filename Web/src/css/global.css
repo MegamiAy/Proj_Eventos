@@ -457,6 +457,9 @@ main {
     .event-content a{
         text-decoration: none;
     }
+    .event-card i{
+        color: #CC6820;
+    }
     .event-img{
         position: relative;
         width: 100%;

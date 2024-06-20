@@ -1,302 +1,479 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Container de Cards</title>
-    <link rel="stylesheet" href="../src/css/global.css">
-    <link rel="stylesheet" href="../src/css/test-events.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Navegação de Cards</title>
+  <link rel="stylesheet" href="../src/css/global.css">
+  <link rel="stylesheet" href="../src/css/test-events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-<!-- Navegação -->
-<header id="header">
-    <!-- O conteúdo do cabeçalho será carregado aqui -->
-</header>
-<!-- Conteúdo -->
-<main>
-    <!-- Título da Página -->
-    <div class="inner-title">
-        <h2>Eventos</h2>
-    </div>
-    <!-- Categorias -->
-    <div class="categories">
-        <div class="categories-background">
-            <div class="categories-title">
-                <h2>Qual é a sua vibe <orange>hoje?</orange></h2>
+  <div class="container">
+    <section class="category-section">
+      <h2>Categoria X</h2>
+      <div class="cards-container">
+          <!-- Cards da Categoria X -->
+          <div class="event-card">
+          <a href="#">
+            <div class="event-img">
+              <img src="../src/img/events/event01.png" alt="Imagem">
+              <span class="event-category" id="music">Música</span>
             </div>
-            <div class="cat-cards">
-                <!-- Categoria 1 -->
-                <div class="cat-card">
-                    <a href="../view/bar.html">
-                        <div class="cat-img">
-                            <img src="../src/img/catogories/beer.png" alt="cat1" title="cat1">
-                        </div>
-                        <h2>Bar</h2>
-                    </a>
+            <div class="event-info">
+              <div class="event-info-header">
+                <h3 class="event-title">ELECTRO NIGHT</h3>
+              </div>
+              <div class="event-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="event-address">Square Garden - Joinville (SC)</span>
+              </div>
+              <div class="event-info-footer">
+                <div class="event-f1">
+                  <div class="event-f-l">
+                    <i class="fas fa-calendar"></i>
+                    <span class="event-date">22/10/2024</span>
+                  </div>
+                  <div class="event-f-l">
+                    <i class="fas fa-clock"></i>
+                    <span class="event-time">22:00h</span>
+                  </div>
                 </div>
-                <!-- Categoria 2 -->
-                <div class="cat-card">
-                    <a href="#">
-                        <div class="cat-img">
-                            <img src="../src/img/catogories/show.png" alt="cat2" title="cat2">
-                        </div>
-                        <h2>Show</h2>
-                    </a>
+                <div class="event-f2">
+                  <i class="fas fa-ticket-alt"></i>
+                  <span class="event-price">R$ 20,00</span>
                 </div>
-                <!-- Categoria 3 -->
-                <div class="cat-card">
-                    <a href="#">
-                        <div class="cat-img">
-                            <img src="../src/img/catogories/ferias.png" alt="cat3" title="cat3">
-                        </div>
-                        <h2>Férias</h2>
-                    </a>
-                </div>
-                <!-- Categoria 4 -->
-                <div class="cat-card">
-                    <a href="#">
-                        <div class="cat-img">
-                            <img src="../src/img/catogories/food.png" alt="cat4" title="cat4">
-                        </div>
-                        <h2>Comida</h2>
-                    </a>
-                </div>
-                <!-- Categoria 5 -->
-                <div class="cat-card">
-                    <a href="#">
-                        <div class="cat-img">
-                            <img src="../src/img/catogories/more.png" alt="cat5" title="cat5">
-                        </div>
-                        <h2>Outros</h2>
-                    </a>
-                </div>
+              </div>
             </div>
-        </div>
-    </div>
-    <!-- Seções de Categorias -->
-    <div class="eve-cat-container">
-        <section>
-            <h2>BARES - RESTAURANTES - ALIMENTAÇÃO</h2>
-            <div class="eve-cat-card-wrapper">
-                <button class="nav-button prev-button"><i class="fas fa-chevron-left"></i></button>
-                <!-- Linha -->
-                <div class="eve-cat-card-container">
-                    <!-- Card 1 -->
-                    <div class="eve-cat-card">
-                        <div class="eve-cat-card-image">
-                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                            <span id="beer" class="eve-cat-category-icon">TESTE 1</span>
-                        </div>
-                        <div class="eve-cat-card-content">
-                            <div class="eve-cat-card-header">
-                                <h3 class="eve-cat-card-title">Título do Card</h3>
-                                <span class="eve-cat-card-time">10:00 AM</span>
-                            </div>
-                            <div class="eve-cat-card-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span id="food" class="eve-cat-card-address">Endereço do Evento</span>
-                            </div>
-                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
-                        </div>
-                    </div>
-                    <div class="eve-cat-card">
-                        <div class="eve-cat-card-image">
-                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                            <span class="eve-cat-category-icon">TESTE</span>
-                        </div>
-                        <div class="eve-cat-card-content">
-                            <div class="eve-cat-card-header">
-                                <h3 class="eve-cat-card-title">Título do Card</h3>
-                                <span class="eve-cat-card-time">10:00 AM</span>
-                            </div>
-                            <div class="eve-cat-card-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span id="" class="eve-cat-card-address">Endereço do Evento</span>
-                            </div>
-                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
-                        </div>
-                    </div>
-                    <div class="eve-cat-card">
-                        <div class="eve-cat-card-image">
-                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                            <span class="eve-cat-category-icon"></span>
-                        </div>
-                        <div class="eve-cat-card-content">
-                            <div class="eve-cat-card-header">
-                                <h3 class="eve-cat-card-title">Título do Card</h3>
-                                <span class="eve-cat-card-time">10:00 AM</span>
-                            </div>
-                            <div class="eve-cat-card-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span id="" class="eve-cat-card-address">Endereço do Evento</span>
-                            </div>
-                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
-                        </div>
-                    </div>
-                    <div class="eve-cat-card">
-                        <div class="eve-cat-card-image">
-                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                            <span class="eve-cat-category-icon"></span>
-                        </div>
-                        <div class="eve-cat-card-content">
-                            <div class="eve-cat-card-header">
-                                <h3 class="eve-cat-card-title">Título do Card</h3>
-                                <span class="eve-cat-card-time">10:00 AM</span>
-                            </div>
-                            <div class="eve-cat-card-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span id="" class="eve-cat-card-address">Endereço do Evento</span>
-                            </div>
-                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
-                        </div>
-                    </div>
-                    <div class="eve-cat-card">
-                        <div class="eve-cat-card-image">
-                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                            <span class="eve-cat-category-icon"></span>
-                        </div>
-                        <div class="eve-cat-card-content">
-                            <div class="eve-cat-card-header">
-                                <h3 class="eve-cat-card-title">Título do Card</h3>
-                                <span class="eve-cat-card-time">10:00 AM</span>
-                            </div>
-                            <div class="eve-cat-card-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span id="" class="eve-cat-card-address">Endereço do Evento</span>
-                            </div>
-                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
-                        </div>
-                    </div>
-                    <div class="eve-cat-card">
-                        <div class="eve-cat-card-image">
-                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                            <span class="eve-cat-category-icon"></span>
-                        </div>
-                        <div class="eve-cat-card-content">
-                            <div class="eve-cat-card-header">
-                                <h3 class="eve-cat-card-title">Título do Card</h3>
-                                <span class="eve-cat-card-time">10:00 AM</span>
-                            </div>
-                            <div class="eve-cat-card-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span id="" class="eve-cat-card-address">Endereço do Evento</span>
-                            </div>
-                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
-                        </div>
-                    </div>
-                    <div class="eve-cat-card">
-                        <div class="eve-cat-card-image">
-                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                            <span class="eve-cat-category-icon"></span>
-                        </div>
-                        <div class="eve-cat-card-content">
-                            <div class="eve-cat-card-header">
-                                <h3 class="eve-cat-card-title">Título do Card</h3>
-                                <span class="eve-cat-card-time">10:00 AM</span>
-                            </div>
-                            <div class="eve-cat-card-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span id="" class="eve-cat-card-address">Endereço do Evento</span>
-                            </div>
-                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
-                        </div>
-                    </div>
-                    <div class="eve-cat-card">
-                        <div class="eve-cat-card-image">
-                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                            <span class="eve-cat-category-icon"></span>
-                        </div>
-                        <div class="eve-cat-card-content">
-                            <div class="eve-cat-card-header">
-                                <h3 class="eve-cat-card-title">Título do Card</h3>
-                                <span class="eve-cat-card-time">10:00 AM</span>
-                            </div>
-                            <div class="eve-cat-card-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span id="" class="eve-cat-card-address">Endereço do Evento</span>
-                            </div>
-                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
-                        </div>
-                    </div>
-                    <div class="eve-cat-card">
-                        <div class="eve-cat-card-image">
-                            <img src="https://via.placeholder.com/200x100" alt="Imagem do Card">
-                            <span class="eve-cat-category-icon"></span>
-                        </div>
-                        <div class="eve-cat-card-content">
-                            <div class="eve-cat-card-header">
-                                <h3 class="eve-cat-card-title">Título do Card GTESHEGHE</h3>
-                                <span class="eve-cat-card-time">10:00 AM</span>
-                            </div>
-                            <div class="eve-cat-card-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span id="" class="eve-cat-card-address">Endereço do Evento</span>
-                            </div>
-                            <a href="#" class="eve-cat-card-link">VER MAIS</a>
-                        </div>
-                    </div>
-                    <!-- Repita os cards conforme necessário -->
+          </a>
+          </div>
+          <!-- Cards da Categoria X -->
+          <div class="event-card">
+            <a href="#">
+              <div class="event-img">
+                <img src="../src/img/events/event01.png" alt="Imagem">
+                <span class="event-category" id="music">Música</span>
+              </div>
+              <div class="event-info">
+                <div class="event-info-header">
+                  <h3 class="event-title">ELECTRO NIGHT</h3>
                 </div>
-                <button class="nav-button next-button"><i class="fas fa-chevron-right"></i></button>
+                <div class="event-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="event-address">Square Garden - Joinville (SC)</span>
+                </div>
+                <div class="event-info-footer">
+                  <div class="event-f1">
+                    <div class="event-f-l">
+                      <i class="fas fa-calendar"></i>
+                      <span class="event-date">22/10/2024</span>
+                    </div>
+                    <div class="event-f-l">
+                      <i class="fas fa-clock"></i>
+                      <span class="event-time">22:00h</span>
+                    </div>
+                  </div>
+                  <div class="event-f2">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span class="event-price">R$ 20,00</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- Cards da Categoria X -->
+          <div class="event-card">
+            <a href="#">
+              <div class="event-img">
+                <img src="../src/img/events/event01.png" alt="Imagem">
+                <span class="event-category" id="music">Música</span>
+              </div>
+              <div class="event-info">
+                <div class="event-info-header">
+                  <h3 class="event-title">ELECTRO NIGHT</h3>
+                </div>
+                <div class="event-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="event-address">Square Garden - Joinville (SC)</span>
+                </div>
+                <div class="event-info-footer">
+                  <div class="event-f1">
+                    <div class="event-f-l">
+                      <i class="fas fa-calendar"></i>
+                      <span class="event-date">22/10/2024</span>
+                    </div>
+                    <div class="event-f-l">
+                      <i class="fas fa-clock"></i>
+                      <span class="event-time">22:00h</span>
+                    </div>
+                  </div>
+                  <div class="event-f2">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span class="event-price">R$ 20,00</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- Cards da Categoria X -->
+          <div class="event-card">
+            <a href="#">
+              <div class="event-img">
+                <img src="../src/img/events/event01.png" alt="Imagem">
+                <span class="event-category" id="music">Música</span>
+              </div>
+              <div class="event-info">
+                <div class="event-info-header">
+                  <h3 class="event-title">ELECTRO NIGHT</h3>
+                </div>
+                <div class="event-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="event-address">Square Garden - Joinville (SC)</span>
+                </div>
+                <div class="event-info-footer">
+                  <div class="event-f1">
+                    <div class="event-f-l">
+                      <i class="fas fa-calendar"></i>
+                      <span class="event-date">22/10/2024</span>
+                    </div>
+                    <div class="event-f-l">
+                      <i class="fas fa-clock"></i>
+                      <span class="event-time">22:00h</span>
+                    </div>
+                  </div>
+                  <div class="event-f2">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span class="event-price">R$ 20,00</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- Cards da Categoria X -->
+          <div class="event-card">
+            <a href="#">
+              <div class="event-img">
+                <img src="../src/img/events/event01.png" alt="Imagem">
+                <span class="event-category" id="music">Música</span>
+              </div>
+              <div class="event-info">
+                <div class="event-info-header">
+                  <h3 class="event-title">ELECTRO NIGHT</h3>
+                </div>
+                <div class="event-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="event-address">Square Garden - Joinville (SC)</span>
+                </div>
+                <div class="event-info-footer">
+                  <div class="event-f1">
+                    <div class="event-f-l">
+                      <i class="fas fa-calendar"></i>
+                      <span class="event-date">22/10/2024</span>
+                    </div>
+                    <div class="event-f-l">
+                      <i class="fas fa-clock"></i>
+                      <span class="event-time">22:00h</span>
+                    </div>
+                  </div>
+                  <div class="event-f2">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span class="event-price">R$ 20,00</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- Cards da Categoria X -->
+          <div class="event-card">
+            <a href="#">
+              <div class="event-img">
+                <img src="../src/img/events/event01.png" alt="Imagem">
+                <span class="event-category" id="music">Música</span>
+              </div>
+              <div class="event-info">
+                <div class="event-info-header">
+                  <h3 class="event-title">ELECTRO NIGHT</h3>
+                </div>
+                <div class="event-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="event-address">Square Garden - Joinville (SC)</span>
+                </div>
+                <div class="event-info-footer">
+                  <div class="event-f1">
+                    <div class="event-f-l">
+                      <i class="fas fa-calendar"></i>
+                      <span class="event-date">22/10/2024</span>
+                    </div>
+                    <div class="event-f-l">
+                      <i class="fas fa-clock"></i>
+                      <span class="event-time">22:00h</span>
+                    </div>
+                  </div>
+                  <div class="event-f2">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span class="event-price">R$ 20,00</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- Cards da Categoria X -->
+          <div class="event-card">
+            <a href="#">
+              <div class="event-img">
+                <img src="../src/img/events/event01.png" alt="Imagem">
+                <span class="event-category" id="music">Música</span>
+              </div>
+              <div class="event-info">
+                <div class="event-info-header">
+                  <h3 class="event-title">ELECTRO NIGHT</h3>
+                </div>
+                <div class="event-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="event-address">Square Garden - Joinville (SC)</span>
+                </div>
+                <div class="event-info-footer">
+                  <div class="event-f1">
+                    <div class="event-f-l">
+                      <i class="fas fa-calendar"></i>
+                      <span class="event-date">22/10/2024</span>
+                    </div>
+                    <div class="event-f-l">
+                      <i class="fas fa-clock"></i>
+                      <span class="event-time">22:00h</span>
+                    </div>
+                  </div>
+                  <div class="event-f2">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span class="event-price">R$ 20,00</span>
+                  </div>
+                </div>
+              </div>
+            </a>
             </div>
-        </section>
-        <!-- Repita as seções conforme necessário -->
-    </div>
-</main>
-<!-- Rodapé -->
-<footer>
-    <div class="footer">
-        <div class="footer-logo">
-            <img src="../src/img/white_logo.PNG" alt="KAYA" title="KAYA" width="80" height="80">
-        </div>
-        <div class="footer-list">
-            <ul>
-                <li class="footer-item"><a class="footer-link" href="#">INÍCIO</a></li>
-                <li class="footer-item"><a class="footer-link" href="#">EVENTOS</a></li>
-                <li class="footer-item"><a class="footer-link" href="#">CRIAR</a></li>
-                <li class="footer-item"><a class="footer-link" href="#">PERFIL</a></li>
-            </ul>
-        </div>
-        <div class="footer-social">
-            <ul>
-                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-facebook-square"></i></a></li>
-                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-instagram"></i></a></li>
-                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-credits">
-            <p>© 2024 KAYA. Todos os direitos reservados.</p>
-        </div>
-    </div>
-</footer>
-<!-- Scripts - colocar no arquivo externo após finalização -->
-<script src="../src/js/scriptEvents.js"></script>
-<script>
-    fetch('template/headerView.html')
-        .then(response => response.text())
-        .then(html => {
-            // Insira o conteúdo do cabeçalho no elemento com id "header"
-            document.getElementById('header').innerHTML = html;
-        })
-        .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
-</script>
-<script>
-    const containers = document.querySelectorAll('.eve-cat-card-container');
+            <!-- Cards da Categoria X -->
+            <div class="event-card">
+              <a href="#">
+                <div class="event-img">
+                  <img src="../src/img/events/event01.png" alt="Imagem">
+                  <span class="event-category" id="music">Música</span>
+                </div>
+                <div class="event-info">
+                  <div class="event-info-header">
+                    <h3 class="event-title">ELECTRO NIGHT</h3>
+                  </div>
+                  <div class="event-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="event-address">Square Garden - Joinville (SC)</span>
+                  </div>
+                  <div class="event-info-footer">
+                    <div class="event-f1">
+                      <div class="event-f-l">
+                        <i class="fas fa-calendar"></i>
+                        <span class="event-date">22/10/2024</span>
+                      </div>
+                      <div class="event-f-l">
+                        <i class="fas fa-clock"></i>
+                        <span class="event-time">22:00h</span>
+                      </div>
+                    </div>
+                    <div class="event-f2">
+                      <i class="fas fa-ticket-alt"></i>
+                      <span class="event-price">R$ 20,00</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Cards da Categoria X -->
+            <div class="event-card">
+              <a href="#">
+                <div class="event-img">
+                  <img src="../src/img/events/event01.png" alt="Imagem">
+                  <span class="event-category" id="music">Música</span>
+                </div>
+                <div class="event-info">
+                  <div class="event-info-header">
+                    <h3 class="event-title">ELECTRO NIGHT</h3>
+                  </div>
+                  <div class="event-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="event-address">Square Garden - Joinville (SC)</span>
+                  </div>
+                  <div class="event-info-footer">
+                    <div class="event-f1">
+                      <div class="event-f-l">
+                        <i class="fas fa-calendar"></i>
+                        <span class="event-date">22/10/2024</span>
+                      </div>
+                      <div class="event-f-l">
+                        <i class="fas fa-clock"></i>
+                        <span class="event-time">22:00h</span>
+                      </div>
+                    </div>
+                    <div class="event-f2">
+                      <i class="fas fa-ticket-alt"></i>
+                      <span class="event-price">R$ 20,00</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Cards da Categoria X -->
+            <div class="event-card">
+              <a href="#">
+                <div class="event-img">
+                  <img src="../src/img/events/event01.png" alt="Imagem">
+                  <span class="event-category" id="music">Música</span>
+                </div>
+                <div class="event-info">
+                  <div class="event-info-header">
+                    <h3 class="event-title">ELECTRO NIGHT</h3>
+                  </div>
+                  <div class="event-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="event-address">Square Garden - Joinville (SC)</span>
+                  </div>
+                  <div class="event-info-footer">
+                    <div class="event-f1">
+                      <div class="event-f-l">
+                        <i class="fas fa-calendar"></i>
+                        <span class="event-date">22/10/2024</span>
+                      </div>
+                      <div class="event-f-l">
+                        <i class="fas fa-clock"></i>
+                        <span class="event-time">22:00h</span>
+                      </div>
+                    </div>
+                    <div class="event-f2">
+                      <i class="fas fa-ticket-alt"></i>
+                      <span class="event-price">R$ 20,00</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Cards da Categoria X -->
+            <div class="event-card">
+              <a href="#">
+                <div class="event-img">
+                  <img src="../src/img/events/event01.png" alt="Imagem">
+                  <span class="event-category" id="music">Música</span>
+                </div>
+                <div class="event-info">
+                  <div class="event-info-header">
+                    <h3 class="event-title">ELECTRO NIGHT</h3>
+                  </div>
+                  <div class="event-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="event-address">Square Garden - Joinville (SC)</span>
+                  </div>
+                  <div class="event-info-footer">
+                    <div class="event-f1">
+                      <div class="event-f-l">
+                        <i class="fas fa-calendar"></i>
+                        <span class="event-date">22/10/2024</span>
+                      </div>
+                      <div class="event-f-l">
+                        <i class="fas fa-clock"></i>
+                        <span class="event-time">22:00h</span>
+                      </div>
+                    </div>
+                    <div class="event-f2">
+                      <i class="fas fa-ticket-alt"></i>
+                      <span class="event-price">R$ 20,00</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Cards da Categoria X -->
+            <div class="event-card">
+              <a href="#">
+                <div class="event-img">
+                  <img src="../src/img/events/event01.png" alt="Imagem">
+                  <span class="event-category" id="music">Música</span>
+                </div>
+                <div class="event-info">
+                  <div class="event-info-header">
+                    <h3 class="event-title">ELECTRO NIGHT</h3>
+                  </div>
+                  <div class="event-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="event-address">Square Garden - Joinville (SC)</span>
+                  </div>
+                  <div class="event-info-footer">
+                    <div class="event-f1">
+                      <div class="event-f-l">
+                        <i class="fas fa-calendar"></i>
+                        <span class="event-date">22/10/2024</span>
+                      </div>
+                      <div class="event-f-l">
+                        <i class="fas fa-clock"></i>
+                        <span class="event-time">22:00h</span>
+                      </div>
+                    </div>
+                    <div class="event-f2">
+                      <i class="fas fa-ticket-alt"></i>
+                      <span class="event-price">R$ 20,00</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+      </div>
+      <div class="navigation-buttons">
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+      </div>
+    </section>
+    
+    <!-- Repita a estrutura da seção acima para outras categorias -->
 
-    containers.forEach(container => {
-        const prevButton = container.previousElementSibling;
-        const nextButton = container.nextElementSibling;
+  </div>
 
-        prevButton.addEventListener('click', () => {
-            container.scrollLeft -= container.clientWidth / 2;
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.category-section');
+
+      sections.forEach(section => {
+        const cardsContainer = section.querySelector('.cards-container');
+        const prevButton = section.querySelector('.prev');
+        const nextButton = section.querySelector('.next');
+
+        let scrollAmount = 0;
+        const cardWidth = cardsContainer.scrollWidth / cardsContainer.children.length;
+
+        nextButton.addEventListener('click', function() {
+          const maxScrollLeft = cardsContainer.scrollWidth - cardsContainer.clientWidth;
+          scrollAmount += cardWidth * 4; // Avança 3 cards
+
+          if (scrollAmount > maxScrollLeft) {
+            scrollAmount = maxScrollLeft;
+          }
+
+          cardsContainer.scrollTo({
+            top: 0,
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
         });
 
-        nextButton.addEventListener('click', () => {
-            container.scrollLeft += container.clientWidth / 2;
+        prevButton.addEventListener('click', function() {
+          scrollAmount -= cardWidth * 4; // Retrocede 3 cards
+
+          if (scrollAmount < 0) {
+            scrollAmount = 0;
+          }
+
+          cardsContainer.scrollTo({
+            top: 0,
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
         });
+      });
     });
-</script>
-
+  </script>
 </body>
 </html>

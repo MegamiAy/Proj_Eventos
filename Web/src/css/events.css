@@ -6,8 +6,74 @@
     margin: 0 0 1.5rem 0;
 }
 
+.event-content {
+    padding: 0.5rem;
+    max-width: 1000px;
+    margin: 1rem auto;
+}
+
+.event-section {
+    margin-bottom: 2rem;
+}
+
+.event-cards-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1rem; /* Espaço entre os cards */
+    scrollbar-width: none; /* Oculta a barra de rolagem padrão */
+    -ms-overflow-style: none; /* Oculta a barra de rolagem no IE 10+ */
+}
+
+.event-cards-container::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no Chrome, Safari e Edge */
+}
+
+.event-card {
+    flex: 0 0 auto;
+    width: 250px;
+    background-color: #170C38;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.navigation-buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.navigation-buttons button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navigation-buttons button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* CONTENEDOR DE EVENTOS */
-.eve-cat-container {
+/* .eve-cat-container {
     width: 100%;
 }
 
@@ -18,10 +84,10 @@
 
 .eve-cat-container h2 {
     margin-bottom: 10px;
-}
+} */
 
 /* Botões de Navegação */
-.nav-button {
+/* .nav-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -156,4 +222,4 @@
 .eve-cat-card-link:hover {
     background-color: #170C38;
     color: #fff;
-}
+} */
