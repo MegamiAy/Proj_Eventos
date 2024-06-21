@@ -25,7 +25,7 @@ orange{
     header {
         background-color: #170C38;
     }
-    .nav-bar {
+    .nav-Bares {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -129,7 +129,7 @@ orange{
     }
     /* hEADER - MOBILE */
         @media screen and (max-width: 800px) {
-            /* .nav-bar {
+            /* .nav-Bares {
                 padding: 1.5rem 2rem;
             } */
             .nav-item {
@@ -451,7 +451,7 @@ main {
     .event-card:hover{
         transform: translateY(-5px);
         transition: 0.5s;
-        box-shadow: 0px 0px 30px #000000; /* 3px right, 3px down, 3px blur */
+        box-shadow: 0px 0px 20px #000; /* 3px right, 3px down, 3px blur */
         cursor: pointer;
     }
     .event-content a{
@@ -549,11 +549,11 @@ main {
     /* Eventos - id */
     #beer{
         background-color: #B99200;
-        content: "BAR";
+        content: "Bars";
     }
     #show{
         background-color: #8B1766;
-        content: "SHOW";
+        content: "Show";
     }
     #ferias{
         background-color: #13B900;

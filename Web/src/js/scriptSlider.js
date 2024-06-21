@@ -4,7 +4,7 @@ let slideInterval;
 
 
 // mostrar o slide
-function showSlide(index) {
+function ShowsSlide(index) {
     const slides = document.querySelector('.slides');
     const totalSlides = document.querySelectorAll('.slide').length;
     const indicators = document.querySelectorAll('.indicator');
@@ -32,27 +32,27 @@ function showSlide(index) {
 }
 
 // mudança de slide a cada 3 segundos
-function startSlideShow() {
+function startSlideShows() {
     slideInterval = setInterval(() => {
-        showSlide(currentSlide + 1);
+        ShowsSlide(currentSlide + 1);
     }, 3000);
 }
 
-function stopSlideShow() {
+function stopSlideShows() {
     clearInterval(slideInterval);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentSlide); // mostra na teal
-    startSlideShow();    // incia a movimentação
+    ShowsSlide(currentSlide); // mostra na teal
+    startSlideShows();    // incia a movimentação
 
     // faz os indicadores, as bolinhas funcionarem
     const indicators = document.querySelectorAll('.indicator');
     indicators.forEach((indicator, i) => {
         indicator.addEventListener('click', () => {
-            stopSlideShow(); 
-            showSlide(i);
-            startSlideShow();
+            stopSlideShows(); 
+            ShowsSlide(i);
+            startSlideShows();
         });
     });
 });
