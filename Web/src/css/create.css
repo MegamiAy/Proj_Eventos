@@ -1,12 +1,5 @@
-/* TÍTULO */
-.inner-title-2{
-    flex: 1;
-    font-weight: 500;
-    text-align: center;
-    padding: 0.5rem 0 0 0; /* 1.7rem top and bottom */
-}
-.inner-title-2 h2 {
-    padding: 0.25rem 0 0 0;
+body{
+    background-color: #170C38;
 }
 
 /* FORMULÁRIO */
@@ -14,9 +7,19 @@
     .create{
         background-color: #170C38;
         width: fit-content;
-        margin: 2rem auto;
+        margin: 0 auto;
         border-radius: 0.5rem;
         padding: 1rem 0 1rem 0;
+    }
+    /* TÍTULO */
+    .inner-title-2{
+        flex: 1;
+        font-weight: 500;
+        text-align: center;
+        padding: 0.5rem 0 3.5rem 0; /* 1.7rem top and bottom */
+    }
+    .inner-title-2 h2 {
+        padding: 0.25rem 0 0 0;
     }
     /* Colunas */
     .create-info{
@@ -26,7 +29,7 @@
         justify-content: space-between;
         max-width: 1000px;
         padding: 1rem 2rem;
-        gap: 2.5rem;
+        gap: 0 2.5rem;
     }
     .create-left, .create-right{
         display: flex;
@@ -45,10 +48,10 @@
     .create-check{
         display: flex;
         flex-direction: row;
-        padding: 0.5rem 0 0.5rem;
+        padding: 0.5rem 0 0 0;
     }
     .create-check input{
-        margin-right: 0.5rem;
+        margin: 0 0.5rem 0 0;
     }
     /* Input file(img) */
     .create-img {
@@ -63,6 +66,11 @@
         font-size: 16px;
         text-align: center;
         border-radius: 10px;
+        margin: 0.5rem 0;
+    }
+    .create-img:hover{
+        background-color: #CC6820;
+        transition: 0.3s;
     }
     .file-input {
         display: none;
@@ -76,6 +84,15 @@
         align-items: center;
         cursor: pointer;
         color: white;
+    }
+    .create-line{
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+    }
+    .create-line input{
+        width: 130px;
+        margin: 0 0.5rem 0 0;
     }
     /* Input buttons */
     input[type="submit"]{
@@ -119,16 +136,18 @@
     .create-textarea{
         display: flex;
         flex-direction: column;
-        padding: 2.5rem 0;
+        padding: 0.5rem 0 1rem 0;
     }
     .create-textarea textarea{
         color: #000;
-        max-height: 100%;
-        max-width: 100%;
+        /* max-height: 100%;
+        max-width: 100%; */
+        height: 80px;
+        padding: 0.5rem;
         border-radius: 0.5rem;
         resize: none;
         scrollbar-width: thin; /* Define a barra de rolagem como fina */
-        scrollbar-color: gray transparent; /* Cor do indicador e do fundo *
+        scrollbar-color: gray transparent; /* Cor do indicador e do fundo */
     }
     textarea::-webkit-scrollbar {
         width: 6px; /* Largura da barra de rolagem */
@@ -136,6 +155,9 @@
     textarea::-webkit-scrollbar-thumb {
         background-color: gray; /* Cor do "coisinha" (indicador) */
         border-radius: 10px; /* Bordas arredondadas do indicador */
+    }
+    textarea:focus{
+        outline: none;
     }
 
 .create-info a{
@@ -146,4 +168,32 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 1000px){
+    .create-info{
+        flex-direction: column;
+    }
+    .create-info:last-child{
+        gap: 1rem;
+    }
+    .create-left, .create-right{
+        width: 100%;
+    }
+    .create-img{
+        width: 100%;
+    }
+    .create-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .create-select select{
+        width: 100%;
+    }
+    .create-select option{
+        width: 100%;
+    }
+    input[type="submit"], input[type="button"]{
+        width: 100%;
+    }
 }

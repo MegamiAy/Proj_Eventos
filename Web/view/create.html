@@ -16,18 +16,16 @@
 </header>
 <!-- Conteúdo -->
 <main>
-    
-    <div class="inner-title-2">
-        <h3>CRIE SEU PRÓPRIO</h3><h2><orange>EVENTO</orange></h2>
-    </div>
-
     <div class="create">
+        <div class="inner-title-2">
+            <h3>CRIE SEU PRÓPRIO</h3><h2><orange>EVENTO</orange></h2>
+        </div>
         <form action="profile.html">
             <div class="create-info">
                 <div class="creare-left">
                     <div class="create-input">
                         <label for="name">Nome do evento</label>
-                        <input type="text" id="name" name="name" placeholder="..." required>
+                        <input type="text" id="name" name="name" placeholder="Ex: Meu Evento" required>
                     </div>
     
                     <div class="create-img">
@@ -39,21 +37,21 @@
     
                     <div class="create-check">
                         <input type="checkbox" name="ticket" value="">
-                        <label type="checkbox" for="ticket">É necessário Ticket/Ingresso?</label>
+                        <label type="checkbox" for="ticket">É necessário Ticket / Ingresso</label>
                     </div>
                     <div class="create-check">
                         <input type="checkbox" name="free" value="">
-                        <label type="checkbox" for="free">Entrada franca?</label>
+                        <label type="checkbox" for="free">Entrada franca</label>
                     </div>
     
                     <div class="create-line">
                         <div class="create-input">
-                            <label for="price" name="price">Valor</label>
-                            <input type="number" id="price" name="price" placeholder="..." required>
+                            <label for="price" name="price">Valor *</label>
+                            <input type="number" id="price" name="price" placeholder="Ex: R$ 40,00" required>
                         </div>
                         <div class="create-input">
-                            <label for="conditional">Condições</label>
-                            <input type="text" id="conditional" name="conditional" placeholder="..." required>
+                            <label for="conditional">Especiais</label>
+                            <input type="text" id="conditional" name="conditional" placeholder="Ex: MEIA - R$ 20,00" required>
                         </div>
                     </div>
                 </div>
@@ -64,7 +62,7 @@
                     <div class="create-input">
                         <label for="local">Localização</label>
                         <span><i></i></span>
-                        <input type="text" id="local" name="local" placeholder="..." required>
+                        <input type="text" id="local" name="local" placeholder="Ex: Rua da Cidade, Centro - 23" required>
                     </div>
                     <div class="create-input">
                         <label for="date">Data</label>
@@ -79,7 +77,7 @@
                     <div class="create-select">
                         <label for="category">Categoria</label>
                         <select name="category" id="categpry">
-                            <option value="1">Categoria 1</option>
+                            <option value="1">(Selecione uma categoria)</option>
                             <option value="2">Categoria 2</option>
                             <option value="3">Categoria 3</option>
                             <option value="4">Categoria 4</option>
@@ -87,7 +85,7 @@
                     </div>
                     <div class="create-textarea">
                         <label for="desc">Descrição</label>
-                        <textarea name="desc" id="desc" placeholder="..." required></textarea>
+                        <textarea name="desc" id="desc" placeholder="Conte um pouco mais sobre seu evento!" required></textarea>
                     </div>
                 </div>
             </div>
