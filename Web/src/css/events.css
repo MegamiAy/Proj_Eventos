@@ -6,55 +6,88 @@
     margin: 0 0 1.5rem 0;
 }
 
-.event-content {
-    padding: 0.5rem;
-    max-width: 1000px;
-    margin: 1rem auto;
+/* Novo */
+.category-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.event-section {
-    margin-bottom: 2rem;
+.category-container h2 {
+    margin: 2rem 0 0 0;
 }
 
-.event-cards-container {
+.category-section {
+    margin-bottom: 30px;
+    position: relative; /* Para posicionamento dos botões */
+}
+
+.cards-container {
+    margin: 0 auto;
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 1rem; /* Espaço entre os cards */
-    scrollbar-width: none; /* Oculta a barra de rolagem padrão */
-    -ms-overflow-style: none; /* Oculta a barra de rolagem no IE 10+ */
+    flex-wrap: nowrap; /* Garante que os cards fiquem em linha */
+    overflow: hidden; /* Esconde o overflow para remover o scrollview */
 }
 
-.event-cards-container::-webkit-scrollbar {
-    display: none; /* Oculta a barra de rolagem no Chrome, Safari e Edge */
+.event-card{
+    margin: 1.5rem 0.5rem 2.5rem 0.5rem;
 }
-
-.event-card {
-    flex: 0 0 auto;
-    width: 250px;
-    background-color: #170C38;
-    border-radius: 0.5rem;
-    margin-right: 1rem;
-    color: #fff;
+/* .event-card:nth-child(3n+1) {
+    margin: 1.5rem 0 2.5rem 0; 
 }
+.event-card:nth-child(3n+3) {
+    margin: 1.5rem 0 2.5rem 0;
+}
+.event-card:first-child {
+    margin-left: 0;
+}
+.event-card:last-child {
+    margin-right: 0;
+} */
 
 .navigation-buttons {
-    text-align: center;
-    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.navigation-buttons button {
-    margin: 0 10px;
-    padding: 8px 16px;
-    background-color: #4CAF50;
+button.prev,
+button.next {
+    background-color: #170C38;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 50%;
+    margin: 0 -2rem 0 -2rem;
+    padding: 0.5rem 0.7rem;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.navigation-buttons button:hover {
-    background-color: #45a049;
+button.prev:hover,
+button.next:hover {
+background-color: #0056b3;
+}
+
+/* Estilos para mobile */
+@media (max-width: 767px) {
+  .cards-container {
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Scroll "snap" para facilitar a navegação */
+    -webkit-overflow-scrolling: touch; /* Scroll suave no iOS */
+  }
+
+  .event-card {
+    scroll-snap-align: start; /* Alinha cards ao início do scroll */
+    box-sizing: border-box; /* Inclui padding no cálculo de largura */
+    width: 100%; /* Define a largura total para cada card */
+  }
+
+  /* Esconde os botões de navegação na versão mobile */
+  .navigation-buttons {
+    display: none;
+  }
 }
 
 
