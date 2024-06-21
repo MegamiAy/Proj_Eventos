@@ -6,44 +6,27 @@
     margin: 0 0 1.5rem 0;
 }
 
-/* Novo */
+/* Novo - Seção de eventos*/
 .category-container {
     max-width: 800px;
     margin: 0 auto;
 }
-
 .category-container h2 {
     margin: 2rem 0 0 0;
 }
-
 .category-section {
     margin-bottom: 30px;
     position: relative; /* Para posicionamento dos botões */
 }
-
 .cards-container {
     margin: 0 auto;
     display: flex;
     flex-wrap: nowrap; /* Garante que os cards fiquem em linha */
     overflow: hidden; /* Esconde o overflow para remover o scrollview */
 }
-
 .event-card{
     margin: 1.5rem 0.5rem 2.5rem 0.5rem;
 }
-/* .event-card:nth-child(3n+1) {
-    margin: 1.5rem 0 2.5rem 0; 
-}
-.event-card:nth-child(3n+3) {
-    margin: 1.5rem 0 2.5rem 0;
-}
-.event-card:first-child {
-    margin-left: 0;
-}
-.event-card:last-child {
-    margin-right: 0;
-} */
-
 .navigation-buttons {
     position: absolute;
     top: 50%;
@@ -52,7 +35,6 @@
     display: flex;
     justify-content: space-between;
 }
-
 button.prev,
 button.next {
     background-color: #170C38;
@@ -63,27 +45,15 @@ button.next {
     padding: 0.5rem 0.7rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: bolder;
 }
-
 button.prev:hover,
 button.next:hover {
-background-color: #0056b3;
+background-color: #CC6820;
 }
 
 /* Estilos para mobile */
 @media (max-width: 767px) {
-  .cards-container {
-    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
-    scroll-snap-type: x mandatory; /* Scroll "snap" para facilitar a navegação */
-    -webkit-overflow-scrolling: touch; /* Scroll suave no iOS */
-  }
-
-  .event-card {
-    scroll-snap-align: start; /* Alinha cards ao início do scroll */
-    box-sizing: border-box; /* Inclui padding no cálculo de largura */
-    width: 100%; /* Define a largura total para cada card */
-  }
-
   /* Esconde os botões de navegação na versão mobile */
   .navigation-buttons {
     display: none;
