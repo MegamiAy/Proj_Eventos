@@ -1,96 +1,149 @@
-/* IMPORT */
-
-
-/* VARIABLES */
-
-
-/* GLOBAL */
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-/* BODY */
-
-body {
-    background: linear-gradient(to top right, #3a1f93, #0b0805, #01199b);
-    background-color: #3a1f93;
-    height: 100vh;
-    background-size: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body img {
-    width: 35%;
-    transform: translate(-50%, -50%);;
-    z-index: 1;
-}
-
+/* TÍTULO */
 .inner-title-2{
     flex: 1;
     font-weight: 500;
     text-align: center;
-    padding: 1rem 0 0 0; /* 1.7rem top and bottom */
+    padding: 0.5rem 0 0 0; /* 1.7rem top and bottom */
+}
+.inner-title-2 h2 {
+    padding: 0.25rem 0 0 0;
 }
 
-.block {
-    width: fit-content;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.500) ;
-    color: white;
-    transform: translate(-50%, -50%);
-    border-radius: 25px;
-}
+/* FORMULÁRIO */
+    /* Container */
+    .create{
+        background-color: #170C38;
+        width: fit-content;
+        margin: 2rem auto;
+        border-radius: 0.5rem;
+        padding: 1rem 0 1rem 0;
+    }
+    /* Colunas */
+    .create-info{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1000px;
+        padding: 1rem 2rem;
+        gap: 2.5rem;
+    }
+    .create-left, .create-right{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
 
-label{
-    float: left;
-    margin-left: 9.1%;
-    font-weight: normal;
-}
+/* Inputs */
+    /* Input* */
+    .create-input{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+    /* Input checkbox */
+    .create-check{
+        display: flex;
+        flex-direction: row;
+        padding: 0.5rem 0 0.5rem;
+    }
+    .create-check input{
+        margin-right: 0.5rem;
+    }
+    /* Input file(img) */
+    .create-img {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background-color: #555;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .file-input {
+        display: none;
+    }
+    .file-label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: white;
+    }
+    /* Input buttons */
+    input[type="submit"]{
+        background-color: #494;
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 300px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    input[type="button"]{
+        background-color: #ff3845;
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 300px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .create-select{
+        padding: 0.5rem 0;
+    }
+    .create-select select{
+        width: 300px;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        color: #000;
+    }
+    .create-select option{
+        padding: 0.5rem;
+        color: #000;
+        border-radius: 0.5rem;
+    }
+    .create-textarea{
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem 0;
+    }
+    .create-textarea textarea{
+        color: #000;
+        max-height: 100%;
+        max-width: 100%;
+        border-radius: 0.5rem;
+        resize: none;
+        scrollbar-width: thin; /* Define a barra de rolagem como fina */
+        scrollbar-color: gray transparent; /* Cor do indicador e do fundo *
+    }
+    textarea::-webkit-scrollbar {
+        width: 6px; /* Largura da barra de rolagem */
+    }
+    textarea::-webkit-scrollbar-thumb {
+        background-color: gray; /* Cor do "coisinha" (indicador) */
+        border-radius: 10px; /* Bordas arredondadas do indicador */
+    }
 
-input[type=text],
-input[type=datetime-local] {
-    width:75%;
-    height: 35px;
-    margin: 10px 0;
-    padding: 0 15px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-input[type=submit] {
-    width: 80%;
-    height: 45px;
-    background-color: #CC6820;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-#fog {
-    float: left;
-    margin-left: 9.5%;
-}
-
-#cad {
-    float: right;
-    margin-right: 9.5%;
-}
-
-
-form a {
-    font-size: 14px;
-    color: white;
+.create-info a{
+    display: flex;
     text-decoration: none;
-}
-
-form a:hover{
-    color: rgb(106, 188, 207);
+    color: white;
+    border-radius: 0.5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }

@@ -10,33 +10,137 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+<!-- Navegação -->
+<header id="header">
+    <!-- O conteúdo do cabeçalho será carregado aqui -->
+</header>
+<!-- Conteúdo -->
+<main>
+    
     <div class="inner-title-2">
-        <h3>CRIE SEU PRÓPRIO</h3><br><h2><orange>EVENTO</orange></h2>
+        <h3>CRIE SEU PRÓPRIO</h3><h2><orange>EVENTO</orange></h2>
     </div>
-    <div class="block">
-        <h1>Crie seu evento</h1>
+
+    <div class="create">
         <form action="profile.html">
-            <div class="block-left">
-
+            <div class="create-info">
+                <div class="creare-left">
+                    <div class="create-input">
+                        <label for="name">Nome do evento</label>
+                        <input type="text" id="name" name="name" placeholder="..." required>
+                    </div>
+    
+                    <div class="create-img">
+                        <input type="file" name="img1" id="img1" class="file-input">
+                        <label for="img1" class="file-label">
+                            CLIQUE AQUI PARA ADICIONAR UMA IMAGEM DE CAPA
+                        </label>
+                    </div>
+    
+                    <div class="create-check">
+                        <input type="checkbox" name="ticket" value="">
+                        <label type="checkbox" for="ticket">É necessário Ticket/Ingresso?</label>
+                    </div>
+                    <div class="create-check">
+                        <input type="checkbox" name="free" value="">
+                        <label type="checkbox" for="free">Entrada franca?</label>
+                    </div>
+    
+                    <div class="create-line">
+                        <div class="create-input">
+                            <label for="price" name="price">Valor</label>
+                            <input type="number" id="price" name="price" placeholder="..." required>
+                        </div>
+                        <div class="create-input">
+                            <label for="conditional">Condições</label>
+                            <input type="text" id="conditional" name="conditional" placeholder="..." required>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- OU -->
+                </div>
+                <div class="create-right">
+                    <div class="create-input">
+                        <label for="local">Localização</label>
+                        <span><i></i></span>
+                        <input type="text" id="local" name="local" placeholder="..." required>
+                    </div>
+                    <div class="create-input">
+                        <label for="date">Data</label>
+                        <span><i></i></span>
+                        <input type="date" id="date" name="date" placeholder="..." required>
+                    </div>
+                    <div class="create-input">
+                        <label for="time">Horário</label>
+                        <span><i></i></span>
+                        <input type="time" id="time" name="time" placeholder="..." required>
+                    </div>
+                    <div class="create-select">
+                        <label for="category">Categoria</label>
+                        <select name="category" id="categpry">
+                            <option value="1">Categoria 1</option>
+                            <option value="2">Categoria 2</option>
+                            <option value="3">Categoria 3</option>
+                            <option value="4">Categoria 4</option>
+                        </select>
+                    </div>
+                    <div class="create-textarea">
+                        <label for="desc">Descrição</label>
+                        <textarea name="desc" id="desc" placeholder="..." required></textarea>
+                    </div>
+                </div>
             </div>
-            <div class="block-right">
-
+            <div class="create-info">
+                <input type="submit" name="CRIAR" id="criar" value="CRIAR NOVO EVENTO">
+                <a>OU</a>
+                <input type="button" value="CANCELAR E VOLTAR" onclick="">
             </div>
-            <label for="name">Nome do evento</label><br>
-            <input type="text" id="name" name="name" placeholder="..." required><br>
-            <label for="desc">Descrição</label><br>
-            <input type="text" id="name" name="name" placeholder="..." required><br>
-            <label for="desc">Local</label><br>
-            <input type="text" id="name" name="name" placeholder="..." required><br>
-            <label for="desc">Dia e Hora</label><br>
-            <input type="datetime-local" id="name" name="name" placeholder="..." required><br>
-            <label for="img">Envie 4 imagens para anunciar seu evento</label><br>
-            <input type="file" name="img1" id="img1">
-            <input type="file" name="img1" id="img1"><br>
-            <input type="file" name="img1" id="img1">
-            <input type="file" name="img1" id="img1"><br>
-            <input type="submit" name="CRIAR" id="criar">
         </form>
     </div>
+</main>
+<!-- Rodapé -->
+<footer>
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="../src/img/white_logo.PNG" alt="KAYA" title="KAYA" width="80" height="80">
+        </div>
+        <div class="footer-list">
+            <ul>
+                <li class="footer-item"><a class="footer-link" href="#">INÍCIO</a></li>
+                <li class="footer-item"><a class="footer-link" href="#">EVENTOS</a></li>
+                <li class="footer-item"><a class="footer-link" href="#">CRIAR</a></li>
+                <li class="footer-item"><a class="footer-link" href="#">PERFIL</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <ul>
+                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-credits">
+            <p>© 2024 KAYA. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../src/js/scriptCreate.js"></script>
+<script>
+    fetch('template/headerView.html')
+        .then(response => response.text())
+        .then(html => {
+            // Insira o conteúdo do cabeçalho no elemento com id "header"
+            document.getElementById('header').innerHTML = html;
+        })
+        .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
+</script>
+<script>
+    document.getElementById('img1').addEventListener('change', function() {
+        const fileName = this.files[0].name;
+        document.querySelector('.file-label').textContent = fileName;
+    });
+</script>
 </body>
 </html>
