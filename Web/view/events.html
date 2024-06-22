@@ -516,31 +516,7 @@
     
 </main>
 <!-- Rodapé -->
-<footer>
-    <div class="footer">
-        <div class="footer-logo">
-            <img src="../src/img/white_logo.PNG" alt="KAYA" title="KAYA" width="80" height="80">
-        </div>
-        <div class="footer-list">
-            <ul>
-                <li class="footer-item"><a class="footer-link" href="#">INÍCIO</a></li>
-                <li class="footer-item"><a class="footer-link" href="#">EVENTOS</a></li>
-                <li class="footer-item"><a class="footer-link" href="#">CRIAR</a></li>
-                <li class="footer-item"><a class="footer-link" href="#">PERFIL</a></li>
-            </ul>
-        </div>
-        <div class="footer-social">
-            <ul>
-                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-facebook-square"></i></a></li>
-                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-instagram"></i></a></li>
-                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-credits">
-            <p>© 2024 KAYA. Todos os direitos reservados.</p>
-        </div>
-    </div>
-</footer>
+<footer id="footer"></footer>
 
 <!-- Scripts - colocar no arquivo externo após finalização -->
 <script src="../src/js/scriptEvents.js"></script>
@@ -552,6 +528,15 @@
             document.getElementById('header').innerHTML = html;
         })
         .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
+</script>
+<script>
+    // puxar o footer da pasta de templates
+    fetch('template/footerView.html')
+        .then(response => response.text())
+        .then(html => {
+            document.querySelector('footer').innerHTML = html;
+        })
+        .catch(error => console.error('Erro ao carregar o rodapé:', error));
 </script>
 <!-- <script>
     const containers = document.querySelectorAll('.eve-cat-card-container');

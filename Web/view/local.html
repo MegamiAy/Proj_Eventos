@@ -7,7 +7,7 @@
     <title>EVENTOS | KAYA</title>
     <link rel="stylesheet" type="text/css" href="../src/css/global.css">
     <link rel="stylesheet" href="../src/css/local.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTuxEIxJkEayj1PQAvvB1qrg5B7GCDaqM&libraries=places"></script>
 </head>
 <body>
@@ -128,11 +128,7 @@
         </div>
     </div>
 
-
-
-
-
-
+    <!-- Mapa -->
     <div class="map">
         <div class="map-title">
             <h2>LOCALIZE EVENTOS NO <br><orange>MAPA</orange></h2>
@@ -190,31 +186,7 @@
         </div>
     </div>
 </main>
-<footer>
-    <div class="footer">
-        <div class="footer-logo">
-            <img src="../src/img/white_logo.PNG" alt="KAYA" title="KAYA" width="80" height="80">
-        </div>
-        <div class="footer-list">
-            <ul>
-                <li class="footer-item"><a class="footer-link" href="#">INÍCIO</a></li>
-                <li class="footer-item"><a class="footer-link" href="#">EVENTOS</a></li>
-                <li class="footer-item"><a class="footer-link" href="#">CRIAR</a></li>
-                <li class="footer-item"><a class="footer-link" href="#">PERFIL</a></li>
-            </ul>
-        </div>
-        <div class="footer-social">
-            <ul>
-                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-facebook-square"></i></a></li>
-                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-instagram"></i></a></li>
-                <li class="footer-item"><a class="footer-link" href="#"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-credits">
-            <p>© 2024 KAYA. Todos os direitos reservados.</p>
-        </div>
-    </div>
-</footer>
+<footer id="footer"></footer>
 <script src="../src/js/scriptEvents.js"></script>
 <script>
     fetch('template/headerView.html')
@@ -224,6 +196,15 @@
             document.getElementById('header').innerHTML = html;
         })
         .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
+</script>
+<script>
+    // puxar o footer da pasta de templates
+    fetch('template/footerView.html')
+        .then(response => response.text())
+        .then(html => {
+            document.querySelector('footer').innerHTML = html;
+        })
+        .catch(error => console.error('Erro ao carregar o rodapé:', error));
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
@@ -297,6 +278,7 @@
         });
     }
 </script>
+
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTuxEIxJkEayj1PQAvvB1qrg5B7GCDaqM&libraries=places&callback=initMap"></script>
 </body>
 </html>

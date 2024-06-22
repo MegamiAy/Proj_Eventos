@@ -55,6 +55,18 @@ orange{
         margin: 0;
         padding: 0;
     }
+    .nav-list ul li {
+        align-items: center;
+        margin: 0 10px;
+        text-align: center;
+    }
+    .nav-list ul li i {
+        font-size: 20px;
+        margin: 7px 7px 7px 0;
+    }
+    .nav-list ul li a {
+        font-size: 16px;
+    }
     .nav-item {
         padding: 5px 15px;
     }
@@ -81,6 +93,7 @@ orange{
         background-color: #fff;
         border-radius: 0.5rem;
         padding: 5px;
+        width: fit-content;
     }
     .nav-pes-container:hover {
         transform: translateY(-2px);
@@ -100,6 +113,7 @@ orange{
         font-size: 1rem;
         border-radius: 0.5rem;
         margin-left: 5px;
+        width: 100px;
     }
     .nav-pes input:focus {
         outline: none;
@@ -128,7 +142,7 @@ orange{
         display: none;
     }
     /* hEADER - MOBILE */
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 980px) {
             /* .nav-Bares {
                 padding: 1.5rem 2rem;
             } */
@@ -637,13 +651,13 @@ main {
     @media screen and (max-width: 730px) {
         .footer{
             padding: 1rem 0.5rem;
-            min-width: 350px;
+            min-width: 290px;
         }
         .footer ul{
             font-size: 10px;
         }
         .footer h3{
-            font-size: 12px;
+            font-size: 10px;
         }
         .footer-right, .footer-left{
             width: 100%;
