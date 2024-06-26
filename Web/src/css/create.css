@@ -70,6 +70,7 @@ body{
     }
     .create-img:hover{
         background-color: #CC6820;
+        transform: scale(1.01);
         transition: 0.3s;
     }
     .file-input {
@@ -119,6 +120,12 @@ body{
         font-weight: bold;
         font-size: 20px;
     }
+    input[type="submit"]:hover, input[type="button"]:hover{
+        background-color: #CC6820;
+        transform: scale(1.03);
+        transition: 0.3s;
+    }
+    /* Selects */
     .create-select{
         padding: 0.5rem 0;
     }
@@ -133,6 +140,7 @@ body{
         color: #000;
         border-radius: 0.5rem;
     }
+    /* Textarea */
     .create-textarea{
         display: flex;
         flex-direction: column;
