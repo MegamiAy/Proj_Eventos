@@ -69,23 +69,3 @@ function initMap() {
         map.fitBounds(bounds);
     });
 }
-
-
-
-
-//Header
-fetch('template/headerView.html')
-.then(response => response.text())
-.then(html => {
-    // Insira o conteúdo do cabeçalho no elemento com id "header"
-    document.getElementById('header').innerHTML = html;
-})
-.catch(error => console.error('Erro ao carregar o cabeçalho:', error));
-
-//Footer
-fetch('template/footerView.html')
-.then(response => response.text())
-.then(html => {
-    document.querySelector('footer').innerHTML = html;
-})
-.catch(error => console.error('Erro ao carregar o rodapé:', error));
