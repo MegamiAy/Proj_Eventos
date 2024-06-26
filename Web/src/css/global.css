@@ -142,7 +142,7 @@ orange{
         display: none;
     }
     /* hEADER - MOBILE */
-        @media screen and (max-width: 980px) {
+        @media screen and (max-width: 985px) {
             /* .nav-Bares {
                 padding: 1.5rem 2rem;
             } */

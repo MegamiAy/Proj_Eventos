@@ -35,8 +35,7 @@
     display: flex;
     justify-content: space-between;
 }
-button.prev,
-button.next {
+button.prev, button.next {
     background-color: #170C38;
     color: white;
     border: none;
@@ -47,9 +46,8 @@ button.next {
     transition: background-color 0.3s;
     font-weight: bolder;
 }
-button.prev:hover,
-button.next:hover {
-background-color: #CC6820;
+button.prev:hover, button.next:hover {
+    background-color: #CC6820;
 }
 
 /* Estilos para mobile */
