@@ -1,0 +1,31 @@
+.inner-title{
+    margin: 0 0 0 0;
+}
+.inner-title h2{
+    margin: 0 0 0 0;
+}
+
+.about{
+    margin: 0 auto;
+    max-width: 800px;
+    min-width: 300px
+}
+.about-line{
+    padding: 1.5rem;
+    background-color: #170C38;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+}
+p{
+    line-height: 1.5;
+    margin: 1rem 0 0 0;
+    border-radius: 0.5rem;
+    text-align: justify;
+}
+
+@media screen and (max-width: 500px){
+    .about-line{
+        margin: 0;
+        border-radius: 0;
+    }
+}
