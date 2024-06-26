@@ -412,23 +412,5 @@
 <footer id="footer"></footer>
 <script src="Web/src/js/scriptHome.js"></script>
 <script src="Web/src/js/scriptSlider.js"></script>
-<script>
-    // puxar o header da pasta de templates
-    fetch('Web/view/template/header.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('header').innerHTML = html;
-        })
-        .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
-</script>
-<script>
-    // puxar o footer da pasta de templates
-    fetch('Web/view/template/footer.html')
-        .then(response => response.text())
-        .then(html => {
-            document.querySelector('footer').innerHTML = html;
-        })
-        .catch(error => console.error('Erro ao carregar o rodapé:', error));
-</script>
 </body>
 </html>

@@ -1,3 +1,19 @@
+//Header
+fetch('Web/view/template/header.html')
+.then(response => response.text())
+.then(html => {
+    document.getElementById('header').innerHTML = html;
+})
+.catch(error => console.error('Erro ao carregar o cabeçalho:', error));
+
+//Footer
+fetch('Web/view/template/footer.html')
+.then(response => response.text())
+.then(html => {
+    document.querySelector('footer').innerHTML = html;
+})
+.catch(error => console.error('Erro ao carregar o rodapé:', error));
+
 // Função para abrir e fechar o menu mobile
 function menuShow() {
     let menuMobile = document.querySelector('.mobile-menu');

@@ -99,31 +99,6 @@
 </main>
 <!-- Rodapé -->
 <footer id="footer"></footer>
-
 <script src="../src/js/scriptCreate.js"></script>
-<script>
-    fetch('template/headerView.html')
-        .then(response => response.text())
-        .then(html => {
-            // Insira o conteúdo do cabeçalho no elemento com id "header"
-            document.getElementById('header').innerHTML = html;
-        })
-        .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
-</script>
-<script>
-    // puxar o footer da pasta de templates
-    fetch('template/footerView.html')
-        .then(response => response.text())
-        .then(html => {
-            document.querySelector('footer').innerHTML = html;
-        })
-        .catch(error => console.error('Erro ao carregar o rodapé:', error));
-</script>
-<script>
-    document.getElementById('img1').addEventListener('change', function() {
-        const fileName = this.files[0].name;
-        document.querySelector('.file-label').textContent = fileName;
-    });
-</script>
 </body>
 </html>
