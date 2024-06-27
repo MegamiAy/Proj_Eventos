@@ -96,7 +96,7 @@ orange{
         align-items: center;
         background-color: #fff;
         border-radius: 0.5rem;
-        padding: 5px;
+        padding: 0.25rem;
         width: fit-content;
     }
     .nav-pes-container:hover {
@@ -104,20 +104,23 @@ orange{
         transition: 0.3s;
         transform: scale(1.05);
     }
-    .nav-pes img {
-        padding: 5px;
+    .nav-pes i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 0 0.5rem;
         width: 20px;
         height: 20px;
+        color: #444;
     }
     .nav-pes input {
         border: 0;
-        padding: 0.5rem;
         color: black;
         font-weight: 500;
-        font-size: 1rem;
+        font-size: 14px;
         border-radius: 0.5rem;
         margin-left: 5px;
-        width: 100px;
+        width: 150px;
     }
     .nav-pes input:focus {
         outline: none;
