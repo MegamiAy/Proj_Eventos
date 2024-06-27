@@ -307,6 +307,10 @@ main {
         transform: scale(1.025);
         transition: 0.3s;
     }
+    textarea::placeholder{
+        color:#000;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
     /* CATEGORIAS */
     .categories{
@@ -666,10 +670,10 @@ main {
         width: fit-content;
     }
     .footer-right{
-        text-align: center;
+        text-align: right;
     }
     .footer-right a{
-        margin: 0 0.75rem; /* top right bottom left */
+        margin: 0 0 0 1rem; /* top right bottom left */
     }
     footer a:hover{
         color: #CC6820;

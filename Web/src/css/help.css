@@ -1,0 +1,84 @@
+.help{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.help-info{
+    display: flex;
+    flex-direction: column;
+    background-color: #170C38;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    min-width: 800px;
+    border-radius: 0.5rem;
+}
+.help-info h3{
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+}
+.help-input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+.help-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    margin: 0.25rem 0;
+}
+input[type="submit"]{
+    background-color: #CC6820;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 1rem 0 0 0;
+    width: 100%;
+}
+
+/* Textarea */
+textarea{
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    resize: none;
+    height: 200px;
+    overflow-y: auto;
+}
+textarea::-webkit-scrollbar {
+    width: 6px; /* Largura da barra de rolagem */
+}
+textarea::-webkit-scrollbar-thumb {
+    background-color: gray; /* Cor do "coisinha" (indicador) */
+    border-radius: 10px; /* Bordas arredondadas do indicador */
+}
+textarea:focus{
+    outline: none;
+}
+
+@media screen and (max-width: 850px){
+    .help-info{
+        min-width: 500px;
+    }
+}
+@media screen and (max-width: 570px){
+    .help-info{
+        min-width: 300px;
+    }
+}
+@media screen and (max-width: 400px){
+    .help-info{
+        min-width: 200px;
+    }
+}
