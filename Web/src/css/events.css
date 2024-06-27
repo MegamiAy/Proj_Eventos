@@ -10,26 +10,27 @@
 .category-container {
     max-width: 800px;
     margin: 0 auto;
+    height: fit-content;
 }
 .category-section h2 {
     margin: 2rem 0 0 0.5rem;
 }
 .category-section {
-    margin-bottom: 30px;
     position: relative; /* Para posicionamento dos botões */
 }
 .cards-container {
     margin: 0 auto;
+    padding: 0;
     display: flex;
     flex-wrap: nowrap; /* Garante que os cards fiquem em linha */
-    overflow: hidden; /* Esconde o overflow para remover o scrollview */
+    overflow: hidden;
 }
 .event-card{
-    margin: 1.5rem 0.5rem 2.5rem 0.5rem;
+    margin: 1.5rem 0.5rem 0.5rem 0.5rem;
 }
 .navigation-buttons {
     position: absolute;
-    top: 50%;
+    top: 170px;
     transform: translateY(-50%);
     width: 100%;
     display: flex;
@@ -40,8 +41,10 @@ button.prev, button.next {
     color: white;
     border: none;
     border-radius: 50%;
+    width: 30px;
+    height: 30px;
     margin: 0 -2rem 0 -2rem;
-    padding: 0.5rem 0.7rem;
+    padding: 0.5rem 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s;
     font-weight: bolder;
@@ -59,7 +62,3 @@ button.prev:hover, button.next:hover {
     display: none;
   }
 }
-
-
-
-
