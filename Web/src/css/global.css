@@ -486,6 +486,7 @@ main {
     }
     .event-card{
         width: 250px;
+        height: 240px;
         background-color: #170C38;
         border-radius: 0.5rem;
         margin: 1.5rem 1.5rem 2.5rem 1.5rem; /* top right bottom left */

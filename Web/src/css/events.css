@@ -11,8 +11,8 @@
     max-width: 800px;
     margin: 0 auto;
 }
-.category-container h2 {
-    margin: 2rem 0 0 0;
+.category-section h2 {
+    margin: 2rem 0 0 0.5rem;
 }
 .category-section {
     margin-bottom: 30px;
@@ -49,7 +49,9 @@ button.prev, button.next {
 button.prev:hover, button.next:hover {
     background-color: #CC6820;
 }
-
+.cards-container::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no Chrome, Safari e Opera */
+}
 /* Estilos para mobile */
 @media (max-width: 767px) {
   /* Esconde os botões de navegação na versão mobile */
@@ -57,3 +59,7 @@ button.prev:hover, button.next:hover {
     display: none;
   }
 }
+
+
+
+
