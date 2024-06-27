@@ -4,23 +4,34 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../src/img/white_logo.PNG" type="image/x-icon">
-        <title>CADASTRAR</title>
-        <link rel="stylesheet" type="text/css" href="../src/css/reg.css">
+        <title>REGISTRAR-SE</title>
+        <link rel="stylesheet" type="text/css" href="../src/css/global.css">
+        <link rel="stylesheet" type="text/css" href="../src/css/crud.css">
     </head>
     <body>
-        <div class="block">
-            <img src="../src/img/white_logo.PNG" class="logo">
-            <h3 class="tit">Participe do clube!</h3>
-            <form>
-                <h4>Seu Email</h4>
-                <input type="text" placeholder="Email">
-                <h4>Sua Senha</h4>
-                <input type="password" placeholder="Senha"><br>
-                <h4>Repita a Senha</h4>
-                <input type="password" placeholder="Digiste a Mesma Senha"><br>
-                <a href="login.html"> Cadastrar </a>
-                <input type="submit" value="ENTRAR"> <br>
-            </form>
+        <div class="container">
+            <div class="block">
+                <img src="../src/img/white_logo.PNG" class="logo">
+                <h3 class="tit">Participe do Clube!</h3>
+                <form>
+                    <div class="form-input">
+                        <input type="text" name="username" placeholder="Nome de Usuário" class="log-inp">    
+                    </div>
+                    <div class="form-input">
+                        <input type="email" name="email" placeholder="E-mail" class="log-inp">    
+                    </div>
+                    <div class="form-input">
+                        <input type="password" name="password" placeholder="Senha">
+                    </div> 
+                    <div class="form-input">
+                        <input type="password" name="password" placeholder="Confirmar Senha">
+                    </div> 
+                    <input type="submit" value="REGISTRAR-SE">
+                    <div class="form-links">
+                        <a id="cad" href="login.html">Já é do clube? <b>ENTRE AGORA!</b></a>
+                    </div>
+                </form>
+            </div>
         </div>
         <script src="../src/js/scriptRegister.js"></script>
     </body>

@@ -304,7 +304,7 @@ main {
         color:#000;
     }
     input:hover, select:hover, textarea:hover, input[type="checkbox"]:hover{
-        transform: scale(1.01);
+        transform: scale(1.025);
         transition: 0.3s;
     }
 
