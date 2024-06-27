@@ -637,7 +637,7 @@ main {
     .footer {
         background-color: #170C38;
         color: #fff;
-        padding: 2rem;
+        padding: 1.5rem 2rem;
         display: flex;
         justify-content: space-between;
     }
@@ -654,18 +654,22 @@ main {
         justify-content: center;
         align-items: center;
     }
+    .footer-logo img{
+        width: 60px;
+        height: 60px;
+    }
     .footer-logo:hover{
         transform: scale(1.05);
         transition: 0.3s;
     }
     .footer-left, .footer-right{
-        width: 190px;
+        width: fit-content;
     }
     .footer-right{
-        text-align: right;
+        text-align: center;
     }
     .footer-right a{
-        margin: 0 0 0 0.5rem; /* top right bottom left */
+        margin: 0 0.75rem; /* top right bottom left */
     }
     footer a:hover{
         color: #CC6820;
