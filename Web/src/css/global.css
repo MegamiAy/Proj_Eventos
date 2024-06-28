@@ -18,7 +18,7 @@ a{
 
 /* CRIADOS */
 orange{
-    color:#CC6820
+    color:#CC6820;
 }
 
 /* HEADER */
@@ -273,7 +273,7 @@ main {
         font-size: 40px;
         text-align: center;
         padding: 0.5rem; /* top right bottom left */
-        border-bottom: solid orange 5px;
+        border-bottom: solid #CC6820 5px;
     }
     @media screen and (max-width: 730px) {
         .inner-title{
@@ -285,7 +285,7 @@ main {
             font-size: 40px;
             text-align: center;
             padding: 0.25rem;
-            border-bottom: solid orange 5px;
+            border-bottom: solid #CC6820 5px;
         }
         
     }
