@@ -126,3 +126,21 @@
         flex: 1 1 100%;
     }
 }
+
+/* Eventos Criados */
+.event-img i{
+    color: white;
+}
+#rm{
+    background-color: blueviolet;
+}
+.narrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #170C38;
+    padding: 1rem;
+    margin: 1rem 0  ;
+}
+
+/* Eventos Salvos */

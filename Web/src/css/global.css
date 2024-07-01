@@ -517,6 +517,19 @@ main {
         border-radius: 0.5rem;
         object-fit: cover;
     }
+    .event-img i{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        border-radius: 0;
+        padding: 7px;
+        background-color: #CC6820;
+        box-shadow: 0px 0px 5px #555; /* 3px right, 3px down, 3px blur */
+        font-size: 15px;
+    }
+    .event-img #rm{
+        background-color: #cc0000;
+    }
     .event-category{
         position: absolute;
         top: 5px;
