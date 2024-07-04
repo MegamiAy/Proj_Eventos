@@ -6,6 +6,14 @@ fetch('Web/view/template/header.html')
 })
 .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
 
+// Categorias
+fetch('Web/view/template/categories.html')
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('categories').innerHTML = html;
+    })
+    .catch(error => console.error('Erro ao carregar o categorias:', error));
+
 //Footer
 fetch('Web/view/template/footer.html')
 .then(response => response.text())
