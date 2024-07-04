@@ -611,12 +611,12 @@ main {
     }
 
     /* Eventos - id */
-    #party{
+    /* #party{
         background-color: #de1c42;
         content: "FESTA";
-    }
+    } */
     #beer{
-        background-color: #B99200;
+        background-color: #9A8938;
         content: "BAR";
     }
     #show{
@@ -635,10 +635,10 @@ main {
         background-color: #0093B9;
         content: "ESPORTE";
     }
-    #music{
+    /* #music{
         background-color: #8D00B9;
         content: "MÚSICA";
-    }
+    } */
     #children{
         background-color: #D3269C;
         content: "CRIANÇAS";
