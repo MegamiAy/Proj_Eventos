@@ -540,6 +540,7 @@ main {
         font-weight: bolder;
         box-shadow: 0px 0px 5px #555; /* 3px right, 3px down, 3px blur */
         text-transform: uppercase;
+        color: #f5f5f5;
     }
     .event-category i{
         font-style: none;
@@ -555,6 +556,7 @@ main {
     .event-title{
         font-size: 16px;
         margin: 0;
+        text-transform: uppercase;
     }
     .event-location{
         display: flex;
@@ -627,19 +629,19 @@ main {
     }
     #food{
         background-color: #FF4233;
-        content: "FOOD";
+        content: "CULINÁRIA";
     }
     #sport{
         background-color: #0093B9;
-        content: "SPORT";
+        content: "ESPORTE";
     }
     #music{
         background-color: #8D00B9;
-        content: "MUSIC";
+        content: "MÚSICA";
     }
     #children{
         background-color: #D3269C;
-        content: "CHILDREN";
+        content: "CRIANÇAS";
     }
     #moda{
         background-color: #7776BA;
@@ -680,7 +682,7 @@ main {
         transition: 0.3s;
     }
     .footer-left, .footer-right{
-        width: fit-content;
+        width: 180px;
     }
     .footer-right{
         text-align: right;
@@ -709,7 +711,6 @@ main {
             width: 100%;
         }
         .footer-logo{
-            margin: 1rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
