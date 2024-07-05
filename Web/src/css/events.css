@@ -32,6 +32,9 @@
 .event-card{
     margin: 1.5rem 0.5rem 0.5rem 0.5rem;
 }
+.event-price{
+    text-transform: uppercase;
+}
 .navigation-buttons {
     position: absolute;
     top: 170px;
