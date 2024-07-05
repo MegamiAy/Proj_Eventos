@@ -1,0 +1,39 @@
+form{
+    margin: 0 auto;
+    max-width: 500px;
+}
+.about-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form h3{
+    font-size: 20px;
+    margin: 2rem 0;
+}
+form img{
+    max-width: 300px;
+    border-radius: 0.5rem;
+}
+.info{
+    display: flex;
+    flex-direction:column;
+}
+form i{
+    background-color: #CC6820;;
+    padding: 0.5rem;
+    margin: 0 1rem 0 0;
+    border-radius: 0.25rem;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+.local, .date, .time, .cate, .age, .ticket{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+    width: 300px;
+}
+a{
+    font-size: 12px;
+}
