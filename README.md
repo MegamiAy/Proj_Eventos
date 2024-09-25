@@ -1,7 +1,6 @@
 # Projeto para eventos, Web e Mobile
 
-Primeiro trabalho de UX e UI - Faculdade
-
+Trabalho de UX e UI - 1º Semestre da faculdade
 
 ### Wireframes e Mockups:
 
